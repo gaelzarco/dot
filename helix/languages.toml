@@ -1,0 +1,117 @@
+[[language]]
+name = "html"
+formatter = { command = 'bunx', args = ["prettier", "--parser", "html"] }
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "css"
+formatter = { command = 'bunx', args = ["prettier", "--parser", "css"] }
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "jsx"
+formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"]  }
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "tsx"
+formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"]  }
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "javascript"
+formatter = { command = "bunx", args = ["prettier", "--parser", "typescript"]  }
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "typescript"
+formatter = { command = 'bunx', args = ["prettier", "--parser", "typescript"] }
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[language-server.typescript-language-server.config]
+documentFormatting = false
+hostInfo = "helix"
+format = { "semicolons" = "insert" } 
+
+[language-server.typescript-language-server.config.typescript.inlayHints]
+includeInlayEnumMemberValueHints = true
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayFunctionParameterTypeHints = true
+includeInlayParameterNameHints = "all"
+includeInlayParameterNameHintsWhenArgumentMatchesName = true
+includeInlayPropertyDeclarationTypeHints = true
+includeInlayVariableTypeHints = true
+
+[language-server.typescript-language-server.config.completions]
+completeFunctionCalls = true
+
+[language-server.typescript-language-server.config.javascript.inlayHints]
+includeInlayEnumMemberValueHints = true
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayFunctionParameterTypeHints = true
+includeInlayParameterNameHints = "all"
+includeInlayParameterNameHintsWhenArgumentMatchesName = true
+includeInlayPropertyDeclarationTypeHints = true
+includeInlayVariableTypeHints = true
+
+[language-server.eslint]
+args = ["--stdio"]
+command = "vscode-eslint-language-server"
+
+[language-server.eslint.config]
+format = true
+nodePath = ""
+onIgnoredFiles = "off"
+packageManager = "bun"
+quiet = false
+rulesCustomizations = []
+run = "onType"
+useESLintClass = false
+validate = "on"
+codeAction = { disableRuleComment = { enable = true, location = "separateLine" }, showDocumentation = { enable = true } }
+codeActionOnSave = { mode = "all" }
+experimental = { }
+problems = { shortenToSingleLine = false }
+workingDirectory = { mode = "auto" }
+
+[language-server.vscode-css-language-server.config]
+css = { validate = { enable = true } }
+provideFormatter = true
+
+[[language]]
+name = "rust"
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[language-server.rust-analyzer.config]
+check = { command = "clippy", features = "all" }
+diagnostics = { experimental = { enable = true } }
+hover = { actions = { enable = true } }
+typing = { autoClosingAngleBrackets = { enable = true } }
+cargo = { allFeatures = true }
+procMacro = { enable = true }
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+
+[[language]]
+name = "json"
+language-servers = [ "vscode-json-language-server" ]
+formatter = { command = 'bunx', args = ["prettier", "--parser", "json"] }
+auto-format = true
+indent = { tab-width = 2, unit = " " }

@@ -1,0 +1,60 @@
+theme = "mellow"
+
+[editor]
+mouse = true
+line-number = "relative"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+auto-completion = true
+auto-info = true
+bufferline = "always"
+auto-pairs = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "underline"
+select = "block"
+
+[editor.statusline]
+separator = "✧"
+left = [
+  "spinner",
+  "mode",
+  "file-name",
+  "separator",
+  "spacer",
+  "version-control",
+  "file-modification-indicator",
+  "spacer",
+  "diagnostics",
+]
+right = [
+  "selections",
+  "separator",
+  "spacer",
+  "register",
+  "position",
+  "position-percentage",
+  "file-encoding",
+]
+
+[editor.lsp]
+enable = true
+display-messages = true
+auto-signature-help = true
+display-inlay-hints = true
+display-signature-help-docs = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.file-picker]
+hidden = true
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.insert]
+"C-[" = "normal_mode"
+
+[keys.select]
+"C-[" = "normal_mode"

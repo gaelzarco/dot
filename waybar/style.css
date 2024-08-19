@@ -1,0 +1,161 @@
+* {
+  min-height: 0;
+  font-family: Geist Regular;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+window#waybar {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces {
+  color: #ffffff;
+  background: rgba(10, 10, 10, 0);
+  margin: 4px 5px 5px 5px;
+  border-radius: 15px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+#workspaces button {
+  color: #ffffff;
+  padding: 3px 10px;
+  margin: 2px 2px;
+  border-radius: 15px;
+  border: 0px;
+  transition: all 0.2s ease-in-out;
+  text-shadow: none;
+}
+
+#workspaces button:hover {
+  color: #000;
+  background: rgba(255, 255, 255, 0.6);
+  min-width: 40px;
+  transition: all 0.2s ease-in-out;
+  text-shadow: none;
+}
+
+#workspaces button.active {
+  color: #000;
+  background: rgba(255, 255, 255, 1);
+  min-width: 40px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+#workspaces button.urgent {
+  color: #ffffff;
+  background-color: rgba(255, 68, 61, 0.3);
+  min-width: 40px;
+  transition: all 0.2s ease-in-out;
+  text-shadow: none;
+}
+
+#window {
+  color: #ffffff;
+}
+
+#clock,
+#calendar,
+#pulseaudio,
+#battery,
+#cpu,
+#tray,
+#memory,
+#power,
+#network,
+#bluetooth,
+#custom-gpu,
+#custom-swaync {
+  padding: 0px 8px;
+  margin: 0px 3px 0px 3px;
+  color: #ffffff;
+}
+
+#custom-logo {
+  margin-top: 0px;
+  padding: 0px 10px;
+  margin-left: 3px;
+}
+
+#user,
+#custom-power,
+#taskbar,
+#window {
+  margin-top: 0px;
+  padding: 0px 10px;
+}
+
+#custom-power {
+  margin-top: -1px;
+  margin-right: 3px;
+}
+
+#tray {
+  font-size: 10px;
+  margin-top: -1px;
+}
+
+#custom-swaync {
+  margin-top: 2px;
+  padding: 0px 2px;
+  padding-right: 8px;
+}
+#custom-sep {
+  padding: 0px;
+  color: #ffffff;
+}
+
+#custom-spotify.playing {
+  color: #ffffff;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#cpu,
+#memory,
+#custom-gpu,
+#clock,
+#user {
+  margin-top: 3px;
+  color: #ffffff;
+}
+
+#clock {
+  color: #ffffff;
+}
+
+#calendar {
+  color: #ffffff;
+}
+
+#window {
+  color: #ffffff;
+}
+
+#pulseaudio {
+  color: #ffffff;
+}
+
+#pulseaudio.muted {
+  color: #ffffff;
+}
+
+tooltip {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(89, 89, 89, 0.6);
+}

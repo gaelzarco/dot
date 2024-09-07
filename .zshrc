@@ -101,6 +101,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias x='hx'
+alias v='nvim'
 alias t='tmux a -t x1 || tmux new-session -s "x1"'
 alias y='yazi'
 
@@ -128,7 +129,7 @@ export GPG_TTY=$(tty)
 export TMUX_SESSION=1
 
 autoload -U compinit; compinit
-source ~/code/fzftab/fzf-tab.plugin.zsh
+# source ~/code/fzftab/fzf-tab.plugin.zsh
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 fastfetch

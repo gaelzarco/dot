@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "andreypopp/vim-colors-plain"
+        "kdheepak/monochrome.nvim"
     },
     {
         'nvim-lualine/lualine.nvim',

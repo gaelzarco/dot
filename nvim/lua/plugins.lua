@@ -14,7 +14,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+      'neovim/nvim-lspconfig'
+    },
+    {
         "kdheepak/monochrome.nvim"
+    },
+    {
+        "phaazon/hop.nvim"
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -36,9 +42,6 @@ require("lazy").setup({
         }
     },  
     {
-        "phaazon/hop.nvim"
-    },
-    {
         'nvim-tree/nvim-tree.lua',
         dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
@@ -50,7 +53,7 @@ require('lualine').setup({
   options = {
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '✧', right = '✧'},
+    component_separators = { left = '', right = ''},
     section_separators = { left = '✧', right = '✧'},
     disabled_filetypes = {
       statusline = {},

@@ -1,12 +1,15 @@
 {
   "layer": "top",
   "position": "top",
+  // "mode": "overlay",
   "height": 10,
   "spacing": 0,
   "exclusive": true,
+  "start_hidden": true,
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
+  "reload_style_on_change": true,
   "modules-left": [
     // "custom/logo",
     // "user",
@@ -58,6 +61,12 @@
     "tooltip": true,
     "interval": 1
   },
+  // "custom/gpu": {
+    // "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    // "format": "<small>GPU</small>\n<span>{}%</span>",
+    // "tooltip": false,
+    // "interval": 1
+  // },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
     "format": "GPU  {}%",

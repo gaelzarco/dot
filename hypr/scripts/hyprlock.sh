@@ -1,3 +1,3 @@
 grim -s 1.5 -l 0 ~/.cache/screenlock.png
-magick ~/.cache/screenlock.png -scale 20% -blur 0x2 -resize 200% ~/.cache/screenlock.png
+magick ~/.cache/screenlock.png -scale 20% -blur 0x2 -modulate 30,100,100 -resize 200% ~/.cache/screenlock.png
 hyprlock

@@ -9,7 +9,6 @@ window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
   background-color: rgba(0, 0, 0, 0.3);
-  color: #ffffff;
   box-shadow: none;
   border: none;
 }
@@ -39,7 +38,7 @@ window#waybar.hidden {
 
 #workspaces button:hover {
   color: #000;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   min-width: 40px;
   transition: all 0.2s ease-in-out;
   text-shadow: none;
@@ -47,16 +46,27 @@ window#waybar.hidden {
 
 #workspaces button.active {
   color: #000;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.95);
   min-width: 40px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   text-shadow: none;
 }
 
+@keyframes pulse {
+    to {
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+}
+
 #workspaces button.urgent {
-  color: #ffffff;
-  background-color: rgba(255, 68, 61, 0.3);
+  color: white;
+  border: 1px solid rgba(86, 86, 86, 0.8);
+  /* animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
   min-width: 40px;
   transition: all 0.2s ease-in-out;
   text-shadow: none;
@@ -80,7 +90,6 @@ window#waybar.hidden {
 #custom-swaync {
   padding: 0px 8px;
   margin: 0px 3px 0px 3px;
-  color: #ffffff;
 }
 
 #custom-logo {

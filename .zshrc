@@ -84,9 +84,9 @@
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='helix'
+  export EDITOR='nvim'
 else
-  export EDITOR='helix'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags

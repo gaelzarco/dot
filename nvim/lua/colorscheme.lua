@@ -1,5 +1,5 @@
 -- define your colorscheme here
-local colorscheme = 'monochrome'
+local colorscheme = 'carbonfox'
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not is_ok then

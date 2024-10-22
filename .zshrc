@@ -84,9 +84,9 @@
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
+  export EDITOR='helix'
 else
-  export EDITOR='nvim'
+  export EDITOR='helix'
 fi
 
 # Compilation flags
@@ -100,12 +100,15 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias hypr='Hyprland'
 alias x='hx'
 alias v='nvim'
 alias t='tmux a -t x1 || tmux new-session -s "x1"'
 alias y='yazi'
 
 PATH=~/.console-ninja/.bin:$PATH
+
+. /opt/asdf-vm/asdf.sh
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 # [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"

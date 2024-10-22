@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  // "mode": "overlay",
+  "mode": "dock",
   "height": 10,
   "spacing": 0,
   "exclusive": true,

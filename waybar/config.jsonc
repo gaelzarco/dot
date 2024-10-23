@@ -5,7 +5,7 @@
   "height": 10,
   "spacing": 0,
   "exclusive": true,
-  "start_hidden": true,
+  // "start_hidden": true,
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,

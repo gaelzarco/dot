@@ -80,7 +80,7 @@
           "label": "DnD",
           "type": "toggle",
           "active": false,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && swaync-client -df || swaync-client -dn'"
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && swaync-client -df || swaync-client -dn'"
         },
         {
           "label": "PulseAudio",

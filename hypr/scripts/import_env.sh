@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 set -e
 
 [[ -n $HYPRLAND_DEBUG_CONF ]] && exit 0

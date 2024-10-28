@@ -1,5 +1,5 @@
 -- define your colorscheme here
-local colorscheme = 'carbonfox'
+local colorscheme = 'github_dark_high_contrast'
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not is_ok then

@@ -1,0 +1,4 @@
+# PSM Certificate Override Settings file
+# This is a generated file!  Do not edit.
+space.xarco.net:443:	OID.2.16.840.1.101.3.4.2.1	04:C7:2E:CC:31:8C:B6:D7:5F:E1:A1:88:32:0A:01:86:E1:FE:EA:1D:6D:67:43:21:72:51:B9:25:14:74:AD:1E	
+moxie.xarco.net:443:	OID.2.16.840.1.101.3.4.2.1	13:91:0A:E4:92:79:5C:E3:75:B8:01:4F:12:D2:B5:B8:00:7F:45:60:0A:B3:09:6B:D2:2F:A1:5F:53:7F:3B:19	

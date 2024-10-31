@@ -1,0 +1,191 @@
+[2024-10-28 17:38:21.765] [info] Using configuration file /home/xarco/.config/waybar/config.jsonc
+[2024-10-28 17:38:21.766] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-10-28 17:38:21.766] [info] Using CSS file /home/xarco/.config/waybar/style.css
+[2024-10-28 17:38:21.772] [info] Hyprland IPC starting
+[2024-10-28 17:38:21.772] [error] Hyprland IPC: Unable to connect?
+[2024-10-28 17:38:21.772] [warning] module hyprland/workspaces: Disabling module "hyprland/workspaces", Hyprland IPC: Couldn't connect to /run/user/1000/hypr/4520b30d498daca8079365bdb909a8dea38e8d55_1730160971_299925824/.socket.sock. (3)
+[2024-10-28 17:38:21.885] [warning] Requested height: 10 is less than the minimum height: 16 required by the modules
+[2024-10-28 17:38:21.885] [info] Bar configured (width: 1920, height: 16) for output: DP-1
+
+(waybar:15058): Gtk-CRITICAL **: 17:38:21.889: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15058): Gtk-CRITICAL **: 17:38:21.889: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15058): Gtk-CRITICAL **: 17:38:21.889: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15058): Gtk-CRITICAL **: 17:38:21.889: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15058): Gtk-CRITICAL **: 17:38:21.889: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15058): Gtk-CRITICAL **: 17:38:21.889: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[2024-10-28 17:41:28.972] [info] Using configuration file /home/xarco/.config/waybar/config.jsonc
+[2024-10-28 17:41:28.973] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-10-28 17:41:28.973] [info] Using CSS file /home/xarco/.config/waybar/style.css
+[2024-10-28 17:41:28.978] [info] Hyprland IPC starting
+[2024-10-28 17:41:28.979] [error] Hyprland IPC: Unable to connect?
+[2024-10-28 17:41:28.979] [warning] module hyprland/workspaces: Disabling module "hyprland/workspaces", Hyprland IPC: Couldn't connect to /run/user/1000/hypr/4520b30d498daca8079365bdb909a8dea38e8d55_1730160971_299925824/.socket.sock. (3)
+[2024-10-28 17:41:29.091] [warning] Requested height: 10 is less than the minimum height: 16 required by the modules
+[2024-10-28 17:41:29.091] [info] Bar configured (width: 1920, height: 16) for output: DP-1
+
+(waybar:15966): Gtk-CRITICAL **: 17:41:29.094: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15966): Gtk-CRITICAL **: 17:41:29.094: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15966): Gtk-CRITICAL **: 17:41:29.094: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15966): Gtk-CRITICAL **: 17:41:29.094: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15966): Gtk-CRITICAL **: 17:41:29.094: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:15966): Gtk-CRITICAL **: 17:41:29.094: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+[2024-10-28 17:42:26.726] [info] Using configuration file /home/xarco/.config/waybar/config.jsonc
+[2024-10-28 17:42:26.727] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-10-28 17:42:26.727] [info] Using CSS file /home/xarco/.config/waybar/style.css
+[2024-10-28 17:42:26.730] [info] Hyprland IPC starting
+[2024-10-28 17:42:26.731] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-10-28 17:42:26.843] [warning] Requested height: 10 is less than the minimum height: 32 required by the modules
+[2024-10-28 17:42:26.843] [info] Bar configured (width: 1920, height: 32) for output: DP-1
+
+(waybar:21421): Gtk-CRITICAL **: 17:42:26.849: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 17:42:26.849: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 17:42:26.849: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 17:42:26.849: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 17:42:26.849: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 17:42:26.850: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:41:57.546: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:41:57.546: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:41:57.546: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:41:57.546: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:41:57.546: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:41:57.546: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:43:46.991: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:43:46.991: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:43:46.991: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:43:46.991: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:43:46.992: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:43:46.992: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:44:34.457: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:44:34.457: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:44:34.457: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:44:34.457: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:44:34.457: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:44:34.457: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:45:02.163: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:45:02.163: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:45:02.163: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:45:02.163: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:45:02.163: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:45:02.163: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:33.551: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:33.551: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:33.551: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:33.551: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:33.551: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:33.551: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:45.801: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:45.801: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:45.801: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:45.801: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:45.801: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:45.801: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:53.536: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:53.536: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:53.536: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:53.537: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:53.537: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:50:53.537: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:52:15.675: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:52:15.675: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:52:15.675: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:52:15.675: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:52:15.675: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:52:15.675: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:54:41.198: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:54:41.198: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:54:41.198: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:54:41.198: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:54:41.198: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 18:54:41.198: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 19:07:49.899: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 19:07:49.899: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 19:07:49.899: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 19:07:49.899: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 19:07:49.899: gtk_widget_set_accel_path: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+
+(waybar:21421): Gtk-CRITICAL **: 19:07:49.899: gtk_widget_add_accelerator: assertion 'GTK_IS_ACCEL_GROUP (accel_group)' failed
+Gdk-Message: 19:26:39.199: Error reading events from display: Broken pipe
+[2024-10-29 12:55:54.866] [info] Using configuration file /home/xarco/.config/waybar/config.jsonc
+[2024-10-29 12:55:54.867] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-10-29 12:55:54.867] [info] Using CSS file /home/xarco/.config/waybar/style.css
+[2024-10-29 12:55:54.870] [info] Hyprland IPC starting
+[2024-10-29 12:55:54.871] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-10-29 12:55:54.983] [warning] Requested height: 10 is less than the minimum height: 32 required by the modules
+[2024-10-29 12:55:54.983] [info] Bar configured (width: 1920, height: 32) for output: DP-1
+[2024-10-29 13:54:48.816] [warning] Requested height: 32 is less than the minimum height: 34 required by the modules
+[2024-10-29 13:54:48.824] [info] Bar configured (width: 1920, height: 34) for output: DP-1
+[2024-10-29 13:54:51.908] [info] Bar configured (width: 1920, height: 32) for output: DP-1
+Gdk-Message: 17:03:37.883: Error reading events from display: Broken pipe

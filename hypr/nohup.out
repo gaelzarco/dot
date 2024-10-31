@@ -1,0 +1,31 @@
+[2024-10-30 10:25:04.871] [info] Using configuration file /home/xarco/.config/waybar/config.jsonc
+[2024-10-30 10:25:04.871] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-10-30 10:25:04.871] [info] Using CSS file /home/xarco/.config/waybar/style.css
+[2024-10-30 10:25:04.875] [info] Hyprland IPC starting
+[2024-10-30 10:25:04.876] [error] Hyprland IPC: Unable to connect?
+[2024-10-30 10:25:04.876] [warning] module hyprland/workspaces: Disabling module "hyprland/workspaces", Hyprland IPC: Couldn't connect to /run/user/1000/hypr/4520b30d498daca8079365bdb909a8dea38e8d55_1730161425_1677575063/.socket.sock. (3)
+[2024-10-30 10:25:04.995] [warning] Requested height: 10 is less than the minimum height: 16 required by the modules
+[2024-10-30 10:25:04.995] [info] Bar configured (width: 1920, height: 16) for output: DP-1
+[2024-10-30 10:25:22.894] [info] Using configuration file /home/xarco/.config/waybar/config.jsonc
+[2024-10-30 10:25:22.895] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-10-30 10:25:22.895] [info] Using CSS file /home/xarco/.config/waybar/style.css
+[2024-10-30 10:25:22.901] [info] Hyprland IPC starting
+[2024-10-30 10:25:22.901] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-10-30 10:25:23.017] [warning] Requested height: 10 is less than the minimum height: 32 required by the modules
+[2024-10-30 10:25:23.017] [info] Bar configured (width: 1920, height: 32) for output: DP-1
+[2024-10-30 17:18:43.591] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:19:09.398] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:20:14.269] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:20:27.681] [warning] Requested height: 32 is less than the minimum height: 34 required by the modules
+[2024-10-30 17:20:27.681] [info] Bar configured (width: 1920, height: 34) for output: DP-1
+[2024-10-30 17:20:28.622] [info] Bar configured (width: 1920, height: 32) for output: DP-1
+[2024-10-30 17:21:15.140] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:22:36.821] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:25:54.781] [warning] Requested height: 32 is less than the minimum height: 34 required by the modules
+[2024-10-30 17:25:54.781] [info] Bar configured (width: 1920, height: 34) for output: DP-1
+[2024-10-30 17:25:54.781] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:25:55.707] [info] Bar configured (width: 1920, height: 32) for output: DP-1
+[2024-10-30 17:25:55.707] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:29:23.125] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+[2024-10-30 17:29:49.690] [error] Item 'chrome_status_icon_1': No icon name or pixmap given.
+Gdk-Message: 17:30:51.996: Error reading events from display: Connection reset by peer

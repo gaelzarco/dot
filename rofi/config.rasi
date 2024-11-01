@@ -4,7 +4,7 @@
     g-margin: 2;
     b-color: #000000;
     fg-color: #FFF;
-    fgp-color: #888888cc;
+    fgp-color: #afafafcc;
     b-radius: 10px;
     g-padding: 8px;
     hl-color: #FFF;
@@ -39,7 +39,7 @@ window {
 	border: @w-border;
 	border-color: @w-border-color;
     padding: @w-padding;
-	background-color: rgba(10, 10, 10, 0.3);
+	background-color: rgba(15, 15, 15, 0.8);
 }
 
 prompt {
@@ -47,7 +47,7 @@ prompt {
 }
 
 inputbar {
-    children: ["prompt", "entry"];
+  children: ["prompt", "entry"];
 	spacing: 5px;
 }
 

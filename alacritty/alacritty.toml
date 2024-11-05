@@ -43,7 +43,7 @@ args = [ '-c', 'tmux a -t x1 || tmux new-session -s "x1"']
 
 [colors]
 # Other Window Background Colors
-transparent_background_colors = true 
+transparent_background_colors = false 
 
 # Default colors
 primary.background = "#0f0f0f"

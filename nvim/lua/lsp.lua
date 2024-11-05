@@ -1,6 +1,10 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})
+
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -30,31 +34,24 @@ cmp.setup({
     sources = {
         { 
             name = 'nvim_lsp',
-            max_item_count = 5,  -- Limit LSP suggestions to 5
-            keyword_length = 3   -- Start suggestions after 3 chars
+            keyword_length = 2 
         },
         { 
             name = 'luasnip',
-            max_item_count = 5,
-            keyword_length = 3
+            keyword_length = 2
         },
         { 
             name = 'buffer',
-            max_item_count = 5,
-            keyword_length = 3
+            keyword_length = 2
         },
         { 
             name = 'path',
-            max_item_count = 5,
-            keyword_length = 3
+            keyword_length = 2
         },
     },
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
-    },
-    performance = {
-        max_view_entries = 5,  -- Limit visible items to 5
     },
 })
 
@@ -99,9 +96,28 @@ require('lspconfig').cssls.setup({
 require('lspconfig').jsonls.setup({
   capabilities = capabilities
 })
+
 -- YAML
 require('lspconfig').yamlls.setup({
   capabilities = capabilities
+})
+
+-- HYPRLS 
+require('lspconfig').hyprls.setup({
+  capabilities = capabilities
+})
+
+-- Hyprlang LSP
+vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
+		pattern = {"*.hl", "hypr*.conf"},
+		callback = function(event)
+				print(string.format("starting hyprls for %s", vim.inspect(event)))
+				vim.lsp.start {
+						name = "hyprlang",
+						cmd = {"hyprls"},
+						root_dir = vim.fn.getcwd(),
+				}
+		end
 })
 
 -- Diag config (global settings)
@@ -115,12 +131,6 @@ vim.diagnostic.config({
       source = "always",
     },
 })
-
-local lsp_formatting = function(bufnr)
-    vim.lsp.buf.format({
-        bufnr = bufnr,
-    })
-end
 
 local on_attach = function(client, bufnr)
     -- If the LSP supports formatting, set it up
@@ -142,11 +152,8 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
     border = "rounded",
 })
 
--- Fast diag hold
-vim.o.updatetime = 0
-
 -- Diags appear in floating window  
-vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]]
+vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = true })]]
 
 vim.cmd [[
     augroup lsp_document_highlight

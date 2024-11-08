@@ -5,7 +5,7 @@ image_quality = 90
 
 [opener]
 edit = [
-	{ run = 'hx "$@"', block = true },
+	{ run = 'nvim "$@"', block = true },
 ]
 play = [
 	{ run = 'mpv "$@"', orphan = true, for = "unix" },

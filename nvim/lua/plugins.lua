@@ -17,28 +17,16 @@ require("lazy").setup({
         "neovim/nvim-lspconfig"
     },
     {
-        'hrsh7th/nvim-cmp'
-    },
-    {
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
         'hrsh7th/cmp-nvim-lsp'
     },
     {
-        'hrsh7th/cmp-buffer',
-        'hrsh7th/cmp-path',
         'L3MON4D3/LuaSnip',
-        'saadparwaiz1/cmp_luasnip'
     },
     {
-        'dasupradyumna/midnight.nvim' 
-    },
-    {
-        'projekt0n/github-nvim-theme',
-    },
-    {
-        "kdheepak/monochrome.nvim"
-    },
-    {
-        "phaazon/hop.nvim"
+        'bettervim/yugen.nvim'
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -81,46 +69,34 @@ require("lazy").setup({
 
 require("bufferline").setup({})
 
-require('lualine').setup({
+require('lualine').setup {
   options = {
-    icons_enabled = true,
-    theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = {
-      statusline = {},
-      winbar = {},
-    },
-    ignore_focus = {},
-    always_divide_middle = true,
-    globalstatus = false,
-    refresh = {
-      statusline = 1000,
-      tabline = 1000,
-      winbar = 1000,
-    }
+    component_separators = '',
+    section_separators = { left = '', right = '' },
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+    lualine_b = { 'filename', 'branch' },
+    lualine_c = {
+      '%=', --[[ add your center compoentnts here in place of this comment ]]
+    },
+    lualine_x = {},
+    lualine_y = { 'filetype', 'progress' },
+    lualine_z = {
+      { 'location', separator = { right = '' }, left_padding = 2 },
+    },
   },
   inactive_sections = {
-    lualine_a = {},
+    lualine_a = { 'filename' },
     lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
+    lualine_c = {},
+    lualine_x = {},
     lualine_y = {},
-    lualine_z = {}
+    lualine_z = { 'location' },
   },
   tabline = {},
-  winbar = {},
-  inactive_winbar = {},
-  extensions = {}
-})
+  extensions = {},
+}
 
 require("nvim-tree").setup({
   sort = {

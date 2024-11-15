@@ -153,7 +153,7 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 })
 
 -- Diags appear in floating window  
-vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = true })]]
+vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]]
 
 vim.cmd [[
     augroup lsp_document_highlight

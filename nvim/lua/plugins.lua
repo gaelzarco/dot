@@ -13,61 +13,128 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        "neovim/nvim-lspconfig"
-    },
-    {
-        'hrsh7th/nvim-cmp',
+    { "neovim/nvim-lspconfig" },
+    { 'L3MON4D3/LuaSnip' },
+    { 'hrsh7th/nvim-cmp',
+      dependencies = {
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-nvim-lsp'
+      }
     },
     {
-        'L3MON4D3/LuaSnip',
+      'nvim-treesitter/nvim-treesitter',
+      build = ':TSUpdate',
+      config = function()
+        require('nvim-treesitter.configs').setup({
+          ensure_installed = { "hyprlang" },
+          auto_install = true,
+          highlight = {
+            enable = true,
+          },
+        })
+      end
     },
     {
-        'bettervim/yugen.nvim'
-    },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-    {
-        'akinsho/bufferline.nvim',
-        version = "*",
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        dependencies = {
-          "nvim-lua/plenary.nvim",
-          { 
-            "nvim-telescope/telescope-live-grep-args.nvim",
-            version = "^1.0.0",
-          }
+      "nvim-telescope/telescope.nvim",
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+        { 
+          "nvim-telescope/telescope-live-grep-args.nvim",
+          version = "^1.0.0",
         }
+      }
     },  
     {
-        'nvim-tree/nvim-tree.lua',
-        dependencies = { 'nvim-tree/nvim-web-devicons' }
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
     {
-        'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate',
-        config = function()
-            require('nvim-treesitter.configs').setup({
-                ensure_installed = { "hyprlang" },
-                auto_install = true,
-                highlight = {
-                    enable = true,
-                },
-            })
-        end
+      'akinsho/bufferline.nvim',
+      version = "*",
+      dependencies = 'nvim-tree/nvim-web-devicons'
     },
+    {
+      "goolord/alpha-nvim",
+      -- dependencies = { 'echasnovski/mini.icons' },
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
+      config = function()
+        local startify = require("alpha.themes.startify")
+        -- available: devicons, mini, default is mini
+        -- if provider not loaded and enabled is true, it will try to use another provider
+        startify.file_icons.provider = "devicons"
+        require("alpha").setup(
+          startify.config
+        )
+      end,
+    },
+    {
+      "nvim-tree/nvim-tree.lua",
+      dependencies = {
+        "nvim-tree/nvim-web-devicons",
+      },
+      config = function()
+        require("nvim-tree").setup {}
+      end,
+    },
+    {
+      'mikew/nvim-drawer',
+      opts = {},
+      config = function(_, opts)
+        local drawer = require('nvim-drawer')
+        drawer.setup(opts)
+
+        drawer.create_drawer({
+          -- This is needed for nvim-tree.
+          nvim_tree_hack = true,
+
+          size = 40,
+          position = 'float',
+          win_config = {
+            margin = 2,
+            border = 'rounded',
+            anchor = 'CE',
+            width = 30,
+            height = '60%',
+          },
+
+          on_vim_enter = function(event)
+            --- Example mapping to toggle.
+            vim.keymap.set('n', '<leader>e', function()
+              event.instance.focus_or_toggle()
+            end)
+          end,
+
+          --- Ideally, we would just call this here and be done with it, but
+          --- mappings in nvim-tree don't seem to apply when re-using a buffer in
+          --- a new tab / window.
+          on_did_create_buffer = function()
+            local nvim_tree_api = require('nvim-tree.api')
+            nvim_tree_api.tree.open({ current_window = true })
+          end,
+
+          --- This gets the tree to sync when changing tabs.
+          on_did_open = function()
+            local nvim_tree_api = require('nvim-tree.api')
+            nvim_tree_api.tree.reload()
+
+            vim.opt_local.number = false
+            vim.opt_local.signcolumn = 'no'
+            vim.opt_local.statuscolumn = ''
+          end,
+
+          --- Cleans up some things when closing the drawer.
+          on_did_close = function()
+            local nvim_tree_api = require('nvim-tree.api')
+            nvim_tree_api.tree.close()
+          end,
+        })
+      end
+    },
+    { "steguiosaur/fullerene.nvim" }
 })
 
-
-require("bufferline").setup({})
+require("bufferline").setup{}
 
 require('lualine').setup {
   options = {
@@ -88,7 +155,7 @@ require('lualine').setup {
   },
   inactive_sections = {
     lualine_a = { 'filename' },
-    lualine_b = {},
+   lualine_b = {},
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},
@@ -98,6 +165,7 @@ require('lualine').setup {
   extensions = {},
 }
 
+-- OR setup with some options
 require("nvim-tree").setup({
   sort = {
     sorter = "case_sensitive",

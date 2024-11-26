@@ -51,7 +51,8 @@
     "inhibitors",
     "title",
     "mpris",
-    "notifications"
+    "notifications",
+    "buttons-grid"
   ],
   "widget-config": {
     "inhibitors": {
@@ -61,7 +62,7 @@
     },
     "title": {
       "text": "Notification Center",
-      "clear-all-button": true,
+      "clear-all-button": false,
       "button-text": "❌"
     },
     "mpris": {
@@ -78,22 +79,7 @@
           "label": "DnD",
           "type": "toggle",
           "active": false,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && swaync-client -df || swaync-client -dn'"
-        },
-        {
-          "label": "PulseAudio",
-          "command": "sh -c 'swaync-client -t -sw && pavucontrol'",
-          "enum": "normal"
-        },
-        {
-          "label": "Blueman",
-          "command": "sh -c 'swaync-client -t -sw && blueman-manager'",
-          "enum": "normal"
-        },
-        {
-          "label": "Lock",
-          "command": "sh -c 'swaync-client -t -sw && $HOME/.config/hypr/scripts/hyprlock.sh'",
-          "enum": "normal"
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && swaync-client -dn || swaync-client -df'"
         },
         {
           "label": "Reboot",

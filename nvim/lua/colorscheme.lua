@@ -1,4 +1,4 @@
-local colorscheme = 'fullerene'
+local colorscheme = 'solarized-osaka'
 
 vim.opt.background = "dark" -- set this to dark or light
 

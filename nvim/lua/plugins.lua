@@ -131,7 +131,8 @@ require("lazy").setup({
         })
       end
     },
-    { "steguiosaur/fullerene.nvim" }
+    { "craftzdog/solarized-osaka.nvim" },
+    --{ "typicode/bg.nvim" }
 })
 
 require("bufferline").setup{}
@@ -140,6 +141,7 @@ require('lualine').setup {
   options = {
     component_separators = '',
     section_separators = { left = '', right = '' },
+    --section_separators = { left = '', right = '' },
   },
   sections = {
     lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },

@@ -116,6 +116,10 @@ window#waybar.hidden {
   margin-top: -1px;
 }
 
+#user {
+  padding-left: 12px;
+}
+
 #custom-swaync {
   margin-top: 2px;
   padding: 0px 2px;

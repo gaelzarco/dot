@@ -29,3 +29,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Nvim Drawer
+local drawer = require('nvim-drawer')
+vim.keymap.set('n', '<leader>e', function()
+  drawer.focus_or_toggle()
+end, { desc = "Toggle drawer" })

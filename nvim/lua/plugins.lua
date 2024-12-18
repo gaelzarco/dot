@@ -55,20 +55,6 @@ require("lazy").setup({
       dependencies = 'nvim-tree/nvim-web-devicons'
     },
     {
-      "goolord/alpha-nvim",
-      -- dependencies = { 'echasnovski/mini.icons' },
-      dependencies = { 'nvim-tree/nvim-web-devicons' },
-      config = function()
-        local startify = require("alpha.themes.startify")
-        -- available: devicons, mini, default is mini
-        -- if provider not loaded and enabled is true, it will try to use another provider
-        startify.file_icons.provider = "devicons"
-        require("alpha").setup(
-          startify.config
-        )
-      end,
-    },
-    {
       "nvim-tree/nvim-tree.lua",
       dependencies = {
         "nvim-tree/nvim-web-devicons",
@@ -77,8 +63,66 @@ require("lazy").setup({
         require("nvim-tree").setup {}
       end,
     },
-    { "craftzdog/solarized-osaka.nvim" },
-    --{ "typicode/bg.nvim" }
+    {
+      'mikew/nvim-drawer',
+      opts = {},
+      config = function(_, opts)
+        local drawer = require('nvim-drawer')
+        drawer.setup(opts)
+
+        drawer.create_drawer({
+          -- This is needed for nvim-tree.
+          nvim_tree_hack = true,
+
+          -- Alternatively, you can have it floating.
+          size = 30,
+          position = 'float',
+          win_config = {
+            margin = 2,
+            border = 'rounded',
+            anchor = 'CE',
+            width = 40,
+            height = '80%',
+          },
+
+          on_vim_enter = function(event)
+            vim.keymap.set('n', '<leader>e', function()
+              event.instance.focus_or_toggle()
+            end)
+          end,
+
+          on_did_create_buffer = function()
+            local nvim_tree_api = require('nvim-tree.api')
+            nvim_tree_api.tree.open({ current_window = true })
+          end,
+
+          on_did_open = function()
+            local nvim_tree_api = require('nvim-tree.api')
+
+            vim.opt_local.number = false
+            vim.opt_local.signcolumn = 'no'
+            vim.opt_local.statuscolumn = ''
+          end,
+
+          --- Cleans up some things when closing the drawer.
+          on_did_close = function()
+            local nvim_tree_api = require('nvim-tree.api')
+            nvim_tree_api.tree.close()
+          end,
+        })
+      end
+    },
+    { "craftzdog/solarized-osaka.nvim",
+      lazy = false,
+      priority = 1000,
+      config = function()
+        require("solarized-osaka").setup({
+          styles = {
+              floats = "transparent"
+          },
+        })
+      end
+    },
 })
 
 require("bufferline").setup{}
@@ -126,5 +170,10 @@ require("nvim-tree").setup({
   },
   filters = {
     dotfiles = true,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true, -- Automatically close nvim-tree after opening a file
+    },
   },
 })

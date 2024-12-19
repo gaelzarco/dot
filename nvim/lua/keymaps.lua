@@ -1,7 +1,8 @@
 vim.g.mapleader = " " -- set the leader key to the space bar
 
--- Globals
+-- Misc 
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo last change" })
+vim.keymap.set("n", "<leader>R", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]]) 
 
 -- Nav Buffers
 vim.keymap.set("n", "<leader>b", ":bn<CR>", { desc = "Next buffer" })

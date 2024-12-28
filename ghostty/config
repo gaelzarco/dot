@@ -1,0 +1,24 @@
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
+title = ""
+font-size = 15
+# window-decoration = false
+macos-titlebar-style = tabs
+background = 000000 
+background-opacity = 0.85 
+background-blur-radius = 50
+foreground = ffffff
+macos-icon-screen-color = 000000
+# Comments start with a `#` and are only valid on their own line.
+# Blank lines are ignored!
+
+keybind = cmd+t=new_tab
+keybind = ctrl+h=previous_tab
+keybind = ctrl+l=next_tab
+keybind = cmd+x=close_surface
+keybind = cmd+shift+l=new_split:right
+keybind = cmd+shift+h=new_split:left
+keybind = cmd+shift+j=new_split:top
+
+# Empty values reset the configuration to the default value
+font-family = GeistMono Nerd Font

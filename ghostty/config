@@ -1,24 +1,38 @@
-# The syntax is "key = value". The whitespace around the
-# equals doesn't matter.
+theme = iTerm2 Solarized Dark
 title = ""
-font-size = 15
-# window-decoration = false
-macos-titlebar-style = tabs
+font-family = GeistMono Nerd Font
+font-size = 11
 background = 000000 
 background-opacity = 0.85 
-background-blur-radius = 50
+background-blur-radius = 20
 foreground = ffffff
-macos-icon-screen-color = 000000
-# Comments start with a `#` and are only valid on their own line.
-# Blank lines are ignored!
 
-keybind = cmd+t=new_tab
-keybind = ctrl+h=previous_tab
-keybind = ctrl+l=next_tab
-keybind = cmd+x=close_surface
-keybind = cmd+shift+l=new_split:right
-keybind = cmd+shift+h=new_split:left
-keybind = cmd+shift+j=new_split:top
+# Disable on MacOS
+window-decoration = false  
+# Disable on Linux
+# macos-titlebar-style = tabs 
+# macos-icon-screen-color = 000000
 
-# Empty values reset the configuration to the default value
-font-family = GeistMono Nerd Font
+# Linux Specific
+gtk-adwaita = false
+gtk-tabs-location = left
+
+# Manage 
+keybind = ctrl+space>t=new_tab
+keybind = ctrl+space>w=close_surface
+keybind = ctrl+space>l=new_split:right
+keybind = ctrl+space>h=new_split:left
+keybind = ctrl+space>k=new_split:up
+keybind = ctrl+space>j=new_split:down
+
+# Navigate 
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+k=next_tab
+keybind = ctrl+j=previous_tab
+
+# Adjust
+keybind = ctrl+shift+l=resize_split:right,10
+keybind = ctrl+shift+h=resize_split:left,10
+keybind = ctrl+shift+k=resize_split:up,10
+keybind = ctrl+shift+j=resize_split:down,10

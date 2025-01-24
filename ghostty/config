@@ -1,17 +1,17 @@
 theme = iTerm2 Solarized Dark
 title = ""
 font-family = GeistMono Nerd Font
-font-size = 15
+font-size = 11
 background = 000000 
 background-opacity = 0.85 
 background-blur-radius = 20
 foreground = ffffff
 
 # Disable on MacOS
-# window-decoration = false  
+window-decoration = false  
 # Disable on Linux
-macos-titlebar-style = tabs 
-macos-icon-screen-color = 000000
+#macos-titlebar-style = tabs 
+#macos-icon-screen-color = 000000
 
 # Linux Specific
 gtk-adwaita = false
@@ -30,6 +30,8 @@ keybind = ctrl+l=goto_split:right
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+k=goto_split:top
 keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+alt+j=scroll_page_down
+keybind = ctrl+alt+k=scroll_page_up
 
 # Adjust
 keybind = ctrl+shift+l=resize_split:right,10

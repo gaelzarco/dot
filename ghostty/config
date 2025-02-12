@@ -8,14 +8,14 @@ background-blur-radius = 20
 foreground = ffffff
 
 # Disable on MacOS
-# window-decoration = false  
+# window-decoration = false 
 # Disable on Linux
 macos-titlebar-style = tabs 
 macos-icon-screen-color = 000000
 
 # Linux Specific
-gtk-adwaita = false
-gtk-tabs-location = left
+# gtk-adwaita = false
+# gtk-tabs-location = left
 
 # Manage 
 keybind = ctrl+space>t=new_tab

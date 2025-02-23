@@ -2,10 +2,15 @@ theme = iTerm2 Solarized Dark
 title = ""
 font-family = GeistMono Nerd Font
 font-size = 15
-background = 000000 
-background-opacity = 0.92 
-background-blur-radius = 20
-foreground = ffffff
+background-opacity = 0.8 
+background-blur-radius = 50
+
+# Themes
+theme = solarized-osaka
+background = 000000
+
+# Shaders
+# custom-shader = ~/.config/ghostty/shaders/crt0.glsl
 
 # Disable on MacOS
 # window-decoration = false 

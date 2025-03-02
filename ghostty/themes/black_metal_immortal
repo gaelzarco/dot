@@ -1,0 +1,31 @@
+# Black Metal (Immortal)
+background = #000000
+foreground = #c1c1c1
+selection-background = #222222
+selection-foreground = #c1c1c1
+cursor-color = #c1c1c1
+
+# black
+palette = 0=#000000
+palette = 8=#121212
+# red
+palette = 1=#5f8787
+palette = 9=#aaaaaa
+# green
+palette = 2=#7799bb
+palette = 10=#aaaaaa
+# yellow
+palette = 3=#556677
+palette = 11=#999999
+# blue
+palette = 4=#888888
+palette = 12=#999999
+# magenta
+palette = 5=#999999
+palette = 13=#999999
+# cyan
+palette = 6=#aaaaaa
+palette = 14=#444444
+# white
+palette = 7=#c1c1c1
+palette = 15=#c1c1c1

@@ -8,11 +8,6 @@ vim.keymap.set("n", "<leader>R", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left
 vim.keymap.set("n", "<leader>b", ":bn<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>B", ":bp<CR>", { desc = "Previous Buffer" })
 
--- Telescope + Live Rip Grep
-vim.keymap.set("n", "<leader>f", ":Telescope find_files<CR>", { desc = "Fuzzy find files" })
-vim.keymap.set('n', '<leader>F', ":Telescope live_grep<CR>", { desc = "Fuzzy find files" })
-vim.keymap.set('n', '<leader>g', ":Telescope buffers<CR>", { desc = "Fuzzy find files" })
-
 -- Language Server 
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
@@ -29,9 +24,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>h', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
   end,
 })
-
--- Nvim Drawer
-local drawer = require('nvim-drawer')
-vim.keymap.set('n', '<leader>e', function()
-  drawer.focus_or_toggle()
-end, { desc = "Toggle drawer" })

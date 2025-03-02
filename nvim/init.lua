@@ -1,6 +1,5 @@
 require('options')
 require('plugins')
-require('telescope')
-require('colorscheme')
 require('lsp')
 require('keymaps')
+require('colorscheme')

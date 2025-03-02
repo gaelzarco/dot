@@ -6,6 +6,7 @@ vim.opt.mouse = 'a'                 -- allow the mouse to be used in Nvim
 vim.o.scrolloff = 10 
 vim.o.sidescrolloff = 10
 vim.o.fillchars='eob: '            -- fuck tildes
+vim.o.textwidth = 80
 
 -- Tab
 vim.opt.tabstop = 2                 -- number of visual spaces per TAB

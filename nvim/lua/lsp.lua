@@ -36,7 +36,7 @@ cmp.setup({
 
 -- LSP setup
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local servers = {'rust_analyzer', 'ts_ls', 'html', 'cssls', 'jsonls', 'yamlls', 'hyprls'}
+local servers = {'rust_analyzer', 'ts_ls', 'html', 'cssls', 'jsonls', 'yamlls', 'hyprls', 'clangd'}
 
 -- Common LSP setup for all servers
 local function setup_server(server)

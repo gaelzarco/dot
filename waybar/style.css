@@ -63,11 +63,10 @@ window#waybar.hidden {
   color: white;
   border: 1px solid rgba(86, 86, 86, 0.3);
   animation-name: pulse;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  min-width: 40px;
   transition: all 0.2s ease-in-out;
   text-shadow: none;
 }

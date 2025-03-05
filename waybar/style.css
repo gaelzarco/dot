@@ -8,9 +8,8 @@
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.0);
   box-shadow: none;
-  border: none;
 }
 
 window#waybar.hidden {
@@ -19,35 +18,36 @@ window#waybar.hidden {
 
 #workspaces {
   color: #ffffff;
-  background: rgba(10, 10, 10, 0);
-  margin: 4px 5px 5px 5px;
+  margin: 5px 0px 0px 0px;
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+  border: 1px solid rgba(86, 86, 86, 0.3);
   font-style: normal;
   font-size: 16px;
 }
 
 #workspaces button {
   color: #ffffff;
-  padding: 3px 10px;
   margin: 2px 2px;
+  padding: 2px 5px;
   border-radius: 15px;
-  border: 0px;
   transition: all 0.2s ease-in-out;
   text-shadow: none;
+  border: 1px solid rgba(86, 86, 86, 0);
 }
 
 #workspaces button:hover {
-  color: #000;
-  background: rgba(255, 255, 255, 0.8);
-  min-width: 40px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.0);
+  border: 1px solid rgba(86, 86, 86, 0.5);
   transition: all 0.2s ease-in-out;
   text-shadow: none;
 }
 
 #workspaces button.active {
-  color: #000;
-  background: rgba(255, 255, 255, 0.95);
-  min-width: 40px;
+  color: #ffffff;
+  border: 1px solid rgba(86, 86, 86, 0.3);
+  margin: 2px 2px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   text-shadow: none;
@@ -55,18 +55,18 @@ window#waybar.hidden {
 
 @keyframes pulse {
     to {
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.7);
     }
 }
 
 #workspaces button.urgent {
   color: white;
-  border: 1px solid rgba(86, 86, 86, 0.8);
-  /* animation-name: pulse;
+  border: 1px solid rgba(86, 86, 86, 0.3);
+  animation-name: pulse;
   animation-duration: 1.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: alternate; */
+  animation-direction: alternate;
   min-width: 40px;
   transition: all 0.2s ease-in-out;
   text-shadow: none;
@@ -74,6 +74,22 @@ window#waybar.hidden {
 
 #window {
   color: #ffffff;
+}
+
+#sys {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: 1px solid rgba(86, 86, 86, 0.3);
+  margin: 5px 0px 0px 5px;
+  padding: 0px;
+}
+
+#info {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: 1px solid rgba(86, 86, 86, 0.3);
+  margin: 5px 5px 0px 0px;
+  padding: 0px;
 }
 
 #clock,
@@ -89,13 +105,13 @@ window#waybar.hidden {
 #custom-gpu,
 #custom-swaync {
   padding: 0px 8px;
-  margin: 0px 3px 0px 3px;
 }
 
 #custom-logo {
-  margin-top: 0px;
   padding: 0px 10px;
   margin-left: 3px;
+  border-radius: 15px;
+  border: 1px solid rgba(86, 86, 86, 0.3);
 }
 
 #user,
@@ -112,8 +128,7 @@ window#waybar.hidden {
 }
 
 #tray {
-  font-size: 10px;
-  margin-top: -1px;
+  padding: 0 8px;
 }
 
 #user {
@@ -121,10 +136,10 @@ window#waybar.hidden {
 }
 
 #custom-swaync {
-  margin-top: 2px;
-  padding: 0px 2px;
+  padding: 0px 0px;
   padding-right: 8px;
 }
+
 #custom-sep {
   padding: 0px;
   color: #ffffff;
@@ -143,7 +158,6 @@ window#waybar.empty #window {
 #custom-gpu,
 #clock,
 #user {
-  margin-top: 3px;
   color: #ffffff;
 }
 

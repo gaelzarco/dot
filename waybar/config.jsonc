@@ -1,54 +1,48 @@
 {
   "layer": "top",
   "position": "top",
-  "mode": "dock",
   "height": 10,
   "spacing": 0,
   "exclusive": true,
-  "start_hidden": true,
+  "start_hidden": false,
   "gtk-layer-shell": true,
   "passthrough": false,
   "fixed-center": true,
   "reload_style_on_change": true,
   "modules-left": [
-    "user",
-    "cpu",
-    "memory",
-    "custom/gpu"
+    "group/sys"
   ],
   "modules-center": [
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "tray",
-    "clock",
-    "custom/swaync"
+    "group/info"
   ],
+  "group/sys": {
+    "orientation": "horizontal",
+    "modules": [
+      "user",
+      "cpu",
+      "memory",
+      "custom/gpu"
+    ]
+  },
+  "group/info": {
+    "orientation": "horizontal",
+    "modules": [
+      "tray",
+      "clock",
+      "custom/swaync"
+    ]
+  },
   "tray": {
     "show-passive-items": true,
     "spacing": 10
   },
-  // "battery": {
-  //   "bat": "BAT1",
-  //   "adapter": "ADP0",
-  //   "interval": 1,
-  //   "states": {
-  //     "warning": 30,
-  //     "critical": 15
-  //   },
-  //   "max-length": 20,
-  //   "format": "{icon}{capacity}%",
-  //   "format-warning": "{icon}{capacity}%",
-  //   "format-critical": "{icon}{capacity}%",
-  //   "format-charging": "<span foreground='#26ff55'> {capacity} %</span>",
-  //   "format-plugged": "<span foreground='#26ff55'>  {capacity}%</span>",
-  //   "format-alt": "{icon} {time}",
-  //   "format-full": "<span foreground='#26ff55'> {capacity} %</span>",
-  //   "format-icons": [" ", " ", " ", " ", " "]
-  // },
   "clock": {
-    "format": "{:%a %b %d  %I:%M %p}",
-    "tooltip-format": "<big>{:%B %Y}</big>\n\n<small>{calendar}</small>"
+    "format": "{:%a %b %d  %I:%M:%S %p}",
+    "tooltip-format": "<big>{:%B %Y}</big>\n\n<small>{calendar}</small>",
+    "interval": 1
   },
   "cpu": {
     "format": "CPU  {usage}%",
@@ -84,7 +78,7 @@
     "on-click": "pavucontrol"
   },
   "custom/swaync": {
-    "format": "|   <span>{}</span>",
+    "format": "|  {}",
     "tooltip": false,
     "return-type": "json",
     "exec-if": "which swaync-client",

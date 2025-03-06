@@ -15,31 +15,20 @@
   "notification-icon-size": 64,
   "notification-body-image-height": 100,
   "notification-body-image-width": 200,
-  "timeout": 10,
-  "timeout-low": 5,
+  "timeout": 5,
+  "timeout-low": 3,
   "timeout-critical": 0,
   "fit-to-screen": true,
   "relative-timestamps": true,
   "control-center-width": 500,
-  "control-center-height": 600,
+  "control-center-height": 300,
   "notification-window-width": 400,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
-  "transition-time": 200,
+  "transition-time": 50,
   "hide-on-clear": false,
   "hide-on-action": true,
   "script-fail-notify": true,
-  "scripts": {
-    "example-script": {
-      "exec": "echo 'Do something...'",
-      "urgency": "Normal"
-    },
-    "example-action-script": {
-      "exec": "echo 'Do something actionable!'",
-      "urgency": "Normal",
-      "run-on": "action"
-    }
-  },
   "notification-visibility": {
     "example-name": {
       "state": "muted",
@@ -52,6 +41,7 @@
     "title",
     "mpris",
     "notifications",
+    "label",
     "buttons-grid"
   ],
   "widget-config": {
@@ -61,7 +51,7 @@
       "clear-all-button": true
     },
     "title": {
-      "text": "Notification Center",
+      "text": "Notifications",
       "clear-all-button": false,
       "button-text": "❌"
     },
@@ -76,23 +66,23 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "DnD",
+          "label": "⏾ DnD",
           "type": "toggle",
           "active": false,
           "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && swaync-client -dn || swaync-client -df'"
         },
         {
-          "label": "Reboot",
+          "label": "⮎ Restart",
           "command": "sh -c 'systemctl reboot'",
           "enum": "normal"
         },
         {
-          "label": "Suspend",
+          "label": "⏲ Suspend",
           "command": "sh -c 'systemctl suspend'",
           "enum": "normal"
         },
         {
-          "label": "Power",
+          "label": "⏻ Power",
           "command": "sh -c 'systemctl poweroff'",
           "enum": "normal"
         }

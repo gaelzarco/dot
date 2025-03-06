@@ -12,7 +12,7 @@
     alt-color: #111111FF;
     wbg-color: #000000;
     w-border: 1px solid;
-    w-border-color: rgba(86,86,86,0.6);
+    w-border-color: rgba(86,86,86,0.3);
     w-padding: 12px;
 }
 
@@ -39,7 +39,7 @@ window {
 	border: @w-border;
 	border-color: @w-border-color;
     padding: @w-padding;
-	background-color: rgba(15, 15, 15, 0.8);
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 prompt {

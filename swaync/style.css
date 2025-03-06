@@ -1,13 +1,13 @@
 @define-color cc-bg rgba(0, 0, 0, 0.3);
 @define-color noti-border-color rgba(89, 89, 89, 0.6);
-@define-color noti-bg rgba(0, 0, 0, 0.3);
-@define-color noti-bg-opaque rgba(0, 0, 0, 0.3);
-@define-color noti-bg-darker rgba(0, 0, 0, 0.3);
+@define-color noti-bg rgba(0, 0, 0, 0.9);
+@define-color noti-bg-opaque rgba(0, 0, 0, 0.9);
+@define-color noti-bg-darker rgba(0, 0, 0, 0.9);
 @define-color noti-bg-hover rgba(0, 0, 0, 0.6);
-@define-color noti-bg-hover-opaque rgba(0, 0, 0, 0.3);
-@define-color noti-bg-focus rgba(0, 0, 0, 0.3);
-@define-color noti-close-bg rgba(10, 10, 10, 0.3);
-@define-color noti-close-bg-hover rgba(10, 10, 10, 0.5);
+@define-color noti-bg-hover-opaque rgba(0, 0, 0, 0.9);
+@define-color noti-bg-focus rgba(0, 0, 0, 0.9);
+@define-color noti-close-bg rgba(10, 10, 10, 0.9);
+@define-color noti-close-bg-hover rgba(10, 10, 10, 0.9);
 @define-color text-color rgb(255, 255, 255);
 @define-color text-color-disabled rgb(255, 255, 255);
 @define-color bg-selected rgb(120, 225, 120);
@@ -41,23 +41,25 @@
   border: none;
   min-width: 24px;
   min-height: 24px;
+  border: 1px solid rgba(89, 89, 89, 0.0);
 }
 
 .notification-row .notification-background .close-button:hover {
   box-shadow: none;
-  background: rgba(255, 255, 255, 0.5);
-  color: black;
-  border: none;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border: 1px solid rgba(89, 89, 89, 0.7);
 }
 
 .close-button {
-  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 200px;
   transition: all 200ms ease-in-out;
 }
 
 .notification .close-button {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .notification-row .notification-background .notification {
@@ -299,6 +301,7 @@
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
   background: @cc-bg;
+  background: rgba(0,0,0,0.9);
   color: @text-color;
   border-radius: 10px;
   margin: 14px 14px 200px 30px;

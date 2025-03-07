@@ -2,10 +2,13 @@ vim.opt.clipboard = 'unnamedplus'   -- use system clipboard
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 vim.opt.mouse = 'a'                 -- allow the mouse to be used in Nvim
 
+-- Latex
+vim.g.vimtex_compiler_method = 'latexmk'
+
 -- Goated
 vim.o.scrolloff = 10 
 vim.o.sidescrolloff = 10
-vim.o.fillchars='eob: '            -- fuck tildes
+vim.o.fillchars='eob: '             -- fuck tildes
 vim.o.textwidth = 80
 
 -- Tab

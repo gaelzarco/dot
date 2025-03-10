@@ -38,11 +38,11 @@
   },
   "widgets": [
     "inhibitors",
+    "label",
+    "buttons-grid",
     "title",
     "mpris",
-    "notifications",
-    "label",
-    "buttons-grid"
+    "notifications"
   ],
   "widget-config": {
     "inhibitors": {

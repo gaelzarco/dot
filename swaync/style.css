@@ -1,13 +1,13 @@
 @define-color cc-bg rgba(0, 0, 0, 0.3);
 @define-color noti-border-color rgba(89, 89, 89, 0.6);
-@define-color noti-bg rgba(0, 0, 0, 0.9);
-@define-color noti-bg-opaque rgba(0, 0, 0, 0.9);
-@define-color noti-bg-darker rgba(0, 0, 0, 0.9);
+@define-color noti-bg rgba(0, 0, 0, 0.8);
+@define-color noti-bg-opaque rgba(0, 0, 0, 0.8);
+@define-color noti-bg-darker rgba(0, 0, 0, 0.8);
 @define-color noti-bg-hover rgba(0, 0, 0, 0.6);
-@define-color noti-bg-hover-opaque rgba(0, 0, 0, 0.9);
-@define-color noti-bg-focus rgba(0, 0, 0, 0.9);
-@define-color noti-close-bg rgba(10, 10, 10, 0.9);
-@define-color noti-close-bg-hover rgba(10, 10, 10, 0.9);
+@define-color noti-bg-hover-opaque rgba(0, 0, 0, 0.8);
+@define-color noti-bg-focus rgba(0, 0, 0, 0.8);
+@define-color noti-close-bg rgba(10, 10, 10, 0.8);
+@define-color noti-close-bg-hover rgba(10, 10, 10, 0.8);
 @define-color text-color rgb(255, 255, 255);
 @define-color text-color-disabled rgb(255, 255, 255);
 @define-color bg-selected rgb(120, 225, 120);
@@ -64,7 +64,7 @@
 
 .notification-row .notification-background .notification {
   /* The actual notification */
-  border-radius: 10px;
+  border-radius: 8px;
   border: 0.5px solid @noti-border-color;
   box-shadow: none;
   transition: background 0.15s ease-in-out;
@@ -102,7 +102,7 @@
 
 .notification-row .notification-background .notification .notification-default-action {
   /* The large action that also displays the notification summary and body */
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
 }
 
@@ -115,14 +115,14 @@
 
 .notification-row .notification-background .notification .notification-default-action .notification-content {
   background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 12px 10px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .image {
   /* Notification Primary Image */
   -gtk-icon-effect: none;
-  border-radius: 10px;
+  border-radius: 8px;
   /* Size in px */
   margin: 4px;
   margin-right: 10px;
@@ -186,7 +186,7 @@
   color: @text-color;
   caret-color: @text-color;
   border: 0.5px solid @noti-border-color;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
@@ -303,7 +303,7 @@
   background: @cc-bg;
   background: rgba(0,0,0,0.9);
   color: @text-color;
-  border-radius: 10px;
+  border-radius: 8px;
   margin: 14px 14px 300px 30px;
   border: 0.5px solid rgba(89, 89, 89, 0.6);
 }
@@ -394,7 +394,7 @@
 }
 
 .widget-dnd>switch slider {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 12px;
   border: none;
 }
@@ -420,7 +420,7 @@
   padding: 12px;
   margin: 10px 12px;
   background-color: @noti-bg;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: none;
 }
 
@@ -430,7 +430,7 @@
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-title {
@@ -468,7 +468,7 @@
 .widget-buttons-grid {
   padding: 5px;
   margin: 5px 2px 5px 2px;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: transparent;
 }
 

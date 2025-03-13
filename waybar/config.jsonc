@@ -35,6 +35,11 @@
       "custom/swaync"
     ]
   },
+  "user": {
+    "format": " ",
+    "interval": 60,
+    "icon": true
+  },
   "tray": {
     "show-passive-items": true,
     "spacing": 10
@@ -45,37 +50,20 @@
     "interval": 1
   },
   "cpu": {
-    "format": "CPU  {usage}%",
+    "format": "{usage}% <span size='xx-small' foreground='#AAAAAA'>CPU</span>",
     "tooltip": true,
     "interval": 1
   },
   "memory": {
-    "format": "RAM  {percentage}%",
+    "format": "{percentage}% <span size='xx-small' foreground='#AAAAAA'>RAM</span>",
     "tooltip": true,
     "interval": 1
   },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "format": "GPU  {}%",
+    "format": "{}% <span size='xx-small' foreground='#AAAAAA'>GPU</span>",
     "tooltip": false,
     "interval": 1
-  },
-  "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{volume}%   {icon}",
-    "format-bluetooth": "{volume}%    {icon}",
-    "format-bluetooth-muted": "MUTE    {icon}",
-    "format-muted": "MUTE   {icon}",
-    "format-source": "",
-    "format-source-muted": "",
-    "format-icons": {
-      "default": [
-        " ",
-        " ",
-        " "
-      ]
-    },
-    "on-click": "pavucontrol"
   },
   "custom/swaync": {
     "format": "|  {}",
@@ -86,19 +74,6 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
-  "custom/logo": {
-    "format": "✧",
-    "tooltip": false
-  },
-  "custom/sep": {
-    "format": "|",
-    "tooltip": false
-  },
-  "custom/power": {
-    "tooltip": false,
-    "on-click": "~/.config/hypr/scripts/wlogout.sh",
-    "format": " "
   },
   "network": {
     "format": "{ifname}",
@@ -119,13 +94,6 @@
     "on-click": "blueman-manager",
     "format-no-controller": ""
   },
-  // Other
-  "user": {
-    "format": "{user}",
-    "interval": 60,
-    "icon": true
-  },
-  // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 18,

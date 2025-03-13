@@ -1,13 +1,13 @@
 * {
   min-height: 0;
   font-family: Geist Regular;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
 }
 
 window#waybar {
   transition-property: background-color;
-  transition-duration: 0.5s;
+  transition-duration: 0.1s;
   background-color: rgba(0, 0, 0, 0.0);
   box-shadow: none;
 }
@@ -18,12 +18,10 @@ window#waybar.hidden {
 
 #workspaces {
   color: #ffffff;
-  margin: 5px 0px 0px 0px;
+  margin: 4px 0px 0px 0px;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 15px;
   border: 1px solid rgba(86, 86, 86, 0.3);
-  font-style: normal;
-  font-size: 16px;
 }
 
 #workspaces button {
@@ -31,55 +29,34 @@ window#waybar.hidden {
   margin: 2px 2px;
   padding: 2px 5px;
   border-radius: 15px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   text-shadow: none;
   border: 1px solid rgba(86, 86, 86, 0);
-}
-
-#workspaces button:hover {
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.0);
-  border: 1px solid rgba(86, 86, 86, 0.5);
-  transition: all 0.2s ease-in-out;
-  text-shadow: none;
 }
 
 #workspaces button.active {
   color: #ffffff;
   border: 1px solid rgba(86, 86, 86, 0.3);
   margin: 2px 2px;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  text-shadow: none;
 }
 
-@keyframes pulse {
-    to {
-      border: 1px solid rgba(255, 255, 255, 0.7);
-    }
+#workspaces button:hover {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.0);
+  border: 1px solid rgba(86, 86, 86, 0.7);
 }
 
 #workspaces button.urgent {
-  color: white;
-  border: 1px solid rgba(86, 86, 86, 0.3);
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  transition: all 0.2s ease-in-out;
-  text-shadow: none;
-}
-
-#window {
-  color: #ffffff;
+  color: black;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(86, 86, 86, 0.0);
 }
 
 #sys {
   background: rgba(0, 0, 0, 0.9);
   border-radius: 15px;
   border: 1px solid rgba(86, 86, 86, 0.3);
-  margin: 5px 0px 0px 5px;
+  margin: 4px 0px 0px 5px;
   padding: 0px;
 }
 
@@ -87,7 +64,7 @@ window#waybar.hidden {
   background: rgba(0, 0, 0, 0.9);
   border-radius: 15px;
   border: 1px solid rgba(86, 86, 86, 0.3);
-  margin: 5px 5px 0px 0px;
+  margin: 4px 5px 0px 0px;
   padding: 0px;
 }
 
@@ -101,83 +78,28 @@ window#waybar.hidden {
 #power,
 #network,
 #bluetooth,
-#custom-gpu,
 #custom-swaync {
-  padding: 0px 8px;
-}
-
-#custom-logo {
-  padding: 0px 10px;
-  margin-left: 3px;
-  border-radius: 15px;
-  border: 1px solid rgba(86, 86, 86, 0.3);
-}
-
-#user,
-#custom-power,
-#taskbar,
-#window {
-  margin-top: 0px;
-  padding: 0px 10px;
-}
-
-#custom-power {
-  margin-top: -1px;
-  margin-right: 3px;
-}
-
-#tray {
-  padding: 0 8px;
+  padding: 0px 4px;
 }
 
 #user {
-  padding-left: 12px;
+  padding: 0px 4px 0px 8px;
+}
+
+#custom-gpu {
+  padding: 0px 8px 0px 4px;
+}
+
+#tray {
+  padding: 0px 4px 0px 8px;
 }
 
 #custom-swaync {
-  padding: 0px 0px;
   padding-right: 8px;
-}
-
-#custom-sep {
-  padding: 0px;
-  color: #ffffff;
-}
-
-#custom-spotify.playing {
-  color: #ffffff;
 }
 
 window#waybar.empty #window {
   background-color: transparent;
-}
-
-#cpu,
-#memory,
-#custom-gpu,
-#clock,
-#user {
-  color: #ffffff;
-}
-
-#clock {
-  color: #ffffff;
-}
-
-#calendar {
-  color: #ffffff;
-}
-
-#window {
-  color: #ffffff;
-}
-
-#pulseaudio {
-  color: #ffffff;
-}
-
-#pulseaudio.muted {
-  color: #ffffff;
 }
 
 tooltip {

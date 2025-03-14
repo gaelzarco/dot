@@ -1,25 +1,25 @@
 title = ""
 font-family = GeistMono Nerd Font
-font-size = 15
+font-size = 11
 background-opacity = 0.8 
 background-blur-radius = 50
 
 # Themes
-theme = black_metal_immortal
+theme = black_metal_dark_funeral
 background = 000000
 
 # Shaders
 # custom-shader = ~/.config/ghostty/shaders/crt0.glsl
 
 # Disable on MacOS
-# window-decoration = false 
+window-decoration = false 
 # Disable on Linux
-macos-titlebar-style = tabs 
-macos-icon-screen-color = 000000
+# macos-titlebar-style = tabs 
+# macos-icon-screen-color = 000000
 
 # Linux Specific
-# gtk-adwaita = false
-# gtk-tabs-location = left
+gtk-adwaita = false
+gtk-tabs-location = left
 
 # Manage 
 keybind = ctrl+space>t=new_tab

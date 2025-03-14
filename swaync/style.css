@@ -22,9 +22,7 @@
 }
 
 .notification-row .notification-background {
-  padding: 4px 10px;
-  margin-top: 9px;
-  margin-right: 4px;
+  padding: 6px 6px;
 }
 
 .notification-row .notification-background .close-button {
@@ -304,7 +302,7 @@
   background: rgba(0,0,0,0.9);
   color: @text-color;
   border-radius: 8px;
-  margin: 14px 14px 300px 30px;
+  margin: 6px 6px 300px 30px;
   border: 0.5px solid rgba(89, 89, 89, 0.6);
 }
 

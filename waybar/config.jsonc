@@ -21,7 +21,10 @@
   "group/sys": {
     "orientation": "horizontal",
     "modules": [
-      "user"
+      "user",
+      "cpu",
+      "memory",
+      "custom/gpu"
     ]
   },
   "group/info": {

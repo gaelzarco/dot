@@ -302,7 +302,7 @@
   background: rgba(0,0,0,0.9);
   color: @text-color;
   border-radius: 8px;
-  margin: 6px 6px 300px 30px;
+  margin: 6px 6px 450px 30px;
   border: 0.5px solid rgba(89, 89, 89, 0.6);
 }
 
@@ -409,15 +409,15 @@
 
 /* Mpris widget */
 .widget-mpris {
-  background: transparent;
+  margin-bottom: -30px;
+  padding: 0px;
   box-shadow: none;
   /* The parent to all players */
 }
 
 .widget-mpris .widget-mpris-player {
-  padding: 12px;
-  margin: 10px 12px;
-  background-color: @noti-bg;
+  margin: 12px;
+  background-color: rgba(0, 0, 0, 0.85);
   border-radius: 8px;
   box-shadow: none;
 }
@@ -446,7 +446,6 @@
 }
 
 .widget-mpris .widget-mpris-player>box>button:hover {
-  background-color: @noti-bg-hover;
 }
 
 .widget-mpris>box>button {
@@ -458,20 +457,17 @@
 }
 
 .widget-mpris .widget-mpris-player {
-  background: rgba(0, 0, 0, 0.75);
-  border: 0.5px solid rgba(89, 89, 89, 0.6);
 }
 
 /* Buttons widget */
 .widget-buttons-grid {
   padding: 5px;
-  margin: 5px 2px 5px 2px;
-  border-radius: 8px;
+  margin: 0px 2px 5px 2px;
   background-color: transparent;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-  min-width: 150px;
+  min-width: 92px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 100px;
   padding: 5px;
@@ -529,7 +525,7 @@
   margin: 8px 9px 0px 9px;
   border: 1px solid;
   border-color: rgba(89,89,89, 0.3);
-  border-radius: 100px;
+  border-radius: 8px;
 }
 
 .widget-volume>box>button {

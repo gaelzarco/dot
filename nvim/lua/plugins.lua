@@ -51,5 +51,14 @@ require("lazy").setup({
       vim.g.vimtex_view_method = "zathura"
     end
   },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true
+  },
+  {
+    'windwp/nvim-ts-autotag',
+    config = function() require('nvim-ts-autotag').setup() end
+  },
   { 'metalelf0/base16-black-metal-scheme' }
 })

@@ -120,6 +120,17 @@ run = 'move-node-to-workspace 5'
 if.app-id = 'com.square-enix.finalfantasyxiv'
 run = 'move-node-to-workspace 5'
 
+[[on-window-detected]]
+if.app-id = 'net.rpcs3.rpcs3'
+run = [
+  'layout floating',
+  'move-node-to-workspace 5'
+]
+
+[[on-window-detected]]
+if.app-id = 'NULL-APP-BUNDLE-ID'
+run = 'layout floating'
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]

@@ -5,6 +5,39 @@ local luasnip = require('luasnip')
 -- File type configuration
 vim.filetype.add({ pattern = { [".*/hypr/.*%.conf"] = "hyprlang" } })
 
+-- Set up nvim-autopairs
+local npairs = require('nvim-autopairs')
+npairs.setup({
+    check_ts = true,  -- Use treesitter for better matching
+    ts_config = {
+        lua = {'string'},  -- Don't add pairs in lua string treesitter nodes
+        javascript = {'template_string'},
+        java = false,  -- Don't check treesitter on java
+    },
+    disable_filetype = { "TelescopePrompt" },
+    fast_wrap = {
+        map = '<M-e>',  -- Alt+e to use fast_wrap
+        chars = { '{', '[', '(', '"', "'" },
+        pattern = [=[[%'%"%)%>%]%)%}%,]]=],
+        end_key = '$',
+        keys = 'qwertyuiopzxcvbnmasdfghjkl',
+        check_comma = true,
+        highlight = 'Search',
+        highlight_grey = 'Comment'
+    },
+})
+
+-- Set up autopairs with cmp integration
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+)
+
+-- Add support for HTML/XML tags with nvim-ts-autotag if you use it
+-- Uncomment if you have nvim-ts-autotag installed
+require('nvim-ts-autotag').setup()
+
 -- Completion setup
 cmp.setup({
     snippet = {

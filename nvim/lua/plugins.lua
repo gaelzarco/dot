@@ -60,5 +60,35 @@ require("lazy").setup({
     'windwp/nvim-ts-autotag',
     config = function() require('nvim-ts-autotag').setup() end
   },
-  { 'metalelf0/base16-black-metal-scheme' }
+  { 'metalelf0/base16-black-metal-scheme' },
+  {
+    "mikavilpas/yazi.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "folke/snacks.nvim"
+    },
+    keys = {
+      {
+        "<leader>f",
+        "<cmd>Yazi<cr>",
+        desc = "Open yazi at the current file",
+      },
+      {
+        -- Open in the current working directory
+        "<leader>F",
+        "<cmd>Yazi cwd<cr>",
+        desc = "Open the file manager in nvim's working directory",
+      },
+    },
+    opts = {
+      open_for_directories = true,
+      keymaps = {
+        show_help = "<f1>",
+      },
+    },
+    init = function()
+      vim.g.loaded_netrw = 1
+      vim.g.loaded_netrwPlugin = 1
+    end,
+  }
 })

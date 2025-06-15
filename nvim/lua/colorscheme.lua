@@ -1,4 +1,4 @@
-local colorscheme = 'base16-black-metal-dark-funeral'
+local colorscheme = 'base16-black-metal-khold'
 
 -- vim.opt.background = "dark" -- set this to dark or light
 
@@ -14,6 +14,5 @@ end
 
 -- Uncomment the lines below to prevent overwriting transparent bg
 -- vim.cmd("autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE")
-
 -- vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
 -- vim.cmd("highlight NonText guibg=NONE ctermbg=NONE")

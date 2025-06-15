@@ -1,8 +1,10 @@
-title = ""
+# title = ""
 font-family = GeistMono Nerd Font
 font-size = 16
-background-opacity = 0.8 
-background-blur-radius = 50
+background-opacity = 0.1 
+background-blur-radius = 70
+window-padding-x = 5
+window-padding-y = 5
 
 # Themes
 theme = black_metal_dark_funeral
@@ -12,13 +14,16 @@ background = 000000
 # custom-shader = ~/.config/ghostty/shaders/crt0.glsl
 
 # Enable on MacOS
-# window-decoration = false 
+macos-titlebar-style = hidden 
+# Set to macos-icon to 'custom-style' to apply other icon opts below
+macos-icon = xray
+# macos-icon-screen-color = #000000
+# macos-icon-ghost-color = #FFFFFF 
+# macos-icon-frame = plastic 
 
 # Enable on Linux
-macos-titlebar-style = tabs 
-macos-icon-screen-color = 000000
-gtk-adwaita = false
-gtk-tabs-location = left
+# gtk-adwaita = false
+# gtk-tabs-location = left
 
 # Manage 
 keybind = ctrl+space>t=new_tab
@@ -39,3 +44,13 @@ keybind = ctrl+shift+l=resize_split:right,10
 keybind = ctrl+shift+h=resize_split:left,10
 keybind = ctrl+shift+k=resize_split:up,10
 keybind = ctrl+shift+j=resize_split:down,10
+
+# Disable alt-tab switching on MacOS (Aerospace)
+keybind = alt+left=ignore
+keybind = alt+up=ignore
+keybind = alt+down=ignore
+keybind = alt+right=ignore
+keybind = alt+h=ignore
+keybind = alt+j=ignore
+keybind = alt+k=ignore
+keybind = alt+l=ignore

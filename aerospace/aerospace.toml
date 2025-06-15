@@ -134,6 +134,18 @@ run = [
 ]
 
 [[on-window-detected]]
+if.app-id = 'com.valvesoftware.steam'
+run = [
+  'move-node-to-workspace 5'
+]
+
+[[on-window-detected]]
+if.app-id = 'com.valvesoftware.steam.helper'
+run = [
+  'move-node-to-workspace 5'
+]
+
+[[on-window-detected]]
 if.app-id = 'NULL-APP-BUNDLE-ID'
 run = 'layout floating'
 

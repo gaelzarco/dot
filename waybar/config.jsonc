@@ -21,7 +21,8 @@
   "group/sys": {
     "orientation": "horizontal",
     "modules": [
-      "user"
+      "user",
+      "custom/brightness"
     ]
   },
   "group/info": {
@@ -46,20 +47,31 @@
     "interval": 1
   },
   "cpu": {
-    "format": "{usage}% <span size='xx-small' foreground='#AAAAAA'>CPU</span>",
+    "format": "{usage}% <span foreground='#FFFFFF'>CPU</span>",
     "tooltip": true,
     "interval": 1
   },
   "memory": {
-    "format": "{percentage}% <span size='xx-small' foreground='#AAAAAA'>RAM</span>",
+    "format": "{percentage}% <span foreground='#FFFFFF'>RAM</span>",
     "tooltip": true,
     "interval": 1
   },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "format": "{}% <span size='xx-small' foreground='#AAAAAA'>GPU</span>",
+    "format": "{}% <span foreground='#FFFFFF'>GPU</span>",
     "tooltip": false,
     "interval": 1
+  },
+  "custom/brightness": {
+    "format": "<span>☀</span> {percentage}%",
+    "return-type": "json",
+    "exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+' | { read x; echo '{\"percentage\":'${x}'}'; }",
+    "on-scroll-up": "ddcutil --noverify setvcp 10 + 10 && pkill -RTMIN+5 waybar",
+    "on-scroll-down": "ddcutil --noverify setvcp 10 - 10 && pkill -RTMIN+5 waybar",
+    "on-click": "ddcutil --noverify setvcp 10 0 && pkill -RTMIN+5 waybar",
+    "on-click-right": "ddcutil --noverify setvcp 10 100 && pkill -RTMIN+5 waybar",
+    "signal": 5,
+    "tooltip": false
   },
   "custom/swaync": {
     "format": "|  {}",

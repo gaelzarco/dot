@@ -77,16 +77,13 @@ window#waybar.hidden {
 #memory,
 #power,
 #network,
-#bluetooth {
+#bluetooth,
+#custom-gpu {
   padding: 0px 4px;
 }
 
 #user {
   padding: 0px 5px 0px 8px;
-}
-
-#custom-gpu {
-  padding: 0px 8px 0px 4px;
 }
 
 #tray {
@@ -98,6 +95,14 @@ window#waybar.hidden {
 }
 
 #custom-swaync {
+  padding: 0px 8px 0px 4px;
+}
+
+#custom-brightness {
+  padding: 0px 8px 0px 4px;
+}
+
+#memory {
   padding: 0px 8px 0px 4px;
 }
 

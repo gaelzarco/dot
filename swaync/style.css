@@ -1,6 +1,6 @@
 @define-color cc-bg rgba(0, 0, 0, 0.3);
 @define-color noti-border-color rgba(89, 89, 89, 0.6);
-@define-color noti-bg rgba(0, 0, 0, 0.8);
+@define-color noti-bg rgba(0, 0, 0, 0.5);
 @define-color noti-bg-opaque rgba(0, 0, 0, 0.8);
 @define-color noti-bg-darker rgba(0, 0, 0, 0.8);
 @define-color noti-bg-hover rgba(0, 0, 0, 0.6);
@@ -299,7 +299,7 @@
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
   background: @cc-bg;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.5);
   color: @text-color;
   border-radius: 8px;
   margin: 6px 6px 450px 30px;

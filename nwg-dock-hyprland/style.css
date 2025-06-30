@@ -2,39 +2,37 @@ window {
   background: rgba(0,0,0,0.5);
 	border-radius: 100px;
 	border-style: none;
-  padding: 0px 1px 0px 1px;
-  margin: 0px 2px 0px 2px;
 }
 
 #box {
   /* Define attributes of the box surrounding icons here */
-  padding: 5px 2px;
+  padding: 2px 2px;
   border-radius: 100px;
   border: solid 1px rgba(89,89,89,0.5);
 }
 
 #active {
 	/* This is to underline the button representing the currently active window */
-  border: solid 0px;
-  border-radius: 10px;
+  border: solid 1px;
+  border-color: rgba(89,89,89,0.5);
+  border-radius: 100px;
+  padding: 0px;
 }
 
 button, image {
 	background: none;
 	border-style: none;
 	box-shadow: none;
-	color: #999
 }
 
 button {
-	padding: 4px;
-	color: #eee;
+  border: solid 1px;
+  border-color: rgba(89,89,89,0.0);
+	padding: 0px;
   font-size: 12px
 }
 
 button:hover {
-  border: solid 0px;
-  border-radius: 10px;
 }
 
 button:focus {

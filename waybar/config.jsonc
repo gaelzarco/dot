@@ -22,7 +22,11 @@
     "orientation": "horizontal",
     "modules": [
       "user",
-      "custom/brightness"
+      "custom/brightness",
+      "cpu",
+      "custom/gpu",
+      "memory",
+      "wlr/taskbar"
     ]
   },
   "group/info": {
@@ -47,18 +51,18 @@
     "interval": 1
   },
   "cpu": {
-    "format": "{usage}% <span foreground='#FFFFFF'>CPU</span>",
+    "format": "∵ {usage}%",
     "tooltip": true,
     "interval": 1
   },
   "memory": {
-    "format": "{percentage}% <span foreground='#FFFFFF'>RAM</span>",
+    "format": "⣼ {percentage}%",
     "tooltip": true,
     "interval": 1
   },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "format": "{}% <span foreground='#FFFFFF'>GPU</span>",
+    "format": "◌ {}%",
     "tooltip": false,
     "interval": 1
   },
@@ -104,7 +108,7 @@
   },
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 18,
+    "icon-size": 15,
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",

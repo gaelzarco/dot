@@ -78,12 +78,14 @@ window#waybar.hidden {
 #power,
 #network,
 #bluetooth,
-#custom-gpu {
+#custom-gpu,
+#custom-brightness,
+#memory {
   padding: 0px 4px;
 }
 
 #user {
-  padding: 0px 5px 0px 8px;
+  padding: 0px 4px 0px 8px;
 }
 
 #tray {
@@ -98,20 +100,36 @@ window#waybar.hidden {
   padding: 0px 8px 0px 4px;
 }
 
-#custom-brightness {
-  padding: 0px 8px 0px 4px;
-}
-
-#memory {
-  padding: 0px 8px 0px 4px;
-}
-
 window#waybar.empty #window {
   background-color: transparent;
 }
 
 tooltip {
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(89, 89, 89, 0.6);
+}
+#taskbar {
+  background: transparent;
+  padding: 3px 8px 3px 4px;
+}
+
+#taskbar button {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 6px;
+  padding: 0px 4px;
+  color: #ffffff;
+  font-size: 12px;
+  min-width: 0px;
+}
+
+#taskbar button:hover {
+  transition: all 0.2s ease;
+}
+
+#taskbar button.active {
+  border: 1px solid rgba(89, 89, 89, 0.5);
+  border-radius: 100px;
 }

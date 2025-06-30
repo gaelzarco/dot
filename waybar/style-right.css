@@ -1,0 +1,51 @@
+* {
+  min-height: 0;
+  font-family: Geist;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+window#waybar {
+  transition-property: background-color;
+  transition-duration: 0.1s;
+  background-color: rgba(0, 0, 0, 0.0);
+  box-shadow: none;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#taskbar {
+  border: 1px solid rgba(86, 86, 86, 0.5);
+  border-radius: 100px;
+  background: rgba(0,0,0,0.5);
+  padding: 2px;
+  margin: 0px 4px 0px 0px;
+}
+
+#taskbar button {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 6px;
+  padding: 5px 2px;
+  color: #ffffff;
+  font-size: 12px;
+  min-width: 0px;
+}
+
+#taskbar button:hover {
+  transition: all 0.2s ease;
+}
+
+#taskbar button.active {
+  border: 1px solid rgba(89, 89, 89, 0.5);
+  border-radius: 100px;
+}
+
+tooltip {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(89, 89, 89, 0.6);
+}

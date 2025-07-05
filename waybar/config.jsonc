@@ -67,13 +67,13 @@
   },
   "custom/brightness": {
     "format": "<span>☀</span> {percentage}%",
-    "return-type": "json",
+    "return-type": "json", 
     "exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+' | { read x; echo '{\"percentage\":'${x}'}'; }",
-    "on-scroll-up": "ddcutil --noverify setvcp 10 + 10 && pkill -RTMIN+5 waybar",
-    "on-scroll-down": "ddcutil --noverify setvcp 10 - 10 && pkill -RTMIN+5 waybar",
-    "on-click": "ddcutil --noverify setvcp 10 0 && pkill -RTMIN+5 waybar",
-    "on-click-right": "ddcutil --noverify setvcp 10 100 && pkill -RTMIN+5 waybar",
-    "signal": 5,
+    "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up && pkill -RTMIN+5 waybar",
+    "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down && pkill -RTMIN+5 waybar",
+    "on-click": "$HOME/.config/waybar/scripts/brightness_notify.sh min && pkill -RTMIN+5 waybar",
+    "on-click-right": "$HOME/.config/waybar/scripts/brightness_notify.sh max && pkill -RTMIN+5 waybar",
+    "signal": 5, 
     "tooltip": false
   },
   "custom/swaync": {

@@ -3,8 +3,7 @@
 # Optimized brightness control for Eve Spectrum ES07D03
 # Uses aggressive caching and optimized ddcutil settings
 
-# Configuration - optimized for your monitor
-I2C_BUS="2"  # Your monitor is on /dev/i2c-2
+I2C_BUS="2"
 CACHE_FILE="/tmp/brightness_cache"
 LOCK_FILE="/tmp/brightness_notification.lock"
 APPLY_LOCK="/tmp/brightness_apply.lock"

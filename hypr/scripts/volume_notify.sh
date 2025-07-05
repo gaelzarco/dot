@@ -20,4 +20,4 @@ else
     VOLUME=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -o "[0-9]\+" | sed -n 2p)
 fi
 
-notify-send -a "$DEVICE_NAME" -t 1000 "$DEVICE_NAME" -h string:x-canonical-private-synchronous:volume -h int:value:${VOLUME:-0}
+notify-send -e -a "$DEVICE_NAME" -t 2000 "$DEVICE_NAME" -h string:x-canonical-private-synchronous:volume -h int:value:${VOLUME:-0}

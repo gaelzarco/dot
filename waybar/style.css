@@ -18,17 +18,12 @@ window#waybar.hidden {
 
 #workspaces {
   color: #ffffff;
-  margin: 4px 0px 0px 0px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 0px 4px 0px 0px;
 }
 
 #workspaces button {
   color: #ffffff;
-  margin: 2px 2px;
-  padding: 2px 5px;
-  border-radius: 15px;
+  border-radius: 100px;
   transition: all 0.1s ease-in-out;
   text-shadow: none;
   border: 1px solid rgba(86, 86, 86, 0);
@@ -37,7 +32,6 @@ window#waybar.hidden {
 #workspaces button.active {
   color: #ffffff;
   border: 1px solid rgba(86, 86, 86, 0.5);
-  margin: 2px 2px;
 }
 
 #workspaces button:hover {
@@ -57,47 +51,27 @@ window#waybar.hidden {
   border-radius: 15px;
   border: 1px solid rgba(86, 86, 86, 0.5);
   margin: 4px 0px 0px 5px;
-  padding: 0px;
+  padding: 2px 6px;
 }
 
 #info {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
   border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 4px 0px 0px 0px;
+  padding: 2px 6px;
+}
+
+#controls {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: 1px solid rgba(86, 86, 86, 0.5);
   margin: 4px 5px 0px 0px;
-  padding: 0px;
-}
-
-#clock,
-#calendar,
-#pulseaudio,
-#battery,
-#cpu,
-#tray,
-#memory,
-#power,
-#network,
-#bluetooth,
-#custom-gpu,
-#custom-brightness,
-#memory {
-  padding: 0px 4px;
-}
-
-#user {
-  padding: 0px 4px 0px 8px;
-}
-
-#tray {
-  padding: 0px 4px 0px 8px;
-}
-
-#clock {
-  padding: 0px 4px 0px 8px;
+  padding: 2px 6px;
 }
 
 #custom-swaync {
-  padding: 0px 8px 0px 4px;
+  padding: 0px 0px 0px 4px;
 }
 
 window#waybar.empty #window {
@@ -109,7 +83,6 @@ tooltip {
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(89, 89, 89, 0.6);
 }
-
 #taskbar {
   background: transparent;
   padding: 2px 8px 2px 4px;

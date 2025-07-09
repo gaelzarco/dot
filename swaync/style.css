@@ -34,7 +34,7 @@
   padding: 0;
   border-radius: 100%;
   margin-top: 8px;
-  margin-right: 5px;
+  margin-right:9px;
   box-shadow: none;
   border: none;
   min-width: 20px;
@@ -67,6 +67,8 @@
   box-shadow: none;
   transition: background 0.15s ease-in-out;
   background: @noti-bg;
+  margin-right: 1004px;
+  min-width: 280px;
 }
 
 .notification-row .notification-background .notification.low {

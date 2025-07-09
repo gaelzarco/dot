@@ -13,40 +13,46 @@
     "group/sys"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "group/info"
   ],
   "modules-right": [
-    "group/info"
+    "group/controls"
   ],
   "group/sys": {
     "orientation": "horizontal",
     "modules": [
       "user",
-      "custom/brightness",
-      "cpu",
-      "custom/gpu",
-      "memory"
+      "hyprland/workspaces",
+      "hyprland/window"
     ]
   },
   "group/info": {
     "orientation": "horizontal",
     "modules": [
-      "tray",
       "clock",
       "custom/swaync"
     ]
   },
+  "group/controls": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/brightness",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "bluetooth",
+      "network"
+    ]
+  },
   "user": {
-    "format": " ",
+    "format": "   ",
     "icon": true
   },
   "tray": {
     "show-passive-items": true,
-    "spacing": 10
+    "spacing": 8 
   },
   "clock": {
     "format": "{:%a %b %d  %I:%M:%S %p}",
-    "tooltip-format": "<big>{:%B %Y}</big>\n\n<small>{calendar}</small>",
     "interval": 1
   },
   "cpu": {
@@ -88,8 +94,8 @@
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": "",
-    "format-ethernet": "",
+    "format-wifi": "   {ifname}",
+    "format-ethernet": " ",
     "format-disconnected": "Disconnected",
     "tooltip-format": "    {ifname} via {gwaddri}",
     "tooltip-format-wifi": "    {ifname} @ {essid}\n\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
@@ -98,11 +104,11 @@
     "max-length": 50
   },
   "bluetooth": {
-    "format": "{num_connections}  <span ></span>",
+    "format": "   {num_connections}  ",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
-    "on-click": "blueman-manager",
+    "on-click": "overskride",
     "format-no-controller": ""
   },
   "wlr/taskbar": {
@@ -112,5 +118,43 @@
     "on-click": "activate",
     "on-click-middle": "close",
     "ignore-list": []
+  },
+  "hyprland/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "on-click": "activate"
+      //"format": "{icon}",
+  },
+  "pulseaudio": {
+      "format": " {icon}   {volume}%",
+      "tooltip": false,
+      "format-muted": "  Muted",
+      "on-click": "pamixer -t",
+      "on-scroll-up": "pamixer -i 10",
+      "on-scroll-down": "pamixer -d 10",
+      "scroll-step": 5,
+      "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": [
+              "",
+              "",
+              "",
+              ""
+          ]
+      }
+  },
+  "pulseaudio#microphone": {
+      "format": " {format_source}",
+      "format-source": "  {volume}%",
+      "format-source-muted": "   Muted",
+      "on-click": "pamixer --default-source -t",
+      "on-scroll-up": "pamixer --default-source -i 10",
+      "on-scroll-down": "pamixer --default-source -d 10",
+      "scroll-step": 5
   }
 }

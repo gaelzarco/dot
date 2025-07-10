@@ -1,15 +1,13 @@
-* {
-  min-height: 0;
-  font-family: Geist;
-  font-size: 12px;
-  font-weight: 600;
-}
-
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.1s;
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(86, 86, 86, 0.5);
+  border-radius: 0px 0px 14px 14px;
   box-shadow: none;
+  font-family: GeistMono Nerd Font Propo, Geist;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 window#waybar.hidden {
@@ -18,60 +16,41 @@ window#waybar.hidden {
 
 #workspaces {
   color: #ffffff;
-  margin: 0px 4px 0px 0px;
+  margin: 0px;
+  padding: 0px 6px;
 }
 
 #workspaces button {
-  color: #ffffff;
-  border-radius: 100px;
-  transition: all 0.1s ease-in-out;
-  text-shadow: none;
-  border: 1px solid rgba(86, 86, 86, 0);
-}
-
-#workspaces button.active {
-  color: #ffffff;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 0px;
+  padding: 0px;
 }
 
 #workspaces button:hover {
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.0);
-  border: 1px solid rgba(86, 86, 86, 0.3);
-}
-
-#workspaces button.urgent {
-  color: black;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(86, 86, 86, 0.0);
+  background: transparent;
 }
 
 #sys {
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
   border-radius: 15px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
-  margin: 4px 0px 0px 5px;
-  padding: 2px 6px;
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
+  margin: 0px 0px 0px 6px;
+  padding: 0px 6px;
 }
 
 #info {
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
   border-radius: 15px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
-  margin: 4px 0px 0px 0px;
-  padding: 2px 6px;
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
+  margin: 0px 0px 0px 0px;
+  padding: 0px 6px;
 }
 
 #controls {
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
   border-radius: 15px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
-  margin: 4px 5px 0px 0px;
-  padding: 2px 6px;
-}
-
-#custom-swaync {
-  padding: 0px 0px 0px 4px;
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
+  margin: 0px 6px 0px 0px;
+  padding: 0px 6px;
 }
 
 window#waybar.empty #window {
@@ -82,28 +61,4 @@ tooltip {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(89, 89, 89, 0.6);
-}
-#taskbar {
-  background: transparent;
-  padding: 2px 8px 2px 4px;
-}
-
-#taskbar button {
-  background: rgba(0, 0, 0, 0);
-  border: 1px solid;
-  border-color: transparent;
-  border-radius: 6px;
-  padding: 0px 4px;
-  color: #ffffff;
-  font-size: 12px;
-  min-width: 0px;
-}
-
-#taskbar button:hover {
-  transition: all 0.2s ease;
-}
-
-#taskbar button.active {
-  border: 1px solid rgba(89, 89, 89, 0.5);
-  border-radius: 100px;
 }

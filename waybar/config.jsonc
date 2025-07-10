@@ -1,7 +1,7 @@
 {
-  "layer": "bottom",
+  "layer": "top",
   "position": "top",
-  "height": 10,
+  "height": 30,
   "spacing": 0,
   "exclusive": true,
   "start_hidden": false,
@@ -22,6 +22,9 @@
     "orientation": "horizontal",
     "modules": [
       "user",
+      "cpu",
+      "custom/gpu",
+      "memory",
       "hyprland/workspaces",
       "hyprland/window"
     ]
@@ -36,6 +39,7 @@
   "group/controls": {
     "orientation": "horizontal",
     "modules": [
+      "tray",
       "custom/brightness",
       "pulseaudio",
       "pulseaudio#microphone",
@@ -44,15 +48,17 @@
     ]
   },
   "user": {
-    "format": "   ",
+    "format": " ",
     "icon": true
   },
   "tray": {
     "show-passive-items": true,
-    "spacing": 8 
+    "spacing": 8,
+    "icon-size": 14
   },
   "clock": {
-    "format": "{:%a %b %d  %I:%M:%S %p}",
+    "format": "{:%a %b %d %I:%M:%S %p}",
+    "tooltip": false,
     "interval": 1
   },
   "cpu": {
@@ -60,30 +66,30 @@
     "tooltip": true,
     "interval": 1
   },
-  "memory": {
-    "format": "⣼ {percentage}%",
-    "tooltip": true,
-    "interval": 1
-  },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "format": "◌ {}%",
+    "format": " ◌ {}%",
     "tooltip": false,
     "interval": 1
   },
+  "memory": {
+    "format": " ⣼ {percentage}%",
+    "tooltip": true,
+    "interval": 1
+  },
   "custom/brightness": {
-    "format": "<span>☀</span> {percentage}%",
-    "return-type": "json", 
+    "format": " <span>☀</span> {percentage}%",
+    "return-type": "json",
     "exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+' | { read x; echo '{\"percentage\":'${x}'}'; }",
     "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up && pkill -RTMIN+5 waybar",
     "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down && pkill -RTMIN+5 waybar",
     "on-click": "$HOME/.config/waybar/scripts/brightness_notify.sh min && pkill -RTMIN+5 waybar",
     "on-click-right": "$HOME/.config/waybar/scripts/brightness_notify.sh max && pkill -RTMIN+5 waybar",
-    "signal": 5, 
+    "signal": 5,
     "tooltip": false
   },
   "custom/swaync": {
-    "format": "|  {}",
+    "format": " | {}",
     "tooltip": false,
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -94,8 +100,8 @@
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": "   {ifname}",
-    "format-ethernet": " ",
+    "format-wifi": " {ifname}",
+    "format-ethernet": "● {ifname}",
     "format-disconnected": "Disconnected",
     "tooltip-format": "    {ifname} via {gwaddri}",
     "tooltip-format-wifi": "    {ifname} @ {essid}\n\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
@@ -104,7 +110,7 @@
     "max-length": 50
   },
   "bluetooth": {
-    "format": "   {num_connections}  ",
+    "format": "  {num_connections} ",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
@@ -120,41 +126,40 @@
     "ignore-list": []
   },
   "hyprland/workspaces": {
-      "disable-scroll": true,
-      "all-outputs": true,
-      "on-click": "activate"
-      //"format": "{icon}",
+    "all-outputs": true,
+    "on-click": "activate",
+    "active-only": true
   },
   "pulseaudio": {
-      "format": " {icon}   {volume}%",
-      "tooltip": false,
-      "format-muted": "  Muted",
-      "on-click": "pamixer -t",
-      "on-scroll-up": "pamixer -i 10",
-      "on-scroll-down": "pamixer -d 10",
-      "scroll-step": 5,
-      "format-icons": {
-          "headphone": "",
-          "hands-free": "",
-          "headset": "",
-          "phone": "",
-          "portable": "",
-          "car": "",
-          "default": [
-              "",
-              "",
-              "",
-              ""
-          ]
-      }
+    "format": " {icon} {volume}%",
+    "tooltip": false,
+    "format-muted": "  Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 10",
+    "on-scroll-down": "pamixer -d 10",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
   },
   "pulseaudio#microphone": {
-      "format": " {format_source}",
-      "format-source": "  {volume}%",
-      "format-source-muted": "   Muted",
-      "on-click": "pamixer --default-source -t",
-      "on-scroll-up": "pamixer --default-source -i 10",
-      "on-scroll-down": "pamixer --default-source -d 10",
-      "scroll-step": 5
+    "format": " {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 10",
+    "on-scroll-down": "pamixer --default-source -d 10",
+    "scroll-step": 5
   }
 }

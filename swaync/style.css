@@ -12,6 +12,22 @@
 @define-color text-color-disabled rgb(255, 255, 255);
 @define-color bg-selected rgb(120, 225, 120);
 
+window,
+.notification,        /* each notification frame */
+.notification .title, /* the title text */
+.notification .body,  /* the body text */
+.buttons-grid,        /* your control-center buttons */
+.label,               /* the “Control Center” label */
+.mpris               /* the mpris widget */
+{
+  font-family: "GeistMono Nerd Font Mono";
+}
+
+.notification .title /* the title text */
+{
+  font-weight: 500;
+}
+
 .notification-row {
   outline: none;
 }
@@ -62,13 +78,11 @@
 
 .notification-row .notification-background .notification {
   /* The actual notification */
-  border-radius: 8px;
-  border: 0.5px solid @noti-border-color;
+  border-radius: 10px;
+  border: 1px solid @noti-border-color;
   box-shadow: none;
   transition: background 0.15s ease-in-out;
-  background: @noti-bg;
-  margin-right: 1004px;
-  min-width: 280px;
+  background: transparent;
 }
 
 .notification-row .notification-background .notification.low {
@@ -304,7 +318,6 @@
   background: rgba(0,0,0,0.5);
   color: @text-color;
   border-radius: 10px;
-  margin: 6px 6px 450px 30px;
   border: 0.5px solid rgba(89, 89, 89, 0.6);
 }
 

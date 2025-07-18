@@ -10,7 +10,9 @@
   "fixed-center": true,
   "reload_style_on_change": true,
   "modules-left": [
-    "group/sys"
+    "group/sys",
+    "group/hypr",
+    "mpris"
   ],
   "modules-center": [
     "group/info"
@@ -24,7 +26,12 @@
       "user",
       "cpu",
       "custom/gpu",
-      "memory",
+      "memory"
+    ]
+  },
+  "group/hypr": {
+    "orientation": "horizontal",
+    "modules": [
       "hyprland/workspaces",
       "hyprland/window"
     ]
@@ -46,6 +53,30 @@
       "bluetooth",
       "network"
     ]
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "default": "⏸",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "▶"
+    },
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+    "max-length": 20
+    // "ignored-players": ["firefox"]
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "rewrite": {
+      ".*Zen.*": "Zen Browser",
+      ".*Discord.*": "Discord"
+    },
+    "max-length": 50
   },
   "user": {
     "format": " ",
@@ -89,19 +120,22 @@
     "tooltip": false
   },
   "custom/swaync": {
-    "format": " | {}",
-    "tooltip": false,
+    "format": " {icon}",
+    "format-icons": {
+      "notification": "<span color='#AAFFAA'>●</span>",
+      "none": "<span color='#FFFFFF'>◌</span>"
+    },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true
+    "escape":              false
   },
   "network": {
     "format": "{ifname}",
     "format-wifi": " {ifname}",
-    "format-ethernet": "● {ifname}",
+    "format-ethernet": " {ifname}",
     "format-disconnected": "Disconnected",
     "tooltip-format": "    {ifname} via {gwaddri}",
     "tooltip-format-wifi": "    {ifname} @ {essid}\n\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
@@ -133,11 +167,11 @@
   "pulseaudio": {
     "format": " {icon} {volume}%",
     "tooltip": false,
-    "format-muted": "  Muted",
+    "format-muted": "  Muted",
     "on-click": "pamixer -t",
-    "on-scroll-up": "pamixer -i 10",
-    "on-scroll-down": "pamixer -d 10",
-    "scroll-step": 5,
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 1,
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -158,8 +192,8 @@
     "format-source": " {volume}%",
     "format-source-muted": " Muted",
     "on-click": "pamixer --default-source -t",
-    "on-scroll-up": "pamixer --default-source -i 10",
-    "on-scroll-down": "pamixer --default-source -d 10",
-    "scroll-step": 5
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "scroll-step": 1
   }
 }

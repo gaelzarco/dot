@@ -7,7 +7,7 @@ if pgrep -x "wf-recorder" > /dev/null; then
   pkill wf-recorder
 
   latest_recording=$(cat /tmp/latest_recording_filename)
-  notify-send -t 1000 -a "Screen Record" "Recording Saved" "Recording saved as $latest_recording"
+  notify-send -t 2000 -a "Screen Record" "Recording Saved" "Recording saved as $latest_recording"
 
   # Clean up the filename cache
   [ -f /tmp/latest_recording_filename ] && rm /tmp/latest_recording_filename
@@ -34,5 +34,5 @@ else
   # Run wf-recorder with the selected geometry
   wf-recorder --audio --file="$new_filename" -g "$geometry" &
 
-  notify-send -t 1000 -a "Screen Record" "Recording Initialized..." "Super + R to stop"
+  notify-send -t 2000 -a "Screen Record" "Recording Initialized..." "SUPER + SHIFT + R to stop"
 fi

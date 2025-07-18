@@ -1,23 +1,27 @@
 window#waybar {
   transition-property: background-color;
   transition-duration: 0.1s;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid rgba(86, 86, 86, 0.5);
-  border-radius: 0px 0px 14px 14px;
+  background-color: rgba(0, 0, 0, 0.0);
+  /* border-bottom: 1px solid rgba(86, 86, 86, 0.5); */
+  /* border-radius: 0px 0px 14px 14px; */
   box-shadow: none;
-  font-family: GeistMono Nerd Font Propo, Geist;
-  font-size: 12px;
-  font-weight: 500;
+  font-family: GeistMono Nerd Font;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 window#waybar.hidden {
   opacity: 0.5;
 }
 
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
 #workspaces {
   color: #ffffff;
   margin: 0px;
-  padding: 0px 4px 0px 6px;
+  padding: 0px;
 }
 
 #workspaces button {
@@ -29,36 +33,54 @@ window#waybar.hidden {
   background: transparent;
 }
 
+#hypr {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 100px;
+  border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 5px 0px 0px 5px;
+  padding: 0px 10px;
+  transition: all 0.5s ease;
+}
+
 #sys {
-  /* background: rgba(0, 0, 0, 0.3); */
-  border-radius: 15px;
-  /* border: 1px solid rgba(86, 86, 86, 0.5); */
-  margin: 0px 0px 0px 6px;
-  padding: 0px 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 100px;
+  border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 5px 0px 0px 5px;
+  padding: 0px 10px;
+  transition: all 0.5s ease;
 }
 
 #info {
-  /* background: rgba(0, 0, 0, 0.3); */
-  border-radius: 15px;
-  /* border: 1px solid rgba(86, 86, 86, 0.5); */
-  margin: 0px 0px 0px 0px;
-  padding: 0px 6px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 100px;
+  border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 5px 0px 0px 0px;
+  padding: 0px 10px;
+  transition: all 0.5s ease;
+}
+
+#mpris {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 100px;
+  border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 5px 5px 0px 5px;
+  padding: 0px 10px;
+  transition: all 0.5s ease;
 }
 
 #controls {
-  /* background: rgba(0, 0, 0, 0.3); */
-  border-radius: 15px;
-  /* border: 1px solid rgba(86, 86, 86, 0.5); */
-  margin: 0px 6px 0px 0px;
-  padding: 0px 6px;
-}
-
-window#waybar.empty #window {
-  background-color: transparent;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 100px;
+  border: 1px solid rgba(86, 86, 86, 0.5);
+  margin: 5px 5px 0px 0px;
+  padding: 0px 10px;
+  transition: all 0.5s ease;
 }
 
 tooltip {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(89, 89, 89, 0.6);
+  font-family: GeistMono Nerd Font Propo;
 }

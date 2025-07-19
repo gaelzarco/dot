@@ -7,25 +7,17 @@
       "1": "white"
     },
     "padding": {
-      "top": 4,
-      "left": 2
+      "top": 1,
+      "left": 1
     }
   },
   "modules": [
+    "break",
     "title",
     "break",
     "os",
-    "kernel",
-    "shell",
-    "display",
-    "de",
-    "terminal",
     "cpu",
     "gpu",
-    "memory",
-    "disk",
-    "swap",
-    "localip",
     "break",
     {
       "type": "colors",

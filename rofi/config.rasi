@@ -12,7 +12,7 @@
     alt-color: #111111FF;
     wbg-color: #000000;
     w-border: 1px solid;
-    w-border-color: rgba(86,86,86,0.8);
+    w-border-color: rgba(86,86,86,0.6);
     w-padding: 8px;
 }
 
@@ -31,7 +31,6 @@ listview {
     fixed-columns: true;
     cycle: false;
     scrollbar: false;
-    border: 0px solid;
     border-radius: @b-radius;
     border: @w-border;
     border-color: @w-border-color;
@@ -57,16 +56,15 @@ prompt {
 inputbar {
     children: ["prompt", "entry"];
     background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 100px;
-    border: @w-border;
-    border-color: @w-border-color;
+    border-radius: 10px;
 }
 
 entry {
-    padding: 10px 20px;
+    padding: 25px 20px;
     placeholder: "Search";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
+    font: "Dots All For Now JL Bold 14";
 }
 
 mainbox {

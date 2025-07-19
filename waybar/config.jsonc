@@ -56,6 +56,7 @@
   },
   "mpris": {
     "format": "{player_icon} {dynamic}",
+    "format-empty": "",
     "format-paused": "{status_icon} <i>{dynamic}</i>",
     "player-icons": {
       "default": "⏸",
@@ -93,23 +94,26 @@
     "interval": 1
   },
   "cpu": {
-    "format": "∵ {usage}%",
+    "format": " ∵ {usage}%",
+    "tooltip-format": "CPU: {}%",
     "tooltip": true,
     "interval": 1
   },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
     "format": " ◌ {}%",
-    "tooltip": false,
+    "tooltip-format": "GPU: {}%",
+    "tooltip": true,
     "interval": 1
   },
   "memory": {
-    "format": " ⣼ {percentage}%",
+    "format": "  ⁞ {percentage}%",
+    "tooltip-format": "RAM: {}%",
     "tooltip": true,
     "interval": 1
   },
   "custom/brightness": {
-    "format": " <span>☀</span> {percentage}%",
+    "format": " ☀ {percentage}%",
     "return-type": "json",
     "exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+' | { read x; echo '{\"percentage\":'${x}'}'; }",
     "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up && pkill -RTMIN+5 waybar",
@@ -130,15 +134,15 @@
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape":              false
+    "escape": false
   },
   "network": {
-    "format": "{ifname}",
-    "format-wifi": " {ifname}",
-    "format-ethernet": " {ifname}",
+    "format": "{ifname} ↓ {bandwidthDownBits}",
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  {ifname}",
     "format-disconnected": "Disconnected",
-    "tooltip-format": "    {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "    {ifname} @ {essid}\n\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format": "  {ifname} via {gwaddri}",
+    "tooltip-format-wifi": " {ifname} @ {essid}\n\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": "    {ifname}\n\nIP: {ipaddr}\nup: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50

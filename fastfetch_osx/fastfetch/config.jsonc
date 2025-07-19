@@ -4,31 +4,28 @@
     "type": "file",
     "source": "/Users/xarco/.config/fastfetch/logos/arch.txt",
     "color": {
-      "1": "default"
+      "1": "white"
     },
     "padding": {
-      "top": 4,
-      "left": 2
+      "top": 1,
+      "left": 1
     }
   },
   "modules": [
+    "break",
     "title",
     "break",
     "os",
-    "kernel",
-    "shell",
-    "de",
-    "terminal",
     "cpu",
     "gpu",
     "memory",
-    "disk",
-    "swap",
-    "localip",
     "break",
     {
       "type": "colors",
       "symbol": "circle"
     }
-  ]
+  ],
+  "display": {
+    "color": "white"
+  }
 }

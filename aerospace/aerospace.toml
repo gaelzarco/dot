@@ -104,15 +104,19 @@ run = [
 ]
 
 [[on-window-detected]]
-if.app-id = 'com.apple.mail'
+if.app-id = 'com.hnc.Discord'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
-if.app-id = 'md.obsidian'
+if.app-id = 'sh.cider.genten.mac'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
-if.app-id = 'com.hnc.Discord'
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]

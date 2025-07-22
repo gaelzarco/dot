@@ -57,7 +57,7 @@
   "mpris": {
     "format": "{player_icon} {dynamic}",
     "format-empty": "",
-    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "format-paused": "{status_icon} {dynamic}",
     "player-icons": {
       "default": "⏸",
       "mpv": "🎵"
@@ -68,7 +68,7 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
     "on-scroll-down": "playerctl next",
-    "max-length": 20
+    "max-length": 40
     // "ignored-players": ["firefox"]
   },
   "hyprland/window": {
@@ -126,7 +126,7 @@
   "custom/swaync": {
     "format": " {icon}",
     "format-icons": {
-      "notification": "<span color='#AAFFAA'>●</span>",
+      "notification": "<span color='#FFBE4E'>●</span>",
       "none": "<span color='#FFFFFF'>◌</span>"
     },
     "return-type": "json",

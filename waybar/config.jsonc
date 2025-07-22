@@ -18,6 +18,7 @@
     "group/info"
   ],
   "modules-right": [
+    "tray",
     "group/controls"
   ],
   "group/sys": {
@@ -46,7 +47,6 @@
   "group/controls": {
     "orientation": "horizontal",
     "modules": [
-      "tray",
       "custom/brightness",
       "pulseaudio",
       "pulseaudio#microphone",
@@ -84,9 +84,9 @@
     "icon": true
   },
   "tray": {
-    "show-passive-items": true,
+    "show-passive-items": false,
     "spacing": 8,
-    "icon-size": 14
+    "icon-size": 13
   },
   "clock": {
     "format": "{:%a %b %d %I:%M:%S %p}",
@@ -94,26 +94,26 @@
     "interval": 1
   },
   "cpu": {
-    "format": " ∵ {usage}%",
+    "format": "  {usage}%",
     "tooltip-format": "CPU: {}%",
     "tooltip": true,
     "interval": 1
   },
   "custom/gpu": {
     "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-    "format": " ◌ {}%",
+    "format": " 󰘚 {}%",
     "tooltip-format": "GPU: {}%",
     "tooltip": true,
     "interval": 1
   },
   "memory": {
-    "format": "  ⁞ {percentage}%",
+    "format": "  {percentage}%",
     "tooltip-format": "RAM: {}%",
     "tooltip": true,
     "interval": 1
   },
   "custom/brightness": {
-    "format": " ☀ {percentage}%",
+    "format": "󰖨 {percentage}%",
     "return-type": "json",
     "exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+' | { read x; echo '{\"percentage\":'${x}'}'; }",
     "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up && pkill -RTMIN+5 waybar",
@@ -139,7 +139,7 @@
   "network": {
     "format": "{ifname} ↓ {bandwidthDownBits}",
     "format-wifi": "  {essid}",
-    "format-ethernet": "  {ifname}",
+    "format-ethernet": "󰈁 {ifname}",
     "format-disconnected": "Disconnected",
     "tooltip-format": "  {ifname} via {gwaddri}",
     "tooltip-format-wifi": " {ifname} @ {essid}\n\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",

@@ -349,6 +349,7 @@ notification-group-header {
 .control-center .control-center-list {
   /* List of notifications */
   background: transparent;
+  padding: 4px 10px;
 }
 
 .control-center .control-center-list .notification {
@@ -451,7 +452,6 @@ notification-group-header {
 }
 
 .widget-mpris .widget-mpris-player {
-  margin: 12px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   border: 1px solid @noti-border-color;

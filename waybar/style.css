@@ -5,9 +5,9 @@ window#waybar {
   /* border-bottom: 1px solid rgba(86, 86, 86, 0.5); */
   /* border-radius: 0px 0px 14px 14px; */
   box-shadow: none;
-  font-family: "GeistMono Nerd Font";
+  font-family: "Aux Mono";
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 window#waybar.hidden {
@@ -67,9 +67,6 @@ window#waybar.empty #window {
   margin: 5px 5px 0px 5px;
   padding: 0px 10px;
   transition: all 0.5s ease;
-  font-family: "Dots All For Now JL";
-  font-weight: 800;
-  font-size: 11px;
 }
 
 #mpris.empty {

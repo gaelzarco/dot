@@ -25,9 +25,9 @@
     "orientation": "horizontal",
     "modules": [
       "user",
-      "cpu",
+      "custom/cpu",
       "custom/gpu",
-      "memory"
+      "custom/memory"
     ]
   },
   "group/hypr": {
@@ -93,23 +93,23 @@
     "tooltip": false,
     "interval": 1
   },
-  "cpu": {
-    "format": "  {usage}%",
-    "tooltip-format": "CPU: {}%",
-    "tooltip": true,
+  "custom/cpu": {
+    "exec": "top -bn1 | grep '%Cpu' | awk '{printf \"%02d\", 100 - $8}'",
+    "format": "  {}%",
+    "tooltip": false,
     "interval": 1
   },
   "custom/gpu": {
-    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "exec": "printf '%02d' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)",
     "format": " 󰘚 {}%",
     "tooltip-format": "GPU: {}%",
     "tooltip": true,
     "interval": 1
   },
-  "memory": {
-    "format": "  {percentage}%",
-    "tooltip-format": "RAM: {}%",
-    "tooltip": true,
+  "custom/memory": {
+    "exec": "free | awk '/Mem:/ {printf \"%02d\", $3*100/$2}'",
+    "format": "  {}%",
+    "tooltip": false,
     "interval": 1
   },
   "custom/brightness": {

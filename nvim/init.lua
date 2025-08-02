@@ -4,22 +4,20 @@ vim.o.signcolumn = "yes"
 vim.o.termguicolors = true
 vim.o.wrap = false
 vim.o.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
 vim.o.swapfile = false
 vim.o.fillchars = 'eob: '
 vim.o.textwidth = 80
-vim.g.mapleader = " "
 vim.o.winborder = "rounded"
 vim.o.clipboard = "unnamedplus"
+vim.g.vimtex_view_method = "zathura"
+vim.g.mapleader = " "
 
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
-
-vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
-vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d<CR>')
 
 vim.pack.add({
   { src = "https://github.com/stevearc/oil.nvim" },
@@ -42,6 +40,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 vim.cmd("set completeopt+=noselect")
 
+require("oil").setup()
 require("mini.pick").setup()
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
@@ -59,7 +58,6 @@ require("nvim-treesitter.configs").setup({
   },
   highlight = { enable = true }
 })
-require("oil").setup()
 require('nvim-ts-autotag').setup({
   opts = {
     enable_close = true,
@@ -69,7 +67,17 @@ require('nvim-ts-autotag').setup({
 })
 require("nvim-autopairs").setup()
 
-vim.g.vimtex_view_method = "zathura"
+vim.lsp.enable({
+  "lua_ls",
+  "ts_ls",
+  "rust_analyzer",
+  "ruff",
+  "clangd",
+  "bashls",
+  "html",
+  "cssls"
+})
+
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo last change" })
 vim.keymap.set("n", "<leader>R", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "Replace word under cursor" })
@@ -88,16 +96,6 @@ vim.keymap.set('n', '<leader>s', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<leader>E', vim.diagnostic.open_float,
   { desc = "Show error message" })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-vim.lsp.enable({
-  "lua_ls",
-  "ts_ls",
-  "rust_analyzer",
-  "ruff",
-  "clangd",
-  "bashls",
-  "html",
-  "cssls"
-})
 
 vim.cmd("colorscheme base16-black-metal-immortal")
 vim.cmd(":hi statusline guibg=NONE")

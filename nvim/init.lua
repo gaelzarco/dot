@@ -77,6 +77,8 @@ vim.keymap.set('n', '<leader>i', vim.lsp.buf.implementation)
 vim.keymap.set('n', '<leader>o', vim.lsp.buf.type_definition)
 vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
 vim.keymap.set('n', '<leader>s', vim.lsp.buf.signature_help)
+vim.keymap.set('n', '<leader>E', vim.diagnostic.open_float,
+  { desc = "Show error message" })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.lsp.enable({
   "lua_ls",

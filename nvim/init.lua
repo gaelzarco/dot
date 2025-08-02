@@ -47,6 +47,7 @@ require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "typescript",
     "javascript",
+    "tsx",
     "rust",
     "python",
     "c",
@@ -59,7 +60,14 @@ require("nvim-treesitter.configs").setup({
   highlight = { enable = true }
 })
 require("oil").setup()
-require("nvim-ts-autotag").setup()
+require('nvim-ts-autotag').setup({
+  opts = {
+    enable_close = true,
+    enable_rename = true,
+    enable_close_on_slash = false
+  }
+})
+require("nvim-autopairs").setup()
 
 vim.g.vimtex_view_method = "zathura"
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo last change" })
@@ -82,13 +90,13 @@ vim.keymap.set('n', '<leader>E', vim.diagnostic.open_float,
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.lsp.enable({
   "lua_ls",
-  "tsserver",
+  "ts_ls",
   "rust_analyzer",
-  "pyright",
+  "ruff",
   "clangd",
   "bashls",
   "html",
-  "css"
+  "cssls"
 })
 
 vim.cmd("colorscheme base16-black-metal-immortal")

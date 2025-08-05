@@ -86,7 +86,8 @@
   "tray": {
     "show-passive-items": false,
     "spacing": 8,
-    "icon-size": 13
+    "icon-size": 13,
+    "format-empty": ""
   },
   "clock": {
     "format": "{:%a %b %d %I:%M:%S %p}",
@@ -124,10 +125,10 @@
     "tooltip": false
   },
   "custom/swaync": {
-    "format": " {icon}",
+    "format": "  {icon}",
     "format-icons": {
-      "notification": "<span color='#FFBE4E'>●</span>",
-      "none": "<span color='#FFFFFF'>◌</span>"
+      "notification": "●",
+      "none": "◌"
     },
     "return-type": "json",
     "exec-if": "which swaync-client",

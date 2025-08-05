@@ -42,6 +42,14 @@ vim.cmd("set completeopt+=noselect")
 
 require("oil").setup()
 require("mini.pick").setup()
+require("nvim-autopairs").setup()
+require('nvim-ts-autotag').setup({
+  opts = {
+    enable_close = true,
+    enable_rename = true,
+    enable_close_on_slash = false
+  }
+})
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "typescript",
@@ -58,15 +66,6 @@ require("nvim-treesitter.configs").setup({
   },
   highlight = { enable = true }
 })
-require('nvim-ts-autotag').setup({
-  opts = {
-    enable_close = true,
-    enable_rename = true,
-    enable_close_on_slash = false
-  }
-})
-require("nvim-autopairs").setup()
-
 vim.lsp.enable({
   "lua_ls",
   "ts_ls",
@@ -75,8 +74,23 @@ vim.lsp.enable({
   "clangd",
   "bashls",
   "html",
-  "cssls"
+  "cssls",
 })
+
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = { "*.hl", "hypr*.conf" },
+  callback = function(event)
+    vim.lsp.start {
+      name = "hyprlang",
+      cmd = { "hyprls" },
+      root_dir = vim.fn.getcwd(),
+    }
+  end
+})
+
 
 vim.keymap.set("n", "U", "<C-r>", { desc = "Redo last change" })
 vim.keymap.set("n", "<leader>R", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]],

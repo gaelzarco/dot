@@ -13,29 +13,29 @@ background = 000000
 
 # Enable on MacOS
 # window-decoration = false 
-# macos-titlebar-style = tabs 
+# macos-titlebar-style = hidden
 # macos-icon-screen-color = 000000
 
 # Enable on Linux
 gtk-adwaita = false
-gtk-tabs-location = left
+gtk-tabs-location = hidden
 
 # Manage 
-keybind = ctrl+space>t=new_tab
-keybind = ctrl+space>w=close_surface
-keybind = ctrl+space>l=new_split:right
-keybind = ctrl+space>h=new_split:left
-keybind = ctrl+space>k=new_split:up
-keybind = ctrl+space>j=new_split:down
-
+# keybind = ctrl+space>t=new_tab
+# keybind = ctrl+space>w=close_surface
+# keybind = ctrl+space>l=new_split:right
+# keybind = ctrl+space>h=new_split:left
+# keybind = ctrl+space>k=new_split:up
+# keybind = ctrl+space>j=new_split:down
+ 
 # Navigate 
-keybind = ctrl+l=goto_split:right
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+k=goto_split:top
-keybind = ctrl+j=goto_split:bottom
-
+# keybind = ctrl+l=goto_split:right
+# keybind = ctrl+h=goto_split:left
+# keybind = ctrl+k=goto_split:top
+# keybind = ctrl+j=goto_split:bottom
+ 
 # Adjust
-keybind = ctrl+shift+l=resize_split:right,10
-keybind = ctrl+shift+h=resize_split:left,10
-keybind = ctrl+shift+k=resize_split:up,10
-keybind = ctrl+shift+j=resize_split:down,10
+# keybind = ctrl+shift+l=resize_split:right,10
+# keybind = ctrl+shift+h=resize_split:left,10
+# keybind = ctrl+shift+k=resize_split:up,10
+# keybind = ctrl+shift+j=resize_split:down,10

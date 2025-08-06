@@ -18,13 +18,11 @@
     "group/info"
   ],
   "modules-right": [
-    "tray",
     "group/controls"
   ],
   "group/sys": {
     "orientation": "horizontal",
     "modules": [
-      "user",
       "custom/cpu",
       "custom/gpu",
       "custom/memory"
@@ -50,8 +48,7 @@
       "custom/brightness",
       "pulseaudio",
       "pulseaudio#microphone",
-      "bluetooth",
-      "network"
+      "bluetooth"
     ]
   },
   "mpris": {
@@ -77,6 +74,7 @@
       ".*Zen.*": "Zen Browser",
       ".*Discord.*": "Discord"
     },
+    "tooltip": false,
     "max-length": 50
   },
   "user": {
@@ -104,7 +102,7 @@
     "exec": "printf '%02d' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)",
     "format": " 󰘚 {}%",
     "tooltip-format": "GPU: {}%",
-    "tooltip": true,
+    "tooltip": false,
     "interval": 1
   },
   "custom/memory": {
@@ -171,7 +169,6 @@
   },
   "pulseaudio": {
     "format": " {icon} {volume}%",
-    "tooltip": false,
     "format-muted": "  Muted",
     "on-click": "pamixer -t",
     "on-scroll-up": "pamixer -i 5",

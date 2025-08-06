@@ -62,7 +62,7 @@ export PATH="$HOME/.local/bin:$PATH"░
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
- HIST_STAMPS="mm.dd.yyyy"
+HIST_STAMPS="mm.dd.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -72,7 +72,7 @@ export PATH="$HOME/.local/bin:$PATH"░
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
- plugins=(git)
+plugins=(git)
 
 # source /opt/homebrew/opt/geometry/share/geometry/geometry.zsh
 # User configuration
@@ -90,7 +90,7 @@ else
 fi
 
 # Compilation flags
- export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -98,17 +98,9 @@ fi
 # For a full list of active aliases, run `alias`.
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias hypr='Hyprland'
-alias x='hx'
-alias v='nvim'
-alias t='tmux a -t x1 || tmux new-session -s "x1"'
-alias y='yazi'
+# alias t='tmux a -t x1 || tmux new-session -s "x1"'
 
 PATH=~/.console-ninja/.bin:$PATH
-
-. /opt/asdf-vm/asdf.sh
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 # [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
@@ -132,7 +124,13 @@ export GPG_TTY=$(tty)
 export TMUX_SESSION=1
 
 autoload -U compinit; compinit
-# source ~/code/fzftab/fzf-tab.plugin.zsh
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec Hyprland
+fi
 
 fastfetch
+
+if [ -z "$TMUX" ]; then
+  tmux attach -t x1 || tmux new-session -s "x1"
+fi

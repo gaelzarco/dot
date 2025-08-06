@@ -34,36 +34,37 @@ window#waybar.empty #window {
 }
 
 #hypr {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 100px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
   margin: 5px 0px 0px 5px;
   padding: 0px 10px;
   transition: all 0.5s ease;
 }
 
 #sys {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 100px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
   margin: 5px 0px 0px 5px;
   padding: 0px 10px;
   transition: all 0.5s ease;
+
 }
 
 #info {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 100px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
   margin: 5px 0px 0px 0px;
   padding: 0px 10px;
   transition: all 0.5s ease;
 }
 
 #mpris {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 100px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
   margin: 5px 5px 0px 5px;
   padding: 0px 10px;
   transition: all 0.5s ease;
@@ -74,18 +75,18 @@ window#waybar.empty #window {
 }
 
 #tray {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 100px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
   margin: 5px 5px 0px 0px;
   padding: 0px 10px;
   transition: all 0.5s ease;
 }
 
 #controls {
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   border-radius: 100px;
-  border: 1px solid rgba(86, 86, 86, 0.5);
+  /* border: 1px solid rgba(86, 86, 86, 0.5); */
   margin: 5px 5px 0px 0px;
   padding: 0px 10px;
   transition: all 0.5s ease;

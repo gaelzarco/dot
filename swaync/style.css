@@ -72,7 +72,7 @@ window,
 
 .notification-row .notification-background .notification {
   /* The actual notification */
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid @noti-border-color;
   box-shadow: none;
   transition: background 0.15s ease-in-out;
@@ -109,7 +109,7 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action {
   /* The large action that also displays the notification summary and body */
-  border-radius: 10px;
+  border-radius: 15px;
   border: none;
 }
 
@@ -122,14 +122,14 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action .notification-content {
   background:transparent;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 12px 10px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .image {
   /* Notification Primary Image */
   -gtk-icon-effect: none;
-  border-radius: 10px;
+  border-radius: 15px;
   /* Size in px */
   margin: 4px;
   margin-right: 10px;
@@ -198,7 +198,7 @@ progressbar > trough > progress {
   /* The "extra" optional bottom notification image */
   margin-top: 4px;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 15px;
   -gtk-icon-effect: none;
 }
 
@@ -212,14 +212,14 @@ progressbar > trough > progress {
   color: @text-color;
   caret-color: @text-color;
   border: 0.5px solid @noti-border-color;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
   margin-left: 4px;
   background: @noti-bg;
   border: 0.5px solid @noti-border-color;
-  border-radius: 12px;
+  border-radius: 15px;
   color: @text-color;
 }
 
@@ -237,7 +237,7 @@ progressbar > trough > progress {
 .notification-row .notification-background .notification .notification-action {
   /* The alternative actions below the default action */
   border: 0.5px solid @noti-border-color;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .notification-row .notification-background .notification .notification-action:first-child {
@@ -338,7 +338,7 @@ notification-group-header {
   /* The Control Center which contains the old notifications + widgets */
   background: rgba(0,0,0,0.5);
   color: @text-color;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid rgba(89, 89, 89, 0.6);
 }
 
@@ -420,7 +420,7 @@ notification-group-header {
 
 .widget-dnd>switch {
   font-size: initial;
-  border-radius: 12px;
+  border-radius: 15px;
   background: rgba(255, 255, 255, 0.6);
   border: 0px solid @noti-border-color;
   box-shadow: none;
@@ -432,7 +432,7 @@ notification-group-header {
 
 .widget-dnd>switch slider {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
+  border-radius: 15px;
   border: none;
 }
 
@@ -454,7 +454,7 @@ notification-group-header {
 
 .widget-mpris .widget-mpris-player {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid @noti-border-color;
   box-shadow: none;
 }
@@ -473,7 +473,7 @@ notification-group-header {
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-title {
@@ -519,7 +519,7 @@ notification-group-header {
 .widget-buttons-grid {
   padding: 10px;
   margin: 0px 12px 15px 12px;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 5px;
 }
 
@@ -584,7 +584,7 @@ notification-group-header {
   margin: 8px 9px 0px 9px;
   border: 1px solid;
   border-color: rgba(89,89,89, 0.3);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .widget-volume>box>button {
@@ -596,7 +596,7 @@ notification-group-header {
   background-color: @noti-bg-alt;
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 8px 8px;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 /* Backlight widget */
@@ -621,7 +621,7 @@ notification-group-header {
   background: @noti-bg;
   border: 1px solid rgba(89, 89, 89, 0.3);
   box-shadow: none;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .widget-inhibitors>button:hover {

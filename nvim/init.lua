@@ -33,6 +33,7 @@ vim.pack.add({
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    -- Autocomplete
     if client:supports_method('textDocument/completion') then
       vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
     end
@@ -92,26 +93,26 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 })
 
 
-vim.keymap.set("n", "U", "<C-r>", { desc = "Redo last change" })
 vim.keymap.set("n", "<leader>R", [[:%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]],
   { desc = "Replace word under cursor" })
 vim.keymap.set("n", "<leader>n", ":bn<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>b", ":bp<CR>", { desc = "Previous buffer" })
-vim.keymap.set('n', '<leader>f', ":Pick files<CR>")
-vim.keymap.set('n', '<leader>h', ":Pick help<CR>")
-vim.keymap.set('n', '<leader>e', ":Oil<CR>")
-vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover)
-vim.keymap.set('n', '<leader>d', vim.lsp.buf.definition)
-vim.keymap.set('n', '<leader>D', vim.lsp.buf.declaration)
-vim.keymap.set('n', '<leader>i', vim.lsp.buf.implementation)
-vim.keymap.set('n', '<leader>o', vim.lsp.buf.type_definition)
-vim.keymap.set('n', '<leader>r', vim.lsp.buf.references)
-vim.keymap.set('n', '<leader>s', vim.lsp.buf.signature_help)
-vim.keymap.set('n', '<leader>E', vim.diagnostic.open_float,
+vim.keymap.set('n', '<leader>ph', ":Pick help<CR>")
+vim.keymap.set('n', '<leader>pf', ":Pick files<CR>")
+vim.keymap.set('n', '<leader>pg', ":Pick grep live<CR>")
+vim.keymap.set('n', '<leader>oe', ":Oil<CR>")
+vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover)
+vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition)
+vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration)
+vim.keymap.set('n', '<leader>li', vim.lsp.buf.implementation)
+vim.keymap.set('n', '<leader>lo', vim.lsp.buf.type_definition)
+vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references)
+vim.keymap.set('n', '<leader>ls', vim.lsp.buf.signature_help)
+vim.keymap.set('n', '<leader>le', vim.diagnostic.open_float,
   { desc = "Show error message" })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
-vim.cmd("colorscheme base16-black-metal-immortal")
+vim.cmd("colorscheme base16-black-metal")
 vim.cmd(":hi statusline guibg=NONE")
 vim.cmd(":hi LineNr guibg=NONE")
 vim.cmd(":hi CursorLineNr guibg=NONE")

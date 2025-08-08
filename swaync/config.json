@@ -19,6 +19,7 @@
   "timeout-critical": 0,
   "fit-to-screen": false,
   "relative-timestamps": true,
+  "24-hour": true,
   "control-center-width": 460,
   "control-center-height": 750,
   "notification-window-width": 400,

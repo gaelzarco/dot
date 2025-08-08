@@ -89,7 +89,7 @@
     "format-empty": ""
   },
   "clock": {
-    "format": "{:%a %b %d %I:%M:%S %p}",
+    "format": "{:%a %b %d %H:%M:%S}",
     "tooltip": false,
     "interval": 1
   },

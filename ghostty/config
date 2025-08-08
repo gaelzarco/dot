@@ -1,24 +1,24 @@
 title = "Ghostty"
 font-family = Aux Mono
-font-size = 12
-background-opacity = 0.6 
+font-size = 16
+background-opacity = 0.7 
 background-blur-radius = 50
 
 # Themes
-theme = black_metal
+theme = black_metal_dark_funeral
 background = 000000
 
 # Shaders
 # custom-shader = ~/.config/ghostty/shaders/crt0.glsl
 
 # Enable on MacOS
-# window-decoration = false 
-# macos-titlebar-style = hidden
-# macos-icon-screen-color = 000000
+window-decoration = false 
+macos-titlebar-style = hidden
+macos-icon-screen-color = 000000
 
 # Enable on Linux
-gtk-adwaita = false
-gtk-tabs-location = hidden
+# gtk-adwaita = false
+# gtk-tabs-location = hidden
 
 # Manage 
 # keybind = ctrl+space>t=new_tab

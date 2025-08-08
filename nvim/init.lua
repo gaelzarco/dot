@@ -27,7 +27,8 @@ vim.pack.add({
   { src = "https://github.com/windwp/nvim-autopairs" },
   { src = "https://github.com/windwp/nvim-ts-autotag" },
   { src = "https://github.com/lervag/vimtex" },
-  { src = "https://github.com/metalelf0/base16-black-metal-scheme" }
+  { src = "https://github.com/metalelf0/base16-black-metal-scheme" },
+  { src = "https://github.com/metalelf0/black-metal-theme-neovim" }
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -112,7 +113,7 @@ vim.keymap.set('n', '<leader>le', vim.diagnostic.open_float,
   { desc = "Show error message" })
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 
-vim.cmd("colorscheme base16-black-metal")
+vim.cmd("colorscheme base16-black-metal-dark-funeral")
 vim.cmd(":hi statusline guibg=NONE")
 vim.cmd(":hi LineNr guibg=NONE")
 vim.cmd(":hi CursorLineNr guibg=NONE")

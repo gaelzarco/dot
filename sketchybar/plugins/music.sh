@@ -21,7 +21,7 @@ fi
 
 title=$(osascript -e 'tell application "Music" to get name of current track')
 artist=$(osascript -e 'tell application "Music" to get artist of current track')
-# ALBUM=$(osascript -e 'tell application "Music" to get album of current track')
+album=$(osascript -e 'tell application "Music" to get album of current track')
 loved=$(osascript -l JavaScript -e "Application('Music').currentTrack().favorited()")
 if [[ $loved ]]; then
     icon="❤"
@@ -36,17 +36,17 @@ if [[ $PLAYER_STATE == "playing" ]]; then
 fi
 
 if [[ ${#title} -gt 25 ]]; then
-  title="$(echo "$title" | cut -c 1-30)…"
+  title="$(echo "$title" | cut -c 1-20)…"
 fi
 
-# if [[ ${#artist} -gt 25 ]]; then
-#   artist="$(echo "$artist" | cut -c 1-12)…"
-# fi
+if [[ ${#artist} -gt 25 ]]; then
+  artist="$(echo "$artist" | cut -c 1-12)…"
+fi
 
-# if [[ ${#ALBUM} -gt 25 ]]; then
-#   ALBUM=$(printf "$(echo $ALBUM | cut -c 1-12)…")
-# fi
+if [[ ${#album} -gt 25 ]]; then
+  album="$(echo "$album" | cut -c 1-12)…"
+fi
 
 sketchybar -m --set music icon="$icon" \
-    --set music label="${title}" \
+    --set music label="${title} - ${artist} - ${album}" \
     --set music drawing=on

@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal config. Feel free to use this mess.
+Personal config
 
 ## Installation
 

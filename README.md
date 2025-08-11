@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal config
+Personal configuration for various programs.
 
 ## Installation
 

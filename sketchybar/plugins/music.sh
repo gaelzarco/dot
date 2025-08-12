@@ -1,52 +1,42 @@
 #!/usr/bin/env bash
 
-# FIXME: Running an osascript on an application target opens that app
-# This sleep is needed to try and ensure that theres enough time to
-# quit the app before the next osascript command is called. I assume 
-# com.apple.iTunes.playerInfo fires off an event when the player quits
-# so it imediately runs before the process is killed
 sleep 1
 
-APP_STATE=$(pgrep -x Music)
-if [[ ! $APP_STATE ]]; then 
-    sketchybar -m --set music drawing=off
-    exit 0
+# Hide if Music.app isn't running / stopped
+if ! pgrep -x Music >/dev/null; then
+  sketchybar -m --set music drawing=off
+  exit 0
 fi
+PLAYER_STATE=$(osascript -e 'tell application "Music" to get player state as text')
+[[ "$PLAYER_STATE" == "stopped" ]] && { sketchybar --set music drawing=off; exit 0; }
 
-PLAYER_STATE=$(osascript -e "tell application \"Music\" to set playerState to (get player state) as text")
-if [[ $PLAYER_STATE == "stopped" ]]; then
-    sketchybar --set music drawing=off
-    exit 0
-fi
-
+# Fetch fields
 title=$(osascript -e 'tell application "Music" to get name of current track')
 artist=$(osascript -e 'tell application "Music" to get artist of current track')
 album=$(osascript -e 'tell application "Music" to get album of current track')
 loved=$(osascript -l JavaScript -e "Application('Music').currentTrack().favorited()")
-if [[ $loved ]]; then
-    icon="❤"
-fi
 
-if [[ $PLAYER_STATE == "paused" ]]; then
-    icon="⏸"
-fi
+# Trim helpers
+trim() { local s="$1" max="$2"; [[ ${#s} -le $max ]] && echo "$s" || echo "${s:0:$((max-1))}…"; }
+[[ -n "$title"  ]] && title="$(trim "$title" 20)"
+[[ -n "$artist" ]] && artist="$(trim "$artist" 12)"
+[[ -n "$album"  ]] && album="$(trim "$album" 12)"
 
-if [[ $PLAYER_STATE == "playing" ]]; then
-    icon="▶"
-fi
+# Build label from available parts only
+parts=()
+[[ -n "$title"  ]]  && parts+=("$title")
+[[ -n "$artist" ]]  && parts+=("$artist")
+[[ -n "$album"  ]]  && parts+=("$album")
+label="$(IFS=' - '; echo "${parts[*]}")"
 
-if [[ ${#title} -gt 25 ]]; then
-  title="$(echo "$title" | cut -c 1-20)…"
-fi
+# Icon
+icon="⏸"
+[[ "$PLAYER_STATE" == "playing" ]] && icon="▶"
+[[ "$loved" == "true" ]] && icon="❤"
 
-if [[ ${#artist} -gt 25 ]]; then
-  artist="$(echo "$artist" | cut -c 1-12)…"
+# Render or hide
+if [[ -z "$label" ]]; then
+  sketchybar -m --set music drawing=off
+else
+  sketchybar -m --set music icon="$icon" label="$label" drawing=on
 fi
-
-if [[ ${#album} -gt 25 ]]; then
-  album="$(echo "$album" | cut -c 1-12)…"
-fi
-
-sketchybar -m --set music icon="$icon" \
-    --set music label="${title} - ${artist} - ${album}" \
-    --set music drawing=on

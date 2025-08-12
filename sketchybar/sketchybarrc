@@ -17,7 +17,29 @@ default=(
 )
 sketchybar --default "${default[@]}"
 
+brightness_slider=(
+  script="$PLUGIN_DIR/brightness.sh"
+  updates=on
+  label.drawing=off
+  icon.drawing=off
+  slider.highlight_color=0xffffffff
+  slider.background.height=5
+  slider.background.corner_radius=3
+  slider.background.color=0x000000ff
+  slider.knob=❙
+  slider.knob.drawing=off
+)
+
+brightness_icon=(
+  click_script="$PLUGIN_DIR/brightness_trigger.sh"
+  icon=☀
+  icon.align=left
+  label.drawing=on
+  drawing=off
+)
+
 sketchybar --add event aerospace_workspace_change
+sketchybar -m --add event song_update com.apple.iTunes.playerInfo
 
 sketchybar --add item space_indicator left \
            --set space_indicator \
@@ -32,14 +54,11 @@ sketchybar --add item front_app left \
            --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
            --subscribe front_app front_app_switched
 
-sketchybar -m --add event song_update com.apple.iTunes.playerInfo
-
 sketchybar -m --add item music left \
            --set music script="$PLUGIN_DIR/music.sh" \
-           click_script="$PLUGIN_DIR/music_click.sh" \
-           icon.padding_left=10 \
-           icon.padding_right=5 \
-           drawing=off \
+             icon.padding_right=5 \
+             icon.padding_left=10 \
+             drawing=off \
            --subscribe music song_update
 
 sketchybar --add item clock right \
@@ -50,5 +69,20 @@ sketchybar --add item clock right \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change
+
+sketchybar --add slider brightness right \
+           --set brightness padding_right=0 "${brightness_slider[@]}" \
+           --subscribe brightness brightness_change mouse.clicked mouse.entered mouse.exited \
+           --add item brightness_icon right \
+           --set brightness_icon "${brightness_icon[@]}"
+
+sketchybar --add item brightness_watch right \
+           --set brightness_watch script="$PLUGIN_DIR/brightness_watch.sh" \
+             update_freq=5 \
+             drawing=off \
+           --subscribe brightness_watch system_woke
+
+"$PLUGIN_DIR/brightness_watch.sh"
+"$PLUGIN_DIR/brightness_trigger.sh"
 
 sketchybar --update

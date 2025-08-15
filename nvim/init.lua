@@ -12,15 +12,11 @@ vim.o.fillchars = 'eob: '
 vim.o.textwidth = 80
 vim.o.winborder = "rounded"
 vim.o.clipboard = "unnamedplus"
+vim.o.completeopt = "menu,menuone,noselect,noinsert"
 vim.g.vimtex_view_method = "zathura"
 vim.g.mapleader = " "
 
-vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
-vim.keymap.set('n', '<leader>w', ':write<CR>')
-vim.keymap.set('n', '<leader>q', ':quit<CR>')
-
 vim.pack.add({
-  { src = "https://github.com/stevearc/oil.nvim" },
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
   { src = "https://github.com/neovim/nvim-lspconfig" },
   { src = "https://github.com/windwp/nvim-autopairs" },
@@ -39,7 +35,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-require("oil").setup()
 require("nvim-autopairs").setup()
 require('nvim-ts-autotag').setup({
   opts = {

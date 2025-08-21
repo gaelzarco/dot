@@ -22,8 +22,8 @@ full_symbol = ' '
 discharging_symbol = ' '
 
 [[battery.display]]
-threshold = 100
-style = "bold green"
+threshold = 25
+style = "bold red"
 
 [character]
 success_symbol = '[➜](bold green)'

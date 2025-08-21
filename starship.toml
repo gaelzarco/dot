@@ -33,15 +33,15 @@ error_symbol = "[➜](bold red)"
 format = "[$branch](white)"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](white)($ahead_behind$stashed)]($style) "
 style = "white"
-conflicted = "!"
-untracked = "_"
-modified = "%"
-staged = "^"
+conflicted = "×"
+untracked = "◌"
+modified = "•"
+staged = "↑"
 renamed = ""
 deleted = ""
-stashed = ""
+stashed = "↷"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)](white)\) '

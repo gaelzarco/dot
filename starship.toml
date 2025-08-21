@@ -1,64 +1,67 @@
 format = """
-[░▒▓](#06090c)\
-[ ⠿ ](bg:#06090c fg:#bacccf)\
-[](bg:#8f8f8f fg:#06090c)\
-$directory\
-[](fg:#8f8f8f bg:#0d0f12)\
-$git_branch\
-$git_status\
-[](fg:#0d0f12 bg:#111315)\
-$nodejs\
-$rust\
-$golang\
-$php\
-[](fg:#111315 bg:#101010)\
-$time\
-[ ](fg:#101010)\
-\n$character"""
+$hostname$username$git_branch$git_state$git_status$battery
+$directory$cmd_duration$character
+"""
+
+[hostname]
+format = "[$hostname](blue)::"
+ssh_only = false
+
+[username]
+format = "[$user](blue) "
+show_always = true
 
 [directory]
-style = "fg:#030303 bg:#8f8f8f"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+format = "[$path](bold white) "
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+[battery]
+format = "[$symbol$percentage]($style) "
+disabled = false
+charging_symbol = ' '
+full_symbol = ' '
+discharging_symbol = ' '
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = "[➜](bold red)"
 
 [git_branch]
-symbol = ""
-style = "bg:#272727"
-format = '[[ $symbol $branch ](fg:#a6b3b5 bg:#0d0f12)]($style)'
+format = "[$branch](white)"
 
 [git_status]
-style = "bg:#272727"
-format = '[[($all_status$ahead_behind )](fg:#a6b3b5 bg:#0d0f12)]($style)'
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "white"
+conflicted = "!"
+untracked = "_"
+modified = "%"
+staged = "^"
+renamed = ""
+deleted = ""
+stashed = ""
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)](white)\) '
+
+[cmd_duration]
+format = "[$duration](gray) "
+min_time = 0
+show_milliseconds = true
+
+[package]
+disabled = false
+
+[erlang]
+symbol = "ⓔ "
 
 [nodejs]
-symbol = ""
-style = "bg:#171717"
-format = '[[ $symbol ($version) ](fg:#a6b3b5 bg:#111315)]($style)'
+symbol = "[⬢](bold green) "
 
-[rust]
-symbol = ""
-style = "bg:#171717"
-format = '[[ $symbol ($version) ](fg:#a6b3b5 bg:#111315)]($style)'
+[pulumi]
+symbol = "🧊 "
 
-[golang]
-symbol = ""
-style = "bg:#171717"
-format = '[[ $symbol ($version) ](fg:#a6b3b5 bg:#111315)]($style)'
- 
-[php]
-symbol = ""
-style = "bg:#171717"
-format = '[[ $symbol ($version) ](fg:#a6b3b5 bg:#111315)]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#101010"
-format = '[[  $time ](fg:#a6b3b5 bg:#101010)]($style)'
+[typst]
+symbol = "t "

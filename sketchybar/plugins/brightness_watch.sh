@@ -11,10 +11,9 @@ detect_pct() {
 }
 
 if pct="$(detect_pct)"; then
-  # show icon + init values so they aren't 0 after reload
-  sketchybar --set brightness_icon drawing=on label="${pct}%"
-  sketchybar --set brightness slider.percentage="$pct" slider.width=0
+  sketchybar --set brightness_icon drawing=on label="${pct}%" \
+             --set brightness drawing=on slider.percentage="$pct" slider.width=0
 else
-  sketchybar --set brightness_icon drawing=off \
-             --set brightness slider.width=0
+  sketchybar --set brightness_icon drawing=off label="" \
+             --set brightness drawing=off slider.width=0
 fi

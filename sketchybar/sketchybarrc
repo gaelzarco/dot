@@ -35,6 +35,7 @@ brightness_icon=(
   icon=☀
   icon.align=left
   label.drawing=on
+  icone.drawing=off
   drawing=off
 )
 

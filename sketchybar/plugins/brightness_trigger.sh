@@ -26,7 +26,7 @@ main() {
   if [[ "$pct" =~ ^[0-9]+$ && $pct -ge 0 && $pct -le 100 ]]; then
     sketchybar --set brightness slider.percentage="$pct" slider.width=0
     sketchybar --set brightness_icon label="${pct}%"
-    sketchybar --trigger brightness_change INFO="$pct"
+    sketchybar --trigger brightness_change SRC=ddc INFO="$pct"
   fi
 }
 main

@@ -13,6 +13,13 @@ detect_display() {
 }
 
 brightness_change() {
+  # Only if we actually have an external DDC display
+  [[ -z "$DDC_DISPLAY" ]] && DDC_DISPLAY="$(detect_display)"
+  [[ -z "$DDC_DISPLAY" ]] && exit 0
+
+  # Only react to our own DDC-triggered events, not the built-in panel
+  [[ "$SRC" != "ddc" ]] && exit 0
+
   # clear label while the slider is visible
   sketchybar --set brightness_icon label=""
 
@@ -36,7 +43,7 @@ mouse_clicked() {
   [[ -z "$DDC_DISPLAY" ]] && exit 0
 
   "$M1DDC" display "$DDC_DISPLAY" set luminance "$PERCENTAGE" >/dev/null 2>&1
-  sketchybar --trigger brightness_change INFO="$PERCENTAGE"
+  sketchybar --trigger brightness_change SRC=ddc INFO="$PERCENTAGE"
 }
 
 mouse_entered() {

@@ -57,7 +57,7 @@ sketchybar --add item front_app left \
 
 sketchybar --add item cpu_usage left \
            --set cpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=3 \
-             icon.padding_left=5 \
+             icon.padding_left=10 \
              icon.font="GeistMono Nerd Font:Regular:14.0"
 
 sketchybar --add item gpu_usage left \
@@ -75,7 +75,7 @@ sketchybar --add item site_status left \
              update_freq=5 \
              icon.font="GeistMono Nerd Font:Regular:14.0" \
              label.font="Aux Mono:Regular:14.0" \
-             icon.padding_left=10
+             icon.padding_left=5
              click_script="open $WEBSITE_URL" \
            --subscribe site_status system_woke
 

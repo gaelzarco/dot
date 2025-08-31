@@ -13,7 +13,10 @@
   },
   "modules": [
     "break",
-    "title",
+    {
+      "type": "title",
+      "format": "{host-name}::{user-name}"
+    },
     "break",
     "os",
     "cpu",

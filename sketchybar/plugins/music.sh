@@ -1,42 +1,31 @@
 #!/usr/bin/env bash
 
-sleep 1
+TITLE_MAX=20
+ARTIST_MAX=12
+ALBUM_MAX=12
 
-# Hide if Music.app isn't running / stopped
-if ! pgrep -x Music >/dev/null; then
-  sketchybar -m --set music drawing=off
-  exit 0
-fi
-PLAYER_STATE=$(osascript -e 'tell application "Music" to get player state as text')
-[[ "$PLAYER_STATE" == "stopped" ]] && { sketchybar --set music drawing=off; exit 0; }
+hide()  { sketchybar -m --set music drawing=off; }
+music() { osascript -e "tell application \"Music\" to $*"; }
+trim()  { local s="$1" max="$2"; [[ ${#s} -gt $max ]] && printf '%s…' "${s:0:max-1}" || printf '%s' "$s"; }
+add()   { local s="$1"; [[ -n "$s" ]] && { [[ -n "$label" ]] && label+=" - "; label+="$s"; }; }
 
-# Fetch fields
-title=$(osascript -e 'tell application "Music" to get name of current track')
-artist=$(osascript -e 'tell application "Music" to get artist of current track')
-album=$(osascript -e 'tell application "Music" to get album of current track')
-loved=$(osascript -l JavaScript -e "Application('Music').currentTrack().favorited()")
+pgrep -x Music >/dev/null || { hide; exit 0; }
+state=$(music 'get player state as text')
+[[ "$state" == "stopped" ]] && { hide; exit 0; }
 
-# Trim helpers
-trim() { local s="$1" max="$2"; [[ ${#s} -le $max ]] && echo "$s" || echo "${s:0:$((max-1))}…"; }
-[[ -n "$title"  ]] && title="$(trim "$title" 20)"
-[[ -n "$artist" ]] && artist="$(trim "$artist" 12)"
-[[ -n "$album"  ]] && album="$(trim "$album" 12)"
+title=$(music 'get name of current track')
+artist=$(music 'get artist of current track')
+# album=$(music 'get album of current track')
 
-# Build label from available parts only
-parts=()
-[[ -n "$title"  ]]  && parts+=("$title")
-[[ -n "$artist" ]]  && parts+=("$artist")
-[[ -n "$album"  ]]  && parts+=("$album")
-label="$(IFS=' - '; echo "${parts[*]}")"
+[[ -n "$title"  ]] && title="$(trim "$title"  "$TITLE_MAX")"
+[[ -n "$artist" ]] && artist="$(trim "$artist" "$ARTIST_MAX")"
+# [[ -n "$album"  ]] && album="$(trim "$album"  "$ALBUM_MAX")"
 
-# Icon
+label=""
+add "$title"; add "$artist"; # add "$album"
+
 icon="⏸"
-[[ "$PLAYER_STATE" == "playing" ]] && icon="▶"
-[[ "$loved" == "true" ]] && icon="❤"
+[[ "$state" == "playing" ]] && icon="▶"
 
-# Render or hide
-if [[ -z "$label" ]]; then
-  sketchybar -m --set music drawing=off
-else
-  sketchybar -m --set music icon="$icon" label="$label" drawing=on
-fi
+# --- render ---
+[[ -n "$label" ]] && sketchybar -m --set music icon="$icon" label="$label" drawing=on || hide

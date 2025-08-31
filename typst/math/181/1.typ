@@ -14,7 +14,7 @@ _where $y$ distance fallen (in feet) after $t$ seconds._
 y)/(Delta t)$)
 
 #parbreak()
-#h(1cm) Example:
+#h(1cm) *Example 1*
 \
 #h(1cm) An object falls from a cliff, what is its average speed...
 \
@@ -25,24 +25,30 @@ y)/(Delta t)$)
 \
 \
 #h(1cm) (a)
-$ (y(2)-y(0))/(2-0) = (16(2)^2-16(0)^2)/2 = (16(2)^2)/2 = 32 "feet/sec" $
+$ (y(2)-y(0))/(2-0) $
+$ = (16(2)^2-16(0)^2)/2 $ 
+$ = (16(2)^2)/2 $
+$ = 32 "ft/s" $
 \
 #h(1cm) (b)
-$ (y(2)-y(1))/(2-1) = (16(2)^2-16(0)^2)/(2-1) = 16(4)-16 = 3(16) = 48 "feet/sec" $
+$ (y(2)-y(1))/(2-1) $
+$ = (16(2)^2-16(0)^2)/(2-1) $ 
+$ = 16(4)-16 = 3(16) $ 
+$ = 48 "ft/s" $
 
 
-#h(1cm) Example:
+#h(1cm) *Example 2*
 \
 #h(1cm) Find the speed of a falling object at $t = 1$ and $t = 2$
 \
-#h(1cm) _We will use the interval $[t_0, t_0 + h]$ where $h = "change in" t$_
+#h(1cm) _We will use the interval $[t_0, t_0 + h]$ where $h = Delta t$_
 \
 $ (y(t_0 + h) - y(t_0))/(t_0+h-t_0) $
 $ (16(t_0 + h)^2 - 16(t_0)^2)/(h) $
 
-#h(1cm) ($t = 1$)
+#h(1cm) ($t_0 = 1$)
 \
-#h(1cm) ($t = 2$) 
+#h(1cm) ($t_0 = 2$) 
 $ (16(2+h)^2-16(2)^2)/h $
 $ = (16(4 + 4h + h^2) - 64)/h $
 $ = (64 + 64h +16h^2-64)/h  $

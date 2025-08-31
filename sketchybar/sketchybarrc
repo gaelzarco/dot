@@ -55,24 +55,9 @@ sketchybar --add item front_app left \
            --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
            --subscribe front_app front_app_switched
 
-sketchybar --add item cpu_usage left \
-           --set cpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=3 \
-             icon.padding_left=10 \
-             icon.font="GeistMono Nerd Font:Regular:14.0"
-
-sketchybar --add item gpu_usage left \
-           --set gpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=3 \
-             icon.padding_left=5 \
-             icon.font="GeistMono Nerd Font:Regular:14.0"
-
-sketchybar --add item mem_usage left \
-           --set mem_usage script="$PLUGIN_DIR/sys.sh" update_freq=3 \
-             icon.padding_left=5 \
-             icon.font="GeistMono Nerd Font:Regular:14.0"
-
 sketchybar --add item site_status left \
            --set site_status script="$PLUGIN_DIR/status.sh" \
-             update_freq=5 \
+             update_freq=10 \
              icon.font="GeistMono Nerd Font:Regular:14.0" \
              label.font="Aux Mono:Regular:14.0" \
              icon.padding_left=5
@@ -81,6 +66,7 @@ sketchybar --add item site_status left \
 
 sketchybar -m --add item music left \
            --set music script="$PLUGIN_DIR/music.sh" \
+             update_freq=2 \
              icon.padding_right=5 \
              icon.padding_left=10 \
              drawing=off \
@@ -93,7 +79,23 @@ sketchybar --add item clock right \
            --subscribe battery system_woke power_source_change \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
+                 icon.padding_right=5 \
            --subscribe volume volume_change
+
+sketchybar --add item mem_usage right \
+           --set mem_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
+             icon.padding_left=5 \
+             icon.font="GeistMono Nerd Font:Regular:14.0"
+
+sketchybar --add item gpu_usage right \
+           --set gpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
+             icon.padding_left=5 \
+             icon.font="GeistMono Nerd Font:Regular:14.0"
+
+sketchybar --add item cpu_usage right \
+           --set cpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
+             icon.padding_left=10 \
+             icon.font="GeistMono Nerd Font:Regular:14.0"
 
 sketchybar --add slider brightness right \
            --set brightness padding_right=0 "${brightness_slider[@]}" \

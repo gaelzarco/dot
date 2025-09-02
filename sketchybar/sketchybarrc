@@ -94,7 +94,7 @@ sketchybar --add item gpu_usage right \
 
 sketchybar --add item cpu_usage right \
            --set cpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
-             icon.padding_left=10 \
+             icon.padding_left=0 \
              icon.font="GeistMono Nerd Font:Regular:14.0"
 
 sketchybar --add slider brightness right \

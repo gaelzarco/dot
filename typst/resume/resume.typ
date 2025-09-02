@@ -14,10 +14,11 @@
 
 = Gael Zarco
 
+Las Vegas, NV |
 #link("mailto:gaelxarco@icloud.com")[gaelxarco\@icloud.com] |
 #link("tel:7024268371")[702-426-8371] |
-#link("https://xarco.net")[xarco.net] |
-#link("https://linkedin.com/in/gaelzarco")[LinkedIn]
+#link("https://linkedin.com/in/gaelzarco")[LinkedIn] |
+#link("https://xarco.net")[Portfolio]
 
 == Work Experience
 #chiline()

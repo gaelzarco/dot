@@ -53,3 +53,18 @@ case "$NAME" in
   gpu_usage) set_item "$NAME" "$(gpu_pct)" "󰢮" ;;
   mem_usage) set_item "$NAME" "$(mem_pct)" "󰍛" ;;
 esac
+
+# sketchybar --add item mem_usage right \
+#            --set mem_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
+#              icon.padding_left=5 \
+#              icon.font="GeistMono Nerd Font:Regular:14.0"
+# 
+# sketchybar --add item gpu_usage right \
+#            --set gpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
+#              icon.padding_left=5 \
+#              icon.font="GeistMono Nerd Font:Regular:14.0"
+# 
+# sketchybar --add item cpu_usage right \
+#            --set cpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
+#              icon.padding_left=0 \
+#              icon.font="GeistMono Nerd Font:Regular:14.0"

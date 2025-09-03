@@ -45,7 +45,9 @@ sketchybar -m --add event song_update com.apple.iTunes.playerInfo
 sketchybar --add item space_indicator left \
            --set space_indicator \
              icon= \
-             icon.padding_right=10 \
+             label.padding_left=0 \
+             icon.padding_left=0 \
+             icon.padding_right=0 \
              label.drawing=on \
              background.drawing=off \
              script="$PLUGIN_DIR/space.sh" \
@@ -81,21 +83,6 @@ sketchybar --add item clock right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
                  icon.padding_right=5 \
            --subscribe volume volume_change
-
-sketchybar --add item mem_usage right \
-           --set mem_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
-             icon.padding_left=5 \
-             icon.font="GeistMono Nerd Font:Regular:14.0"
-
-sketchybar --add item gpu_usage right \
-           --set gpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
-             icon.padding_left=5 \
-             icon.font="GeistMono Nerd Font:Regular:14.0"
-
-sketchybar --add item cpu_usage right \
-           --set cpu_usage script="$PLUGIN_DIR/sys.sh" update_freq=2 \
-             icon.padding_left=0 \
-             icon.font="GeistMono Nerd Font:Regular:14.0"
 
 sketchybar --add slider brightness right \
            --set brightness padding_right=0 "${brightness_slider[@]}" \

@@ -323,3 +323,31 @@ implicitly declared.
 - The name of the destructor is `~className`.
 - Automatically executes when the class object goes out of scope.
 - Should *NEVER* be invoked directly.
+
+#pad(top: 1cm, [
+== Data Abstraction, Classes, and Abstract Data Types
+])
+
+*Abstraction*: Separating design details from usage
+- Separates logical properties from the implementation details.
+
+*Abstract Data Type (ADT)*: Data type that separates the logical properties from
+the implementation details.
+
+Three things associated with an ADT:
+
+1. *Type Name*: The name of the ADT
+2. *Domain*: The set of values belonging to the ADT.
+3. Set of *Operations* on the data.
+
+#pad(top: 1cm, [
+== `struct` VS `class`
+])
+
+#table(
+  columns: 2, rows: 2,
+  [`struct`], [`class`],
+  [members are `public` by default], [members are `private` by default],
+)
+
+Both have the same capabilities.

@@ -14,11 +14,11 @@
     "mpris"
   ],
   "modules-center": [
-    "group/info"
   ],
   "modules-right": [
     "tray",
-    "group/controls"
+    "group/controls",
+    "group/info"
   ],
   "group/sys": {
     "orientation": "horizontal",
@@ -38,8 +38,7 @@
   "group/info": {
     "orientation": "horizontal",
     "modules": [
-      "clock",
-      "custom/swaync"
+      "clock"
     ]
   },
   "group/controls": {

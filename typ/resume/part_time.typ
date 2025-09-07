@@ -22,7 +22,7 @@ Las Vegas, NV |
 Bilingual computer science student with 3+ years of restaurant experience
 (steakhouse, Mexican, and casual dining). I bring IT/Web skills in troubleshooting,
 organization, and clear communication to fast-paced, guest-facing roles.
-Actively seeking part-time role while pursuing a bachelor of science in Computer
+Actively seeking a part-time role while pursuing a bachelor of science in Computer
 Science.
 
 == Work Experience

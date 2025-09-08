@@ -2,12 +2,12 @@
 #let date = datetime(
   year: 2025,
   month: 9,
-  day: 3
+  day: 8
 )
 
 #set align(center) 
 #pad(top: 4cm, bottom: 1.5cm, [
-  = 11; Abstraction & Inheritance
+  = 11; Inheritance & Composition
 
   #v(10pt)
   #set text(14pt, style: "normal")
@@ -17,329 +17,148 @@
 ])
 #set align(left)
 
-#pad(top: 0.5cm, [
-== Classes
-])
-
-Three Categories of class members:
-
-- `private` _(default)_
-#h(1cm) - Member cannot be accesed outsite the class
-
-- `public`
-#h(1cm) - Member is accessible outside the class
-
-- `protected`
-#h(1cm) - Member is accessible within the class and all its subclasses
+- *Inheritance*: "is-a"
+- *Composition*: "has-a"
 
 #pad(top: 0.5cm, [
-== Unified Modeling Language Class Diagrams (UML)
+== Inheritance ("is-a")
 ])
 
-*UML Notation*: used to graphically describe a class and its members
- 
-- `+` member is `public` 
-- `-` member is `private` 
-- `#` member is `protected` 
+Allows creation of new classes from existing ones. It reduces complexity.
 
-#align(center, [#image("./assets/uml.png", width: 100%)])
+- *Derived*: New classes from existing ones. Inherits properties of its base
+  class.
+- *Base*: Original class
+- *Single Inheritance*: Derived class has a single base class.
+- *Multiple Inheritance*: Derived class has more than one base class.
+- *Public Inheritance*: All `public` members of the base class become `public`
+  members of the derived class, unless otherwise specified.
 
-#pad(top: 1cm, [
-== Accessing Class Members
-])
+Inheritance can be viewed as a tree-like structure.
 
-Once an object is declared, it can access the members of the class.
+#align(center, [#image("./assets/inherit.png", width: 100%)])
+_Inhertance: Figure 1_
 
 *Syntax:*
 
 ```cpp
-classObjectName.memberName
-```
-
-- The dot (`.`) is the *Member Access Operator*
-- Member functions of a class have access to all members (`public`, `protected`, and
-  `private`) of the same class, irrespective of where an object of the class is
-
-
-#pad(top: 1cm, [
-== Built-in Operations on Classes
-])
-
-- Arithmetic operators can *NOT* be used on class objects unless the operators are overloaded.
-- Relational operators can *NOT* be used to compare two class objects for
-  equality.
-
-*Built-in operations that are valid for class objects:*
-
-- Member access (`.`)
-- Assignment (`=`)
-
-#pad(top: 1cm, [
-== `class` Scope
-])
-
-A class object can be automatic or static.
-
-*Automatic*: created when the declaration is reached and destroyed when the
-  surrounding block is exited.
-
-*Static*: created when the declaration is reached and destroyed when the
-  program terminates.
-
-#pad(top: 1cm, [
-== Reference Params and `class` Objects
-])
-
-Try to pass by reference. Avoid passing by value (creates copy).
-
-#pad(top: 1cm, [
-== Operators
-])
-
-*Scope Resolution Operator*: `::` used to access functions in a `class`.
-
-*Member Access Operator*: `.` used to access members in a `class`,
-
-#pad(top: 1cm, [
-== Accessor and Mutator Functions
-])
-
-*Accessor Function*: Member function that only accesses the value(s) of member
-variable(s).
-
-*Mutator Function*: Member function that modifies the value(s) of member variable(s).
-
-*Constant Function*:
-- Member function that cannot modify member variables of that class.
-- Member function heading with `const` at the end.
-
-#pad(top: 1cm, [
-== Order of `public` and `private` Members of a Class
-])
-
-No defined order, however follow the book's convention of `public` first.
-
-#pad(top: 1cm, [
-== Constructors
-])
-
-Use constructors to guarantee that member variables are initialized.
-
-Two types:
-- Without params (`default` constructors)
-- With params
-
-Other properties:
-- Name of constructor is the same as the class.
-- A constructor has no type.
-
-*`default` Constructor Example*:
-
-```cpp
-class StudentType {
-  public:
-    StudentType();                          // default constructor
-    std::string getName() const;
-    void setName(std::string name);
-
-  private:
-    std::string name;
-    std::string id;
-    std::string phone;
-}
-
-int main() {
-  StudentType stu1;
-}
-
-// Default constructor implementation
-StudentType::StudentType() {
-  name = "";
-  id = "000";
-  phone = "702-000-0000";
+class className : memberAccessSpecified baseClassName {
+  // Member list
 }
 ```
+_Inhertance: Figure 2_
 
-*Parameterized Constructor Example*:
-```cpp
-class StudentType {
-  public:
-    StudentType(std::string name, std::string id, std::string phone);
-    std::string getName() const;
-    void setName(std::string name);
+- `memberAccessSpecifier` is `public`, `protected`, or `private` (default).
+- `private` members of a base class are private to the base class.
+  - Derived class cannot directly access them.
+- `public` members of the base class can be inherited as `public` or `private`
+  members, depending on inheritance specifier.
+- Derived class can:
+  - Add new members (data and/or functions)
+  - Override (redefine) `public` member functions of the base class
 
-  private:
-    std::string name;
-    std::string id;
-    std::string phone;
-}
+#align(center, [#image("./assets/inherit_2.png", width: 100%)])
+_Inhertance: Figure 3_
 
-int main() {
-  StudentType stu1("Gael", "5006289777", "702-426-8371");
-}
-```
-
-*Parameterized Constructor with Default Arguments Example*:
-
-```cpp
-class StudentType {
-  public:
-    StudentType(std::string name = "", std::string id = "000", std::string phone =
-    "702-000-0000") {
-      name = name;
-      id = id;
-      phone = phone;
-    }
-    std::string getName() const;
-    void setName(std::string name);
-
-  private:
-    std::string name;
-    std::string id;
-    std::string phone;
-}
-
-int main() {
-  StudentType stu1("Gael", "5006289777", "702-426-8371");
-}
-```
-
-Classes *CAN* have more than 1 constructor.
-- Each must have  a different formal parameter list (function signature).
-
-Costructors execute automatically when a class object enters its scope.
-- They cannot be called like other functions.
-- Which constructor executes depends of the types of values passed to the
-  `class` object when the `class` object is declared.
-
-#pad(top: 1cm, [
-== Constructor Precautions
+#pad(top: 0.5cm, [
+== Overiding/Overloading Member Functions of the Base Class
 ])
 
-C++ provides a default constructor if a class does not have one.
-- Likely to be uninitialized if in-line initialization is not used.
+To *override* a `public` member function:
+- Derived function must have the *SAME* name, number, and types, of params as in
+  the base class.
+  - Otherwise, it is *overloaded*.
+- Use `::` to access base class functions from within derived class.
 
-*HOWEVER*, if a class includes constructor(s) with param(s), but not a
-`default`:
-- C++ does *NOT* provide the `default`.
-- Appropriate args must be included when obj is declared.
 
-_If you define any constructor, you *must always* define a `default`
-constructor._
-
-#pad(top: 1cm, [
-== In-Line Initialization of Data Members and the `default` constructor
+#pad(top: 0.5cm, [
+== Constructors of Derived/Base Classes
 ])
 
-C++14 standard allows member initializations in class declarations.
-- Called in-line initialization of the data members.
+A derived class constructor cannot directly access `private` members of the base
+class.
+- It can init `public` or `protected` members of the base class.
 
-When an object is declared without params, then the object is initialized with
-the in-line initialized values.
-- If declared with params, then the default vals are overriden
+Derived class declared $->$ constructor from base class executed.
 
-*Example:*
+#align(center, [#image("./assets/inherit_3.png", width: 100%)])
+_Inhertance: Figure 4_
 
-```cpp
-class ClockType {
-  public:
-    // ...
-  private:
-    int hr = 0;
-    int min = 0;
-    int sec = 0;
-}
-```
+*Destructors* deallocate memory resources allocated by a `class`.
 
-#pad(top: 1cm, [
-== Member-Initialized Lists
+#pad(top: 0.5cm, [
+== Header File of a Derived Class
 ])
 
-Used to initialize class member variables when a constructor is invoked.
-- Use it in the constructor definition.
+Create new header files to define new classes.
+- For derived classes, include the header file of the base class.
+- Definitions appear in a separate `.cpp` file.
 
-*Syntax:*
-
-```cpp
-className(params): member1(value1), member2(value2) {
-  // Constructor body...
-}
-```
-
-*Example:*
-
-```cpp
-StudentType::StudentType(): name(""), id("000"), phone("702-000-0000") {
-
-}
-```
-
-Member variables are initialized before the constructor body executes.
-
-Useful for:
-- Initializing `const` or `reference` members.
-- Efficiently intialzing non-default-constructible objects.
-
-*Example:*
-
-```cpp
-class clockType {
-  public:
-    clockType(int hour, int min, int sec)
-    : hr(hour), m(min), s(sec){}
-  private:
-    int hr;
-    int m;
-    int s;
-}
-```
-
-#pad(top: 1cm, [
-== Arrays of Class Objects (Variables) and Constructors
+#pad(top: 0.5cm, [
+== Multiple Inclusions of a Header File
 ])
 
-If you declare an arr of class obects, the class should have a default
-constructor.
-- Typically used to intialize each (array) class object.
-- Classes should *ALWAYS* have a default constructor.
+Use `#include` to include a header file
+- Use `""` instead of `<>`
 
-If a class has a user-defined constructor, the default constructor is not
-implicitly declared.
-
-#pad(top: 1cm, [
-== Destructors
+#pad(top: 0.5cm, [
+== C++ Steam Classes
 ])
 
-*Destructors* are functions without any types.
-- A class can have only one destructor (has no params).
-- The name of the destructor is `~className`.
-- Automatically executes when the class object goes out of scope.
-- Should *NEVER* be invoked directly.
+The `std::ios` class is the base class of all stream classes.
 
-#pad(top: 1cm, [
-== Data Abstraction, Classes, and Abstract Data Types
+#align(center, [#image("./assets/stream.png", width: 100%)])
+_Inhertance: Figure 5_
+
+`istream` and `ostream` provide ops for data transfer between devices.
+
+#pad(top: 0.5cm, [
+== Protected Members of a Class
 ])
 
-*Abstraction*: Separating design details from usage
-- Separates logical properties from the implementation details.
+A derived class *CANNOT* directly access `private` members of its base class.
+- Declare them as `protected` in the base class so the derived class can
+  directly access them.
 
-*Abstract Data Type (ADT)*: Data type that separates the logical properties from
-the implementation details.
-
-Three things associated with an ADT:
-
-1. *Type Name*: The name of the ADT
-2. *Domain*: The set of values belonging to the ADT.
-3. Set of *Operations* on the data.
-
-#pad(top: 1cm, [
-== `struct` VS `class`
+#pad(top: 0.5cm, [
+== Inheritance as `public`, `protected`, or `private`
 ])
 
-#table(
-  columns: 2, rows: 2,
-  [`struct`], [`class`],
-  [members are `public` by default], [members are `private` by default],
-)
+#align(center, [#image("./assets/access.png", width: 100%)])
+_Inhertance: Figure 6_
 
-Both have the same capabilities.
+#pad(top: 0.5cm, [
+== Composition (Aggregation)
+])
+
+One or more member(s) of a class are *objects* of another class type.
+- *composition* is considered stricter than *aggregation*.
+
+Member objects of a class:
+- Constructed *before* containing class' constructor body executes.
+
+#pad(top: 0.5cm, [
+== Object-Oriented Design (OOD) and Object-Oriented Programming (OOP)
+])
+
+Fundamental principles:
+- *Encapsulation*: Combine data & operations on that data in a single unit
+  (`class`).
+- *Inheritance*: Derived units inherit data and operations from base unit.
+- *Polymorphism*: Abilitiy to use the same expression to denote different
+  ops.
+
+in *Object-Oriented Design*:
+- The *object* is the fundamental entity.
+- Debugging often occurs at the class level.
+- A program is a collection of *interacting objects*.
+
+*Object-Oriented Programming* implements OOD in a programming language
+- C++ supports OOP through the use of classes.
+- A function name and operators can be *overloaded*.
+- Templates provide *Parametric Polymorphism*.
+- C++ supports *Runtime Polymorphism*.
+
+Every object has *internal* (`private`/`protected` members) and *external*
+  (`public` members) state.
+

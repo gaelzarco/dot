@@ -91,10 +91,12 @@ if.app-id = 'com.apple.iCal'
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = 'layout floating'
+
+[[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = [
-  'move-node-to-workspace 1'
-]
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
@@ -103,7 +105,15 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-if.window-title-regex-substring = 'Do Homework.*'
+if.window-title-regex-substring = '.*Do Homework.*'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'sh.cider.genten.mac'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
 run = 'layout floating'
 
 [[on-window-detected]]
@@ -114,7 +124,7 @@ run = 'move-node-to-workspace 2'
 if.app-id = 'org.xquartz.X11'
 run = [
   'layout floating',
-  'move-node-to-workspace 2'
+  'move-node-to-workspace 3'
 ]
 
 [[on-window-detected]]
@@ -125,53 +135,31 @@ run = [
 ]
 
 [[on-window-detected]]
-if.app-id = 'sh.cider.genten.mac'
-run = [
-  'layout floating',
-  'move-node-to-workspace 4'
-]
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'
-run = [
-  'layout floating',
-  'move-node-to-workspace 4'
-]
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 4'
-
-[[on-window-detected]]
-if.app-id = 'com.square-enix.finalfantasyxiv'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
-if.app-id = 'net.rpcs3.rpcs3'
-run = [
-  'layout floating',
-  'move-node-to-workspace 5'
-]
-
-[[on-window-detected]]
-if.app-id = 'com.codeweavers.CrossOver'
-run = [
-  'layout floating',
-  'move-node-to-workspace 5'
-]
-
-[[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam'
 run = [
   'layout floating',
-  'move-node-to-workspace 5'
+  'move-node-to-workspace 3'
 ]
 
 [[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam.helper'
 run = [
   'layout floating',
-  'move-node-to-workspace 5'
+  'move-node-to-workspace 3'
+]
+
+[[on-window-detected]]
+if.app-id = 'com.codeweavers.CrossOver'
+run = [
+  'layout floating',
+  'move-node-to-workspace 3'
+]
+
+[[on-window-detected]]
+if.app-id = 'net.rpcs3.rpcs3'
+run = [
+  'layout floating',
+  'move-node-to-workspace 3'
 ]
 
 [[on-window-detected]]
@@ -195,7 +183,7 @@ inner.horizontal = 5
 inner.vertical =   5
 outer.left =       5 
 outer.bottom =     5
-outer.top = [{ monitor."ES07D03" = 30 }, 5]
+outer.top = [{ monitor."ES07D03" = 35 }, 5]
 outer.right =      5
 
 # 'main' binding mode declaration
@@ -245,8 +233,8 @@ alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-ctrl-h = 'resize smart -50'
-alt-ctrl-l = 'resize smart +50'
+alt-ctrl-k = 'resize smart +50'
+alt-ctrl-j = 'resize smart -50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1 '

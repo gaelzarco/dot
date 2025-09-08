@@ -7,7 +7,7 @@
 
 #set align(center) 
 #pad(top: 4cm, bottom: 1.5cm, [
-  = 10; Classes and Data Abstraction
+  = 11; Abstraction & Inheritance
 
   #v(10pt)
   #set text(14pt, style: "normal")
@@ -15,15 +15,7 @@
 
   #date.display("[month repr:long] [day], [year]")
 ])
-
 #set align(left)
-*Object-Oriented Design (OOD)*: Problem solving methodoloy
-
-*Object*: Combines data and the operations on that data in a single unit
-
-*Class*: A collection of a fixed number of components
-
-*Member*: A component of a class
 
 #pad(top: 0.5cm, [
 == Classes

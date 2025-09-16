@@ -71,6 +71,7 @@
     "format": "{}",
     "rewrite": {
       ".*Zen.*": "Zen",
+      ".*helium.*": "Helium",
       ".*Discord.*": "Discord"
     },
     "tooltip": false,

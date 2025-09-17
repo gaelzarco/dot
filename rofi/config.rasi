@@ -66,7 +66,7 @@ entry {
     placeholder: "Search";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
-    font: "Dots All For Now JL Bold 14";
+    font: "Dots All For Now JL Bold 13";
 }
 
 mainbox {

@@ -46,7 +46,6 @@
     "modules": [
       "custom/brightness",
       "pulseaudio",
-      "pulseaudio#microphone",
       "bluetooth"
     ]
   },
@@ -114,11 +113,11 @@
   "custom/brightness": {
     "format": "󰖨 {percentage}%",
     "return-type": "json",
-    "exec": "ddcutil getvcp 10 | grep -oP 'current.*?=\\s*\\K[0-9]+' | { read x; echo '{\"percentage\":'${x}'}'; }",
-    "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up && pkill -RTMIN+5 waybar",
-    "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down && pkill -RTMIN+5 waybar",
-    "on-click": "$HOME/.config/waybar/scripts/brightness_notify.sh min && pkill -RTMIN+5 waybar",
-    "on-click-right": "$HOME/.config/waybar/scripts/brightness_notify.sh max && pkill -RTMIN+5 waybar",
+    "exec": "x=$(cat /tmp/brightness_cache 2>/dev/null || echo 50); echo '{\"percentage\":'${x}'}'",
+    "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up",
+    "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down",
+    "on-click": "$HOME/.config/waybar/scripts/brightness_notify.sh min",
+    "on-click-right": "$HOME/.config/waybar/scripts/brightness_notify.sh max",
     "signal": 5,
     "tooltip": false
   },
@@ -170,9 +169,10 @@
   "pulseaudio": {
     "format": " {icon} {volume}%",
     "format-muted": "  Muted",
-    "on-click": "pamixer -t",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
+    "on-click": "pavucontrol",
+    "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
+    "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
+    "on-click-middle": "$HOME/.config/hypr/scripts/volume_notify.sh mute",
     "scroll-step": 1,
     "format-icons": {
       "headphone": "",
@@ -187,7 +187,8 @@
         "",
         ""
       ]
-    }
+    },
+    "tooltip": false
   },
   "pulseaudio#microphone": {
     "format": " {format_source}",

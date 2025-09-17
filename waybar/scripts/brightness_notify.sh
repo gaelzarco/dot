@@ -1,74 +1,81 @@
 #!/usr/bin/env bash
 
-I2C_BUS="2"
-CACHE_FILE="/tmp/brightness_cache"
+I2C_BUS=14
+CACHE=/tmp/brightness_cache
+PIDFILE=/tmp/brightness_debounce.pid
 
-# Initialize cache quickly
-[ -f "$CACHE_FILE" ] || echo "50" > "$CACHE_FILE"
+STEP=10
+DEBOUNCE=1           # seconds to wait after last change
+APP_NAME="Spectrum One Monitor"
+SYNC_HINT="spectrum_one"
+NOTIFY_MS=2000
 
-# Fast get brightness from cache
-get_brightness() {
-    cat "$CACHE_FILE" 2>/dev/null || echo "50"
+# Ensure cache exists
+[ -f "$CACHE" ] || printf "50" > "$CACHE"
+
+# Helpers
+read_cache() { cat "$CACHE" 2>/dev/null || echo 50; }
+clamp() { v=$1; [ "$v" -lt 0 ] && echo 0 && return; [ "$v" -gt 100 ] && echo 100 && return; echo "$v"; }
+
+# Cancel pending debounce job (if any)
+cancel_pending() {
+  if [ -f "$PIDFILE" ]; then
+    pid=$(<"$PIDFILE")
+    if [ -n "$pid" ] && kill -0 "$pid" 2>/dev/null; then
+      kill "$pid" 2>/dev/null || true
+      wait "$pid" 2>/dev/null || true
+    fi
+    rm -f "$PIDFILE" 2>/dev/null || true
+  fi
 }
 
-# Apply brightness instantly in background
-apply_brightness() {
-    local value=$1
-    echo "$value" > "$CACHE_FILE"
-    setsid ddcutil --sleep-multiplier 0.00 --bus "$I2C_BUS" setvcp 10 "$value" >/dev/null 2>&1 &
+# Schedule hardware write after debounce; overwrites any existing scheduled job
+schedule_write() {
+  cancel_pending
+
+  (
+    sleep "$DEBOUNCE"
+    new=$(read_cache)
+    setsid ddcutil --sleep-multiplier 0.00 --bus "$I2C_BUS" setvcp 10 "$new" >/dev/null 2>&1
+    rm -f "$PIDFILE" 2>/dev/null || true
+  ) &
+  echo "$!" > "$PIDFILE"
 }
 
-# Send notification immediately
-send_notification() {
-    local value=$(get_brightness)
-    notify-send -e -a "Eve Spectrum" -t 2000 -h int:value:"$value" "Brightness: $value%"
+# Update cache, notify, refresh UI, and schedule the debounced hardware write
+update_local() {
+  new=$(clamp "$1")
+  printf "%d" "$new" > "$CACHE"
+  notify-send -a "$APP_NAME" -t "$NOTIFY_MS" \
+    -h string:x-canonical-private-synchronous:"$SYNC_HINT" \
+    -h int:value:"$new" "$APP_NAME"
+  pkill -RTMIN+5 waybar 2>/dev/null || true
+  schedule_write
 }
 
-# Clamp brightness 0–100
-clamp() {
-    local val=$1
-    [ "$val" -lt 0 ] && echo 0 && return
-    [ "$val" -gt 100 ] && echo 100 && return
-    echo "$val"
+# Force immediate hardware write (cancel pending)
+write_now() {
+  cancel_pending
+  new=$(clamp "$1")
+  printf "%d" "$new" > "$CACHE"
+  notify-send -a "$APP_NAME" -t "$NOTIFY_MS" \
+    -h string:x-canonical-private-synchronous:"$SYNC_HINT" \
+    -h int:value:"$new" "$APP_NAME"
+  pkill -RTMIN+5 waybar 2>/dev/null || true
+  setsid ddcutil --sleep-multiplier 0.00 --bus "$I2C_BUS" setvcp 10 "$new" >/dev/null 2>&1 &
 }
 
-# Adjust brightness
-adjust_brightness() {
-    local change=$1
-    local current=$(get_brightness)
-    local new_value=$(clamp $((current + change)))
-    apply_brightness "$new_value"
-#    send_notification
-}
-
-# Set brightness
-set_brightness() {
-    local value=$(clamp "$1")
-    apply_brightness "$value"
-#    send_notification
-}
-
-# Actual read (slower, use only when forced)
-get_actual() {
-    ddcutil --sleep-multiplier 0.01 --bus "$I2C_BUS" getvcp 10 2>/dev/null | grep -oP 'current value =\s*\K[0-9]+' || get_brightness
-}
-
-# Main logic
 case "$1" in
-    up) adjust_brightness 10 ;;
-    down) adjust_brightness -10 ;;
-    min) set_brightness 10 ;;
-    max) set_brightness 100 ;;
-    set) set_brightness "${2:-50}" ;;
-    get) get_brightness ;;
-    actual) get_actual ;;
-    sync)
-        ACTUAL=$(get_actual)
-        echo "$ACTUAL" > "$CACHE_FILE"
-        send_notification
+  up)   update_local $(( $(read_cache) + STEP )) ;;
+  down) update_local $(( $(read_cache) - STEP )) ;;
+  min)  update_local 10 ;;
+  max)  update_local 100 ;;
+  set)  update_local "${2:-50}" ;;
+  get)  read_cache ;;
+  sync)
+        ACTUAL=$(ddcutil --sleep-multiplier 0.00 --bus "$I2C_BUS" getvcp 10 2>/dev/null \
+                 | grep -oP 'current value =\s*\K[0-9]+' || read_cache)
+        write_now "$ACTUAL"
         ;;
-    *)
-        echo "Usage: $0 {up|down|min|max|set <value>|get|actual|sync}"
-        exit 1
-        ;;
+  *) echo "Usage: $0 {up|down|min|max|set <v>|get|sync}"; exit 1 ;;
 esac

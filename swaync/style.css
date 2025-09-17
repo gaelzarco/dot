@@ -13,12 +13,14 @@
 @define-color bg-selected rgb(120, 225, 120);
 
 window,
+.control-center,
+.notification-row,
 .notification,        /* each notification frame */
 .notification .title, /* the title text */
 .notification .body,  /* the body text */
 .buttons-grid,        /* your control-center buttons */
 .label,               /* the “Control Center” label */
-.mpris               /* the mpris widget */
+.widget-mpris         /* the mpris widget */
 {
   font-family: "Aux Mono";
 }
@@ -51,8 +53,6 @@ window,
   margin-right:9px;
   box-shadow: none;
   border: none;
-  min-width: 20px;
-  min-height: 20px;
   border: 1px solid rgba(89, 89, 89, 0.0);
 }
 
@@ -533,9 +533,11 @@ notification-group-header {
   transition: all ease-in-out 100ms;
   font-size: 0.9rem;
   font-weight: 500;
+  outline: none;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:focus {
+  outline: none;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked {

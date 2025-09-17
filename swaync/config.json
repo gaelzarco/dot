@@ -2,7 +2,7 @@
   "positionx": "center",
   "positiony": "top",
   "layer": "overlay",
-  "nontrol-center-layer": "top",
+  "control-center-layer": "top",
   "layer-shell": true,
   "csspriority": "application",
   "control-center-margin-top": 5,

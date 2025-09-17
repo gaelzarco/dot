@@ -46,7 +46,7 @@ schedule_write() {
 update_local() {
   new=$(clamp "$1")
   printf "%d" "$new" > "$CACHE"
-  notify-send -a "$APP_NAME" -t "$NOTIFY_MS" \
+  notify-send -e -a "$APP_NAME" -t "$NOTIFY_MS" \
     -h string:x-canonical-private-synchronous:"$SYNC_HINT" \
     -h int:value:"$new" "$APP_NAME"
   pkill -RTMIN+5 waybar 2>/dev/null || true
@@ -58,7 +58,7 @@ write_now() {
   cancel_pending
   new=$(clamp "$1")
   printf "%d" "$new" > "$CACHE"
-  notify-send -a "$APP_NAME" -t "$NOTIFY_MS" \
+  notify-send -e -a "$APP_NAME" -t "$NOTIFY_MS" \
     -h string:x-canonical-private-synchronous:"$SYNC_HINT" \
     -h int:value:"$new" "$APP_NAME"
   pkill -RTMIN+5 waybar 2>/dev/null || true

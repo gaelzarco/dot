@@ -163,7 +163,6 @@
   },
   "hyprland/workspaces": {
     "all-outputs": true,
-    "on-click": "activate",
     "active-only": true
   },
   "pulseaudio": {

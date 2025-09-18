@@ -1,6 +1,6 @@
 * {
     font: "Aux Mono Regular 12";
-    g-spacing: 15px;
+    g-spacing: 10px;
     g-margin: 0;
     b-color: rgba(0,0,0,0.5);
     fg-color: #FFF;
@@ -34,7 +34,7 @@ listview {
     border-radius: @b-radius;
     border: @w-border;
     border-color: @w-border-color;
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -56,13 +56,13 @@ prompt {
 inputbar {
     children: ["prompt", "entry"];
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 100px;
+    border-radius: @b-radius;
     border: @w-border;
     border-color: @w-border-color;
 }
 
 entry {
-    padding: 25px 20px;
+    padding: 15px 20px;
     placeholder: "Search";
     text-color: @fg-color;
     placeholder-color: @fgp-color;

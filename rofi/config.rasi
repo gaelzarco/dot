@@ -1,5 +1,5 @@
 * {
-    font: "Aux Mono Regular 12";
+    font: "Aux Mono Regular 11";
     g-spacing: 10px;
     g-margin: 0;
     b-color: rgba(0,0,0,0.5);

@@ -3,9 +3,10 @@ vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
 vim.o.termguicolors = true
 vim.o.wrap = false
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.opt.colorcolumn = "80"
 vim.o.expandtab = true
 vim.o.swapfile = false
 vim.o.fillchars = 'eob: '
@@ -24,6 +25,16 @@ vim.pack.add({
   { src = "https://github.com/lervag/vimtex" },
   { src = "https://github.com/metalelf0/base16-black-metal-scheme" },
   { src = "https://github.com/metalelf0/black-metal-theme-neovim" }
+})
+
+vim.api.nvim_create_autocmd("InsertCharPre", {
+  pattern = { "javascript", "typescript", "lua", "python", "rust", "cpp" },
+  callback = function()
+    local col = vim.fn.col(".")
+    if col > 80 then
+      vim.v.char = "" -- block extra chars
+    end
+  end,
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {

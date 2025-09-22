@@ -69,9 +69,9 @@
   "hyprland/window": {
     "format": "{}",
     "rewrite": {
-      ".*Zen.*": "Zen",
-      ".*helium.*": "Helium",
-      ".*Discord.*": "Discord"
+      // ".*Zen.*": "Zen",
+      // ".*helium.*": "Helium",
+      // ".*Discord.*": "Discord"
     },
     "tooltip": false,
     "max-length": 50
@@ -162,6 +162,7 @@
     "ignore-list": []
   },
   "hyprland/workspaces": {
+    "format": "{} ",
     "all-outputs": true,
     "active-only": true
   },

@@ -63,7 +63,7 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
     "on-scroll-down": "playerctl next",
-    "max-length": 40
+    "max-length": 50
     // "ignored-players": ["firefox"]
   },
   "hyprland/window": {

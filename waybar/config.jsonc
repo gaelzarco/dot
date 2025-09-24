@@ -54,27 +54,28 @@
     "format-empty": "",
     "format-paused": "{status_icon} {dynamic}",
     "player-icons": {
-      "default": "▶",
-      "mpv": "🎵"
+      "default": "›"
     },
     "status-icons": {
-      "paused": "⏸"
+      "paused": "•"
     },
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
     "on-scroll-down": "playerctl next",
-    "max-length": 50
+    "max-length": 25,
+    "tooltip": true
     // "ignored-players": ["firefox"]
   },
   "hyprland/window": {
     "format": "{}",
-    "rewrite": {
-      // ".*Zen.*": "Zen",
-      // ".*helium.*": "Helium",
-      // ".*Discord.*": "Discord"
-    },
-    "tooltip": false,
-    "max-length": 50
+	"rewrite": {
+		".*Zen Browser": "Zen",
+		"(.*) - Helium": "Helium",
+		"(.*) - Discord": "Discord"
+	},
+    "max-length": 25,
+    "tooltip-format": "{title}",
+    "tooltip": true
   },
   "user": {
     "format": " ",
@@ -88,7 +89,8 @@
   },
   "clock": {
     "format": "{:%a %b %d %H:%M:%S}",
-    "tooltip": false,
+    "tooltip-format": "{calendar}",
+    "tooltip": true,
     "interval": 1
   },
   "custom/cpu": {
@@ -113,13 +115,11 @@
   "custom/brightness": {
     "format": "󰖨 {percentage}%",
     "return-type": "json",
-    "exec": "x=$(cat /tmp/brightness_cache 2>/dev/null || echo 50); echo '{\"percentage\":'${x}'}'",
+    "exec": "val=$(cat /tmp/brightness_cache 2>/dev/null || echo 50); printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
     "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up",
     "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down",
-    "on-click": "$HOME/.config/waybar/scripts/brightness_notify.sh min",
-    "on-click-right": "$HOME/.config/waybar/scripts/brightness_notify.sh max",
     "signal": 5,
-    "tooltip": false
+    "tooltip": true
   },
   "custom/swaync": {
     "format": "  {icon}",
@@ -151,7 +151,11 @@
     "format-off": "",
     "interval": 30,
     "on-click": "blueman-manager",
-    "format-no-controller": ""
+    "format-no-controller": "",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}::{device_battery_percentage}%",
+    "tooltip": true
   },
   "wlr/taskbar": {
     "format": "{icon}",
@@ -164,7 +168,8 @@
   "hyprland/workspaces": {
     "format": "{} ",
     "all-outputs": true,
-    "active-only": true
+    "active-only": true,
+    "tooltip": true
   },
   "pulseaudio": {
     "format": " {icon} {volume}%",
@@ -188,7 +193,7 @@
         ""
       ]
     },
-    "tooltip": false
+    "tooltip": true
   },
   "pulseaudio#microphone": {
     "format": " {format_source}",
@@ -197,6 +202,7 @@
     "on-click": "pamixer --default-source -t",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 1
+    "scroll-step": 1,
+    "tooltip": true
   }
 }

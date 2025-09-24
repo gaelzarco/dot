@@ -215,6 +215,7 @@ progressbar>trough>progress {
     background-color: white;
     border-radius: 20px;
     -gtk-icon-effect: none;
+    font-size: 0.9em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply {
@@ -226,23 +227,26 @@ progressbar>trough>progress {
     background: @noti-bg-darker;
     color: @text-color;
     caret-color: @text-color;
-    border: 0.5px solid @noti-border-color;
+    border: 1px solid @noti-border-color;
     border-radius: 20px;
+    font-size: 0.9em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
     margin-left: 4px;
     background: @noti-bg;
-    border: 0.5px solid @noti-border-color;
+    border: 1px solid @noti-border-color;
     border-radius: 20px;
     color: @text-color;
+    font-size: 0.9em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:disabled {
     background: initial;
     color: @text-color-disabled;
-    border: 0.5px solid @noti-border-color;
+    border: 1px solid @noti-border-color;
     border-color: @noti-border-color;
+    font-size: 0.9em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
@@ -254,16 +258,13 @@ progressbar>trough>progress {
     /* The alternative actions below the default action */
     border: 1px solid @noti-border-color;
     border-radius: 20px;
+    font-size: 0.9em;
 }
 
 .notification-row .notification-background .notification .notification-action:first-child {
-    /* add bottom border radius to eliminate clipping */
-    border-bottom-left-radius: 12px;
 }
 
 .notification-row .notification-background .notification .notification-action:last-child {
-    border-bottom-right-radius: 12px;
-    border-right: none;
 }
 
 .notification-group {
@@ -303,7 +304,22 @@ progressbar>trough>progress {
     color: @text-color;
     font-family: "Dots All For Now JL";
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1em;
+}
+
+.text-button {
+    font-size: 11px;
+    border: 0px solid @noti-border-color;
+    border-radius: 20px;
+    outline: none;
+    outline-offset: 0;
+}
+
+.notification-alt-actions {
+    outline: none;
+    border: none;
+    outline-offset: 0;
+    font-size: 11px;
 }
 
 .notification-group .notification-group-buttons {

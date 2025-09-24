@@ -71,6 +71,7 @@
 	"rewrite": {
 		".*Zen Browser": "Zen",
 		"(.*) - Helium": "Helium",
+		"(.*) - Obsidian.*": "Obsidian",
 		"(.*) - Discord": "Discord"
 	},
     "max-length": 25,

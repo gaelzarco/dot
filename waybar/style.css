@@ -73,9 +73,6 @@ window#waybar.empty #window {
     transition: all 0.5s ease;
 }
 
-#mpris { color: #fff; }
-#mpris.paused { color: #bbb; }
-
 #mpris.empty {
     opacity: 0;
 }

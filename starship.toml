@@ -1,14 +1,13 @@
-format = """
-$hostname$username$git_branch$git_state$git_status$battery
-$directory$cmd_duration$character
-"""
+format = """$hostname$username$git_branch$git_state$git_status$battery$directory$cmd_duration$character"""
+
+add_newline = false
 
 [hostname]
-format = "[$hostname](blue)::"
+format = "[$hostname](white)::"
 ssh_only = false
 
 [username]
-format = "[$user](blue) "
+format = "[$user](white) "
 show_always = true
 
 [directory]

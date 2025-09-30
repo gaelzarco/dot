@@ -16,7 +16,6 @@
   "modules-center": [
   ],
   "modules-right": [
-    "tray",
     "group/controls",
     "group/info"
   ],
@@ -44,6 +43,7 @@
   "group/controls": {
     "orientation": "horizontal",
     "modules": [
+      "tray",
       "custom/brightness",
       "pulseaudio",
       "bluetooth"
@@ -66,6 +66,13 @@
     "tooltip": true
     // "ignored-players": ["firefox"]
   },
+  "custom/dualsense": {
+    "format": " {percentage}% ",
+    "return-type": "json",
+    "exec": "b=$(ls -d /sys/class/power_supply/ps-controller-battery-* 2>/dev/null | head -n1); if [ -n \"$b\" ]; then cap=$(cat \"$b/capacity\"); st=$(cat \"$b/status\"); printf '{\"percentage\":%s,\"tooltip\":\"DualSense: %s (%s%%)\",\"class\":[]}\\n' \"$cap\" \"$st\" \"$cap\"; else printf '{\"class\":[\"hidden\"],\"text\":\"\"}\\n'; fi",
+    "interval": 3,
+    "tooltip": true
+  },
   "hyprland/window": {
     "format": "{}",
 	"rewrite": {
@@ -83,6 +90,7 @@
     "icon": true
   },
   "tray": {
+    "format": " {} ",
     "show-passive-items": false,
     "spacing": 8,
     "icon-size": 13,

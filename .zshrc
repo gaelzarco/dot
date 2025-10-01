@@ -84,9 +84,9 @@ plugins=(git)
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='helix'
+  export EDITOR='nvim'
 else
-  export EDITOR='helix'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -125,12 +125,18 @@ export TMUX_SESSION=1
 
 autoload -U compinit; compinit
 
-if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec Hyprland
+# Hyprland: tmux autostart -> win1 runs STAT_CMD, win2 shell
+STAT_CMD="${TMUX_STAT_CMD:-btop}"
+command -v "$STAT_CMD" >/dev/null || STAT_CMD="btop"
+
+if command -v tmux &>/dev/null && [ -z "$TMUX" ] && { [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ] || [ -n "$WAYLAND_DISPLAY" ]; }; then
+  if tmux has-session -t x0 2>/dev/null; then
+    exec tmux attach -t x0
+  else
+    tmux new-session -d -s x0 -n sesh "$STAT_CMD"
+    tmux new-window  -t x0:2 -n term
+    exec tmux attach -t x0 \; select-window -t 1
+  fi
 fi
 
-fastfetch
-
-if [ -z "$TMUX" ]; then
-  tmux attach -t x1 || tmux new-session -s "x1"
-fi
+# fastfetch

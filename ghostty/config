@@ -10,7 +10,7 @@ desktop-notifications = true
 bell-features = no-title
 
 # Themes
-theme = black_metal_immortal
+#theme = black_metal_immortal
 background = 000000
 
 # Shaders

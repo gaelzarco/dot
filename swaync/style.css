@@ -1,5 +1,5 @@
 @define-color cc-bg rgba(0, 0, 0, 0.3);
-@define-color noti-border-color rgba(89, 89, 89, 0.6);
+@define-color noti-border-color rgba(89, 89, 89, 0.8);
 @define-color noti-bg rgba(0, 0, 0, 0.5);
 @define-color noti-bg-opaque rgba(0, 0, 0, 0.5);
 @define-color noti-bg-darker rgba(0, 0, 0, 0.5);
@@ -109,7 +109,7 @@ window,
     margin: 0;
     box-shadow: none;
     background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(89, 89, 89, 0.5);
+    border: 1px solid rgba(89, 89, 89, 0.8);
     color: @text-color;
     transition: background 0.15s ease-in-out;
     border: 1px solid transparent;

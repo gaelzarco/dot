@@ -4,13 +4,11 @@ background-blur = true
 background-opacity = 0.9
 confirm-close-surface = false
 quit-after-last-window-closed = false
-
-# global
 desktop-notifications = true
 bell-features = no-title
 
 # Themes
-#theme = black_metal_immortal
+# theme = black_metal_immortal
 background = 000000
 
 # Shaders
@@ -28,23 +26,3 @@ gtk-titlebar = false
 # Copy/Paste
 keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
-
-# Manage 
-# keybind = ctrl+space>t=new_tab
-# keybind = ctrl+space>w=close_surface
-# keybind = ctrl+space>l=new_split:right
-# keybind = ctrl+space>h=new_split:left
-# keybind = ctrl+space>k=new_split:up
-# keybind = ctrl+space>j=new_split:down
- 
-# Navigate 
-# keybind = ctrl+l=goto_split:right
-# keybind = ctrl+h=goto_split:left
-# keybind = ctrl+k=goto_split:top
-# keybind = ctrl+j=goto_split:bottom
- 
-# Adjust
-# keybind = ctrl+shift+l=resize_split:right,10
-# keybind = ctrl+shift+h=resize_split:left,10
-# keybind = ctrl+shift+k=resize_split:up,10
-# keybind = ctrl+shift+j=resize_split:down,10

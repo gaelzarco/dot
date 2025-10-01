@@ -11,7 +11,7 @@ format = "[$user](white) "
 show_always = true
 
 [directory]
-format = "[$path](bold white) "
+format = "[$path](white) "
 
 [battery]
 format = "[$symbol$percentage]($style) "
@@ -22,11 +22,11 @@ discharging_symbol = ' '
 
 [[battery.display]]
 threshold = 25
-style = "bold red"
+style = "red"
 
 [character]
-success_symbol = '[➜](bold green)'
-error_symbol = "[➜](bold red)"
+success_symbol = '[➜](blue)'
+error_symbol = "[➜](red)"
 
 [git_branch]
 format = "[$branch](white)"
@@ -57,7 +57,7 @@ disabled = false
 symbol = "ⓔ "
 
 [nodejs]
-symbol = "[⬢](bold green) "
+symbol = "[⬢](green) "
 
 [pulumi]
 symbol = "🧊 "

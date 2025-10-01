@@ -125,7 +125,7 @@
   "custom/brightness": {
     "format": "󰖨 {percentage}%",
     "return-type": "json",
-    "exec": "val=$(cat /tmp/brightness_cache 2>/dev/null || echo 50); printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
+    "exec": "if [ -f /tmp/brightness_cache ]; then val=$(cat /tmp/brightness_cache); else val=$(ddcutil --sleep-multiplier 0.00 --bus 14 getvcp 10 2>/dev/null | grep -oP 'current value =\\s*\\K[0-9]+' || echo 50); [ -z \"$val\" ] && val=50; val=$(( (val+5)/10*10 )); [ \"$val\" -lt 0 ] && val=0; [ \"$val\" -gt 100 ] && val=100; echo $val > /tmp/brightness_cache; fi; printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
     "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up",
     "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down",
     "signal": 5,

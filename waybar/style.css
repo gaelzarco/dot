@@ -69,7 +69,7 @@ window#waybar.empty #window {
     border-radius: 100px;
     /* border: 1px solid rgba(86, 86, 86, 0.5); */
     margin: 5px 0px 0px 5px;
-    padding: 0px 5px;
+    padding: 0px 0px;
     transition: all 0.5s ease;
 }
 

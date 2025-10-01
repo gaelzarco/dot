@@ -62,7 +62,8 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
     "on-scroll-down": "playerctl next",
-    "max-length": 25,
+    "max-length": 100,
+    "interval": 1,
     "tooltip": true
     // "ignored-players": ["firefox"]
   },

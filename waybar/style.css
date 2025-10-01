@@ -103,10 +103,10 @@ menu,
 .popover,
 .popup,
 tooltip {
+    font-family: "Aux Mono";
+    font-size: 14px;
     box-shadow: none;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     border: 1px solid rgba(89, 89, 89, 0.8);
-    font-family: "Aux Mono";
-    font-size: 14px;
 }

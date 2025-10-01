@@ -1,21 +1,24 @@
 font-family = Aux Mono
 font-size = 12
-background-opacity = 0.9
-background-blur-radius = 80
+background-blur = true
+background-opacity = 0.925
+confirm-close-surface = false
+quit-after-last-window-closed = false
 
 # global
 desktop-notifications = true
 bell-features = no-title
 
 # Themes
-theme = black_metal
+theme = black_metal_immortal
 background = 000000
 
 # Shaders
 # custom-shader = ~/.config/ghostty/shaders/crt0.glsl
 
 # Enable on Linux
-gtk-tabs-location = top
+gtk-tabs-location = hidden
+gtk-titlebar = false
 
 # Enable on MacOS
 # window-decoration = false 

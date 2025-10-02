@@ -54,10 +54,10 @@
     "format-empty": "",
     "format-paused": "{status_icon} {dynamic}",
     "player-icons": {
-      "default": "›"
+      "default": ">"
     },
     "status-icons": {
-      "paused": "•"
+      "paused": "[]"
     },
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",

@@ -62,7 +62,7 @@
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
     "on-scroll-down": "playerctl next",
-    "max-length": 100,
+    "max-length": 50,
     "interval": 1,
     "tooltip": true
     // "ignored-players": ["firefox"]
@@ -80,9 +80,10 @@
 		".*Zen Browser": "Zen",
 		"(.*) - Helium": "Helium",
 		"(.*) - Obsidian.*": "Obsidian",
-		"(.*) - Discord": "Discord"
+		"(.*) - Discord": "Discord",
+		"RPCS3(.*)": "RPCS3"
 	},
-    "max-length": 25,
+    "max-length": 35,
     "tooltip-format": "{title}",
     "tooltip": true
   },

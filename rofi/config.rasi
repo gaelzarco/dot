@@ -2,7 +2,7 @@
     font: "Aux Mono Regular 11";
     g-spacing: 10px;
     g-margin: 0;
-    b-color: rgba(0,0,0,0.5);
+    b-color: rgba(0,0,0,0.7);
     fg-color: #FFF;
     fgp-color: #afafafcc;
     b-radius: 20px;
@@ -12,7 +12,7 @@
     alt-color: #111111FF;
     wbg-color: #000000;
     w-border: 1px solid;
-    w-border-color: rgba(86,86,86,0.6);
+    w-border-color: rgba(86,86,86,0.8);
     w-padding: 8px;
 }
 
@@ -116,7 +116,7 @@ message {
   background-color: transparent;
 	text-color: @hlt-color;
   border: 1px solid;
-  border-color: rgba(89,89,89,0.5);
+  border-color: rgba(89,89,89,0.8);
   border-radius: @b-radius;
   padding: @g-padding;
   background-color: rgba(0, 0, 0, 0.7);

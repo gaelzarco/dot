@@ -3,8 +3,9 @@ window#waybar {
     /* border-bottom: 1px solid rgba(86, 86, 86, 0.5); */
     /* border-radius: 0px 0px 14px 14px; */
     box-shadow: none;
-    font-family: "Aux Mono";
-    font-size: 14px;
+    font-family: "Dots All For Now JL";
+    font-size: 13px;
+    font-weight: normal;
     color: #ffffff;
 }
 
@@ -24,7 +25,6 @@ window#waybar.empty #window {
 #workspaces button {
     font-family: "Dots All For Now JL";
     font-size: 13px;
-    font-weight: bold;
     /* font-weight: bold; */ 
     color: #ffffff;
     margin: 0px;
@@ -40,7 +40,6 @@ window#waybar.empty #window {
 #hypr {
     font-family: "Dots All For Now JL";
     font-size: 13px;
-    font-weight: bold;
     /* font-weight: bold; */ 
     /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 100px;
@@ -63,7 +62,7 @@ window#waybar.empty #window {
 #info {
     font-family: "Dots All For Now JL";
     font-size: 13px;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 100px;
     /* border: 1px solid rgba(86, 86, 86, 0.5); */
@@ -75,11 +74,12 @@ window#waybar.empty #window {
 #mpris {
     font-family: "Dots All For Now JL";
     font-size: 13px;
-    /* background: rgba(0, 0, 0, 0.6); */
+    font-weight: normal;
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 100px;
-    /* border: 1px solid rgba(86, 86, 86, 0.5); */
+    border: 1px solid rgba(86, 86, 86, 0.8);
     margin: 5px 0px 0px 5px;
-    padding: 0px 0px;
+    padding: 0px 10px;
     transition: all 0.5s ease;
 }
 

@@ -169,8 +169,9 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
     /* Notification time-ago */
+    font-family: "Dots All For Now JL";
     font-size: 11px;
-    font-weight: 400;
+    font-weight: bold;
     background: transparent;
     color: @text-color;
     text-shadow: none;
@@ -512,7 +513,8 @@ notification-group-header {
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-title {
-    font-weight: 500;
+    font-family: "Dots All For Now JL";
+    font-weight: bold;
     font-size: 0.9rem;
 }
 
@@ -559,7 +561,6 @@ notification-group-header {
     margin: 0px 12px 15px 12px;
     border-radius: 20px;
     padding: 5px;
-    font-family: "Aux Mono";
 }
 
 .widget-buttons-grid>flowbox>flowboxchild {
@@ -575,6 +576,7 @@ notification-group-header {
     border: 1px solid @noti-border-color;
     background-color: rgba(0, 0, 0, 0.7);
     transition: 100ms all ease-in-out;
+    font-family: "Dots All For Now JL";
     font-size: 0.9rem;
     font-weight: 500;
     outline: none;

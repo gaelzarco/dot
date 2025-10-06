@@ -113,8 +113,8 @@ menu,
 .popover,
 .popup,
 tooltip {
-    font-family: "Dots All For Now JL";
-    font-size: 13px;
+    font-family: "Aux Mono";
+    font-size: 12px;
     box-shadow: none;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;

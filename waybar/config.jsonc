@@ -78,13 +78,13 @@
     "format": "{}",
     "format-empty": "",
 	"rewrite": {
-		".*Zen Browser": "Zen",
-		"(.*) - Helium": "Helium",
-		"(.*) - Obsidian.*": "Obsidian",
-		"(.*) - Discord": "Discord",
-		"RPCS3(.*)": "RPCS3"
+		// ".*Zen Browser": "Zen",
+		// "(.*) - Helium": "Helium",
+		// "(.*) - Obsidian.*": "Obsidian",
+		// "(.*) - Discord": "Discord",
+		// "RPCS3(.*)": "RPCS3"
 	},
-    "max-length": 35,
+    "max-length": 50,
     "tooltip-format": "{title}",
     "tooltip": true
   },

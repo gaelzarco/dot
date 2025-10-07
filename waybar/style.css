@@ -43,8 +43,8 @@ window#waybar.empty #window {
     /* font-weight: bold; */ 
     /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 100px;
-    /* border: 1px solid rgba(86, 86, 86, 0.5); */
-    margin: 5px 0px 0px 15px;
+    /* border: 1px solid rgBA(86, 86, 86, 0.5); */
+    margin: 5px 0px 2px 5px;
     padding: 0px 5px;
     transition: all 0.5s ease;
 }
@@ -53,7 +53,7 @@ window#waybar.empty #window {
     /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 100px;
     /* border: 1px solid rgba(86, 86, 86, 0.5); */
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0px 2px 0px;
     padding: 0px 5px;
     transition: all 0.5s ease;
 
@@ -66,7 +66,7 @@ window#waybar.empty #window {
     /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 100px;
     /* border: 1px solid rgba(86, 86, 86, 0.5); */
-    margin: 5px 15px 0px 0px;
+    margin: 5px 5px 2px 0px;
     padding: 0px 5px 0px 0px;
     transition: all 0.5s ease;
 }
@@ -75,10 +75,10 @@ window#waybar.empty #window {
     font-family: "Dots All For Now JL";
     font-size: 13px;
     font-weight: normal;
-    background: rgba(0, 0, 0, 0.6);
+    /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 100px;
-    border: 1px solid rgba(86, 86, 86, 0.8);
-    margin: 5px 0px 0px 5px;
+    /* border: 1px solid rgba(86, 86, 86, 0.8); */
+    margin: 5px 0px 2px 0px;
     padding: 0px 10px;
     transition: all 0.5s ease;
 }
@@ -103,7 +103,7 @@ window#waybar.empty #window {
     /* background: rgba(0, 0, 0, 0.6); */
     border-radius: 100px;
     /* border: 1px solid rgba(86, 86, 86, 0.5); */
-    margin: 5px 0px 0px 0px;
+    margin: 5px 0px 2px 0px;
     padding: 0px;
     transition: all 0.5s ease;
 }

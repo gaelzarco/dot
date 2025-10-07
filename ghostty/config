@@ -1,6 +1,6 @@
 font-family = Aux Mono
-font-size = 12
-background-blur = true
+font-size = 10
+background-blur = false
 background-opacity = 1
 confirm-close-surface = false
 quit-after-last-window-closed = false

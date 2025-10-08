@@ -1,13 +1,13 @@
-@define-color cc-bg rgba(0, 0, 0, 0.3);
-@define-color noti-border-color rgba(89, 89, 89, 0.8);
-@define-color noti-bg rgba(0, 0, 0, 0.5);
-@define-color noti-bg-opaque rgba(0, 0, 0, 0.5);
-@define-color noti-bg-darker rgba(0, 0, 0, 0.5);
-@define-color noti-bg-hover rgba(0, 0, 0, 0.6);
-@define-color noti-bg-hover-opaque rgba(0, 0, 0, 0.6);
-@define-color noti-bg-focus rgba(0, 0, 0, 0.6);
-@define-color noti-close-bg rgba(10, 10, 10, 0.6);
-@define-color noti-close-bg-hover rgba(10, 10, 10, 0.6);
+@define-color cc-bg rgba(0, 0, 0, 0.9);
+@define-color noti-border-color rgba(89, 89, 89, 1);
+@define-color noti-bg rgba(0, 0, 0, 0.9);
+@define-color noti-bg-opaque rgba(0, 0, 0, 0.9);
+@define-color noti-bg-darker rgba(0, 0, 0, 0.9);
+@define-color noti-bg-hover rgba(0, 0, 0, 0.9);
+@define-color noti-bg-hover-opaque rgba(0, 0, 0, 0.9);
+@define-color noti-bg-focus rgba(0, 0, 0, 0.9);
+@define-color noti-close-bg rgba(0, 0, 0, 0.9);
+@define-color noti-close-bg-hover rgba(20, 20, 20, 0.9);
 @define-color text-color rgb(255, 255, 255);
 @define-color text-color-disabled rgb(255, 255, 255);
 @define-color bg-selected rgb(120, 225, 120);
@@ -61,13 +61,13 @@ window,
     border-radius: 100%;
     box-shadow: none;
     border: none;
-    border: 1px solid rgba(89, 89, 89, 0.5);
+    border: 1px solid rgba(89, 89, 89, 1);
 }
 
 .notification-row .notification-background .close-button:hover {
     box-shadow: none;
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
     color: white;
 }
 
@@ -84,12 +84,12 @@ window,
     border: 1px solid @noti-border-color;
     box-shadow: none;
     transition: background 0.15s ease-in-out;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .notification-row .notification-background .notification:hover {
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .notification-row .notification-background .notification.low {
@@ -108,8 +108,8 @@ window,
 .notification-row .notification-background .notification .notification-default-action {
     margin: 0;
     box-shadow: none;
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(89, 89, 89, 0.8);
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(89, 89, 89, 1);
     color: @text-color;
     transition: background 0.15s ease-in-out;
     border: 1px solid transparent;
@@ -194,7 +194,7 @@ window,
 progressbar,
 progressbar>trough,
 progressbar>trough>progress {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 100px;
     min-height: 5px;
 }
@@ -251,8 +251,8 @@ progressbar>trough>progress {
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .notification-row .notification-background .notification .notification-action {
@@ -329,7 +329,7 @@ progressbar>trough>progress {
 
 .notification-group button {
     /* Notification Group Buttons */
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
     border: 1px solid @noti-border-color;
     box-shadow: none;
     text-shadow: none;
@@ -338,12 +338,12 @@ progressbar>trough>progress {
 
 .notification-group button:hover {
     /* Notification Group Buttons */
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .notification-group.collapsed .notification-row .notification {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .notification-group .notification-row .notification {}
@@ -364,16 +364,16 @@ notification-group-header {
 }
 
 .notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .control-center {
     /* The Control Center which contains the old notifications + widgets */
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     color: @text-color;
     border-radius: 20px;
-    border: 1px solid rgba(89, 89, 89, 0.6);
+    border: 1px solid rgba(89, 89, 89, 1);
     min-height: 700px;
 }
 
@@ -393,7 +393,7 @@ notification-group-header {
     /* 0 0 0 1px rgba(0, 0, 0, 0.3), */
     /* 0 1px 3px 1px rgba(0, 0, 0, 0.3), */
     /* 0 2px 6px 2px rgba(0, 0, 0, 0.3); */
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .control-center .control-center-list .notification .notification-default-action,
@@ -436,14 +436,14 @@ notification-group-header {
     font-weight: 400;
     color: @text-color;
     text-shadow: none;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.9);
     border: 1px solid @noti-border-color;
-    border-radius: 100px;
+    border-radius: 20px;
 }
 
 .widget-title>button:hover {
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 /* DND widget */
@@ -456,7 +456,7 @@ notification-group-header {
 .widget-dnd>switch {
     font-size: initial;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.9);
     border: 0px solid @noti-border-color;
     box-shadow: none;
 }
@@ -466,7 +466,7 @@ notification-group-header {
 }
 
 .widget-dnd>switch slider {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     border: none;
 }
@@ -488,7 +488,7 @@ notification-group-header {
 }
 
 .widget-mpris .widget-mpris-player {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 20px;
     border: 1px solid @noti-border-color;
     box-shadow: none;
@@ -496,7 +496,7 @@ notification-group-header {
 
 .widget-mpris .widget-mpris-player button {
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     border: 1px solid;
     border-color: @noti-border-color;
     transition: all 100ms ease-in-out;
@@ -504,8 +504,8 @@ notification-group-header {
 
 .widget-mpris .widget-mpris-player button:hover {
     /* The media player buttons (play, pause, next, etc...) */
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
@@ -523,13 +523,13 @@ notification-group-header {
 }
 
 .widget-mpris .widget-mpris-player>box>button {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     margin-top: 0px;
 }
 
 .widget-mpris .widget-mpris-player>box>button:hover {
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .widget-mpris>box>button {
@@ -571,10 +571,10 @@ notification-group-header {
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
     min-width: 180px;
-    border-radius: 100px;
+    border-radius: 20px;
     padding: 5px;
     border: 1px solid @noti-border-color;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: 100ms all ease-in-out;
     font-family: "Dots All For Now JL";
     font-size: 0.9rem;
@@ -590,13 +590,13 @@ notification-group-header {
 .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked {
     /* style given to the active toggle button */
     outline: none;
-    background-color: rgba(40, 40, 40, 0.7);
-    border: 1px solid rgba(89, 89, 89, 0.8);
+    background-color: rgba(40, 40, 40, 0.9);
+    border: 1px solid rgba(89, 89, 89, 1);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-    background-color: rgba(20, 20, 20, 0.7);
-    border: 1px solid rgba(89, 89, 89, 0.8);
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(89, 89, 89, 1);
     outline: none;
 }
 
@@ -635,12 +635,12 @@ notification-group-header {
     padding: 5px;
     margin: 8px 9px 0px 9px;
     border: 1px solid;
-    border-color: rgba(89, 89, 89, 0.3);
+    border-color: rgba(89, 89, 89, 1);
     border-radius: 20px;
 }
 
 .widget-volume>box>button {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.9);
     border: none;
 }
 
@@ -657,7 +657,7 @@ notification-group-header {
     padding: 5px;
     margin: 8px 9px 0px 9px;
     border: 1px solid;
-    border-color: rgba(89, 89, 89, 0.3);
+    border-color: rgba(89, 89, 89, 0.9);
     border-radius: 100px;
 }
 
@@ -671,12 +671,12 @@ notification-group-header {
     color: @text-color;
     text-shadow: none;
     background: @noti-bg;
-    border: 1px solid rgba(89, 89, 89, 0.3);
+    border: 1px solid rgba(89, 89, 89, 1);
     box-shadow: none;
     border-radius: 20px;
 }
 
 .widget-inhibitors>button:hover {
-    border: 1px solid rgba(89, 89, 89, 0.8);
-    background-color: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(89, 89, 89, 1);
+    background-color: rgba(20, 20, 20, 0.9);
 }

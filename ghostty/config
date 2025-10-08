@@ -1,7 +1,7 @@
 font-family = Aux Mono
 font-size = 10
-background-blur = false
-background-opacity = 1
+background-blur = true
+background-opacity = 0.9
 confirm-close-surface = false
 quit-after-last-window-closed = false
 desktop-notifications = true
@@ -15,11 +15,14 @@ background = 000000
 # custom-shader = ~/.config/ghostty/shaders/crt0.glsl
 
 # Toggle on Linux
-gtk-tabs-location = hidden
-gtk-titlebar = false
+window-decoration = true
+gtk-titlebar = true
+gtk-titlebar-style = native
+gtk-tabs-location = top
+gtk-toolbar-style = flat
 
 # Toggle on MacOS
-# window-decoration = false 
+# window-decoration = true
 # macos-titlebar-style = hidden
 # macos-icon-screen-color = 000000
 

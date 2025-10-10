@@ -50,19 +50,19 @@
     ]
   },
   "mpris": {
-    "format": "{player_icon}{dynamic}",
+    "format": "_{player_icon}{dynamic}",
     "format-empty": "",
     "format-paused": "{status_icon}{dynamic}",
     "player-icons": {
       "default": "PLAYING://"
     },
     "status-icons": {
-      "paused": "[]://"
+      "paused": "PAUSED://"
     },
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
     "on-scroll-down": "playerctl next",
-    "max-length": 50,
+    "max-length": 60,
     "interval": 1,
     "tooltip": true
     // "ignored-players": ["firefox"]
@@ -78,13 +78,13 @@
     "format": "{}",
     "format-empty": "",
 	"rewrite": {
-		// ".*Zen Browser": "Zen",
-		// "(.*) - Helium": "Helium",
-		// "(.*) - Obsidian.*": "Obsidian",
-		// "(.*) - Discord": "Discord",
-		// "RPCS3(.*)": "RPCS3"
+		".*Zen Browser": "Zen",
+		"(.*) - Helium": "Helium",
+		"(.*) - Obsidian.*": "Obsidian",
+		"(.*) - Discord": "Discord",
+		"RPCS3(.*)": "RPCS3"
 	},
-    "max-length": 50,
+    "max-length": 60,
     "tooltip-format": "{title}",
     "tooltip": true
   },
@@ -159,7 +159,7 @@
     "max-length": 50
   },
   "bluetooth": {
-    "format": "   {num_connections}  ",
+    "format": "  {num_connections}  ",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
@@ -179,13 +179,13 @@
     "ignore-list": []
   },
   "hyprland/workspaces": {
-    "format": "{}",
+    "format": "{} ",
     "all-outputs": true,
     "active-only": true,
     "tooltip": true
   },
   "pulseaudio": {
-    "format": " {icon}  {volume}%",
+    "format": " {icon}  {volume}% ",
     "format-muted": "   Muted",
     "on-click": "pavucontrol",
     "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",

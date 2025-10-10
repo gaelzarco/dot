@@ -1,9 +1,9 @@
-window#waybar {
+window#waybar, #workspaces button {
     background-color: rgba(0, 0, 0, 0.0);
     box-shadow: none;
     font-family: "Dots All For Now JL";
     font-size: 13px;
-    font-weight: normal;
+    font-weight: bold;
     color: #ffffff;
 }
 
@@ -21,9 +21,6 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-    font-family: "Dots All For Now JL";
-    font-size: 13px;
-    /* font-weight: bold; */ 
     color: #ffffff;
     margin: 0px;
     padding: 0px;
@@ -36,21 +33,12 @@ window#waybar.empty #window {
 }
 
 #hypr {
-    font-family: "Dots All For Now JL";
-    font-size: 13px;
-    /* font-weight: bold; */ 
-    /* background: rgba(0, 0, 0, 0.6); */
-    /* border-radius: 100px; */
-    /* border: 1px solid rgBA(86, 86, 86, 0.5); */
     margin: 5px 0px 2px 5px;
     padding: 0px 5px;
     transition: all 0.5s ease;
 }
 
 #sys {
-    /* background: rgba(0, 0, 0, 0.6); */
-    /* border-radius: 100px; */
-    /* border: 1px solid rgba(86, 86, 86, 0.5); */
     margin: 5px 0px 2px 0px;
     padding: 0px 5px;
     transition: all 0.5s ease;
@@ -58,24 +46,13 @@ window#waybar.empty #window {
 }
 
 #info {
-    font-family: "Dots All For Now JL";
-    font-size: 13px;
-    /* font-weight: bold; */
-    /* background: rgba(0, 0, 0, 0.6); */
-    /* border-radius: 100px; */
-    /* border: 1px solid rgba(86, 86, 86, 0.5); */
     margin: 5px 5px 2px 0px;
     padding: 0px 5px 0px 0px;
     transition: all 0.5s ease;
 }
 
 #mpris {
-    font-family: "Dots All For Now JL";
-    font-size: 13px;
     font-weight: normal;
-    /* background: rgba(0, 0, 0, 0.6); */
-    /* border-radius: 100px; */
-    /* border: 1px solid rgba(86, 86, 86, 0.8); */
     margin: 5px 0px 2px 0px;
     padding: 0px 10px;
     transition: all 0.5s ease;
@@ -90,17 +67,11 @@ window#waybar.empty #window {
 }
 
 #tray {
-    /* background: rgba(0, 0, 0, 0.6); */
-    /* border-radius: 100px; */
-    /* border: 1px solid rgba(86, 86, 86, 0.5); */
     padding: 0px 10px 0px 0px;
     transition: all 0.5s ease;
 }
 
 #controls {
-    /* background: rgba(0, 0, 0, 0.6); */
-    /* border-radius: 100px; */
-    /* border: 1px solid rgba(86, 86, 86, 0.5); */
     margin: 5px 0px 2px 0px;
     padding: 0px;
     transition: all 0.5s ease;
@@ -111,9 +82,8 @@ menu,
 .popover,
 .popup,
 tooltip {
-    font-family: "Dots All For Now JL";
+    font-family: "Aux Mono";
     font-size: 13px;
-    font-weight: normal;
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(89, 89, 89, 1);

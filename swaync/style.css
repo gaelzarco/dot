@@ -26,16 +26,14 @@ window,
 .label,
 /* the “Control Center” label */
 .widget-mpris
-
 /* the mpris widget */
-    {
+{
     font-family: "Aux Mono";
 }
 
 .notification .title
-
 /* the title text */
-    {
+{
     font-weight: 500;
     font-size: 12px;
 }
@@ -47,7 +45,7 @@ window,
 }
 
 .notification-row .notification-background {
-    padding: 6px;
+    padding: 2px;
     background: transparent;
     border: 1px solid transparent;
 }
@@ -576,9 +574,9 @@ notification-group-header {
     border: 1px solid @noti-border-color;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 100ms all ease-in-out;
-    font-family: "Dots All For Now JL";
+    font-family: "Aux Mono";
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 800;
     outline: none;
     color: white;
 }

@@ -10,8 +10,7 @@
   "fixed-center": true,
   "reload_style_on_change": true,
   "modules-left": [
-    "group/hypr",
-    "mpris"
+    "group/hypr"
   ],
   "modules-center": [
   ],

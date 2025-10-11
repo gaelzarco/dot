@@ -49,8 +49,9 @@
     },
     "mpris": {
       "image-size": 96,
-      "image-radius": 10,
+      "image-radius": 20,
       "show-album-art": "never",
+      "blacklist": ["playerctld"],
       "autohide": true
     },
     "label": {

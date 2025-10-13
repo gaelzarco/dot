@@ -190,7 +190,7 @@ inner.horizontal = 5
 inner.vertical =   5
 outer.left =       5 
 outer.bottom =     5
-outer.top = [{ monitor."ES07D03" = 35 }, 5]
+outer.top = [{ monitor."ES07D03" = 30 }, 5]
 outer.right =      5
 
 # 'main' binding mode declaration

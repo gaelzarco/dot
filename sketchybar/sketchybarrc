@@ -6,7 +6,7 @@ default=(
   padding_left=5
   padding_right=5
   icon.font="GeistMono Nerd Font:Regular:14.0"
-  label.font="Aux Mono:Regular:14.0"
+  label.font="Dots All For Now JL:Regular:14.0"
   icon.color=0xffffffff
   label.color=0xffffffff
   icon.padding_left=2
@@ -61,7 +61,7 @@ sketchybar --add item site_status left \
            --set site_status script="$PLUGIN_DIR/status.sh" \
              update_freq=10 \
              icon.font="GeistMono Nerd Font:Regular:14.0" \
-             label.font="Aux Mono:Regular:14.0" \
+             label.font="Dots All For Now JL:Regular:14.0" \
              icon.padding_left=5
              click_script="open $WEBSITE_URL" \
            --subscribe site_status system_woke
@@ -70,7 +70,7 @@ sketchybar -m --add item music left \
            --set music script="$PLUGIN_DIR/music.sh" \
              update_freq=2 \
              icon.padding_right=5 \
-             icon.padding_left=10 \
+             icon.padding_left=5 \
              drawing=off \
            --subscribe music song_update
 

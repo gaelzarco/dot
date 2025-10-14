@@ -45,6 +45,7 @@
       "tray",
       "pulseaudio",
       "backlight",
+      "custom/brightness",
       "battery#1",
       "battery#2"
     ]
@@ -126,9 +127,10 @@
     "interval": 1
   },
   "custom/brightness": {
-    "format": "󰖨  {percentage}%",
+    "format": "󰖨  {percentage}% ",
+    "format-empty": "",
     "return-type": "json",
-    "exec": "if [ -f /tmp/brightness_cache ]; then val=$(cat /tmp/brightness_cache); else val=$(ddcutil --sleep-multiplier 0.00 --bus 14 getvcp 10 2>/dev/null | grep -oP 'current value =\\s*\\K[0-9]+' || echo 50); [ -z \"$val\" ] && val=50; val=$(( (val+5)/10*10 )); [ \"$val\" -lt 0 ] && val=0; [ \"$val\" -gt 100 ] && val=100; echo $val > /tmp/brightness_cache; fi; printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
+    "exec": "if [ -f /tmp/brightness_cache ]; then val=$(cat /tmp/brightness_cache); else val=$(ddcutil --sleep-multiplier 0.00 --bus 4 getvcp 10 2>/dev/null | grep -oP 'current value =\\s*\\K[0-9]+' || echo 50); [ -z \"$val\" ] && val=50; val=$(( (val+5)/10*10 )); [ \"$val\" -lt 0 ] && val=0; [ \"$val\" -gt 100 ] && val=100; echo $val > /tmp/brightness_cache; fi; printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
     "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up",
     "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down",
     "signal": 5,
@@ -244,9 +246,8 @@
   "backlight": {
     "device": "intel_backlight",
     "format": "󰖨  {percent}%  ",
-    "interval": 3,
-    "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-"
+    "on-scroll-up": "brightnessctl set +10%",
+    "on-scroll-down": "brightnessctl set 10%-"
   },
   "pulseaudio#microphone": {
     "format": " {format_source}",

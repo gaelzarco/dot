@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-I2C_BUS=14
+I2C_BUS=4
 CACHE=/tmp/brightness_cache
 PIDFILE=/tmp/brightness_debounce.pid
 

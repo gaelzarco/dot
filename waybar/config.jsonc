@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "height": 30,
   "spacing": 0,
   "exclusive": true,
@@ -43,9 +43,10 @@
     "orientation": "horizontal",
     "modules": [
       "tray",
-      "custom/brightness",
       "pulseaudio",
-      "bluetooth"
+      "backlight",
+      "battery#1",
+      "battery#2"
     ]
   },
   "mpris": {
@@ -92,10 +93,10 @@
     "icon": true
   },
   "tray": {
-    "format": " {}  ",
+    "format": "{}  ",
     "show-passive-items": false,
     "spacing": 8,
-    "icon-size": 13,
+    "icon-size": 15,
     "format-empty": ""
   },
   "clock": {
@@ -184,7 +185,7 @@
     "tooltip": true
   },
   "pulseaudio": {
-    "format": " {icon}  {volume}% ",
+    "format": "{icon}  {volume}%  ",
     "format-muted": "   Muted",
     "on-click": "pavucontrol",
     "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
@@ -206,6 +207,46 @@
       ]
     },
     "tooltip": true
+  },
+  "battery#1": {
+  	"bat": "BAT1",
+  	"interval": 5,
+  	"states": {
+  		"warning": 30,
+  		"critical": 15
+  	},
+  	"events": {
+  		"on-discharging-warning": "notify-send -u normal 'Low Battery'",
+  		"on-discharging-critical": "notify-send -u critical 'Critical Battery'",
+  		"on-charging-100": "notify-send -u normal 'Battery Full'"
+  	},
+  	"format": "{icon}  {capacity}%  ",
+  	"format-icons": ["", "", "", "", ""],
+  	"max-length": 25
+  },
+  "battery#2": {
+  	"bat": "BAT2",
+    "format-empty":"",
+  	"interval": 5,
+  	"states": {
+  		"warning": 30,
+  		"critical": 15
+  	},
+  	"events": {
+  		"on-discharging-warning": "notify-send -u normal 'Low Battery'",
+  		"on-discharging-critical": "notify-send -u critical 'Critical Battery'",
+  		"on-charging-100": "notify-send -u normal 'Battery Full'"
+  	},
+  	"format": "{icon}  {capacity}%  ",
+  	"format-icons": ["", "", "", "", ""],
+  	"max-length": 25
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "󰖨  {percent}%  ",
+    "interval": 3,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
   },
   "pulseaudio#microphone": {
     "format": " {format_source}",

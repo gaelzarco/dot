@@ -13,7 +13,7 @@
 @define-color bg-selected rgb(120, 225, 120);
 
 :root {
-    --br: 20px;
+    --br: 0px;
 }
 
 window,
@@ -39,7 +39,7 @@ window,
 /* the title text */
 {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 1.2em;
 }
 
 .notification-row {
@@ -90,8 +90,6 @@ window,
 }
 
 .notification-row .notification-background .notification:hover {
-    border: 1px solid rgba(89, 89, 89, 1);
-    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .notification-row .notification-background .notification.low {
@@ -124,7 +122,7 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action {
     /* The large action that also displays the notification summary and body */
-    border-radius: 100px;
+    border-radius: 0px;
     border: 1px solid transparent;
 }
 
@@ -137,7 +135,6 @@ window,
 .notification-row .notification-background .notification .notification-default-action .notification-content {
     background: transparent;
     border: 1px solid transparent;
-    border-radius: var(--br);
     padding: 12px 10px;
 }
 
@@ -159,12 +156,11 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
     /* Notification summary/title */
-    font-weight: 500;
     background: transparent;
     color: @text-color;
     text-shadow: none;
     font-family: "Dots All For Now JL";
-    font-size: 11px;
+    font-size: 0.8em;
     font-weight: bold;
     padding: 0px 0px 4px 0px;
 }
@@ -172,7 +168,7 @@ window,
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
     /* Notification time-ago */
     font-family: "Aux Mono";
-    font-size: 11px;
+    font-size: 0.8em;
     font-weight: normal;
     background: transparent;
     color: @text-color;
@@ -181,7 +177,7 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
     /* Notification body */
-    font-size: 11px;
+    font-size: 0.8em;
     font-weight: 400;
     background: transparent;
     color: @text-color;
@@ -252,8 +248,6 @@ progressbar>trough>progress {
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
-    border: 1px solid rgba(89, 89, 89, 1);
-    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .notification-row .notification-background .notification .notification-action {
@@ -296,7 +290,7 @@ progressbar>trough>progress {
 }
 
 .notification-group .notification-group-headers .notification-group-icon {
-    -gtk-icon-size: 24px; /* actually render smaller icon */
+    -gtk-icon-size: 20px; /* actually render smaller icon */
     color: white;
     margin-right: 5px;
 }
@@ -309,11 +303,16 @@ progressbar>trough>progress {
 }
 
 .text-button {
+    /* The actual notification button */
     font-size: 11px;
-    border: 0px solid @noti-border-color;
+    border: 1px solid @noti-border-color;
     border-radius: 100px;
     outline: none;
     outline-offset: 0;
+}
+
+.text-button:hover {
+    background: rgba(20,20,20,0.9);
 }
 
 .notification-alt-actions {
@@ -325,6 +324,7 @@ progressbar>trough>progress {
 
 .notification-group .notification-group-buttons {
     /* Notification Group Buttons */
+    background: rgba(0, 0, 0, 0.0);
 }
 
 .notification-group button {
@@ -338,8 +338,6 @@ progressbar>trough>progress {
 
 .notification-group button:hover {
     /* Notification Group Buttons */
-    border: 1px solid rgba(89, 89, 89, 1);
-    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .notification-group.collapsed .notification-row .notification {
@@ -364,8 +362,6 @@ notification-group-header {
 }
 
 .notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
-    border: 1px solid rgba(89, 89, 89, 1);
-    background-color: rgba(20, 20, 20, 0.9);
 }
 
 .control-center {
@@ -374,7 +370,7 @@ notification-group-header {
     color: @text-color;
     border-radius: var(--br);
     border: 1px solid rgba(89, 89, 89, 1);
-    min-height: 600px;
+    min-height: 700px;
 }
 
 .control-center .control-center-list-placeholder {
@@ -385,7 +381,7 @@ notification-group-header {
 .control-center .control-center-list {
     /* List of notifications */
     background: transparent;
-    padding: 4px 10px;
+    padding: 0px 5px;
 }
 
 .control-center .control-center-list .notification {
@@ -426,7 +422,7 @@ notification-group-header {
 .widget-title {
     font-family: "Dots All For Now JL";
     color: @text-color;
-    margin: 10px 15px -4px 15px;
+    margin: 15px 15px 0px 15px;
     font-size: 1em;
     font-weight: bold;
 }
@@ -577,7 +573,7 @@ notification-group-header {
     background-color: rgba(0, 0, 0, 0.9);
     transition: 100ms all ease-in-out;
     font-family: "Aux Mono";
-    font-size: 0.9rem;
+    font-size: 0.9em;
     font-weight: 800;
     outline: none;
     color: white;

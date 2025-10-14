@@ -1,8 +1,8 @@
 window#waybar, #workspaces button {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 1.0);
     box-shadow: none;
     font-family: "Dots All For Now JL";
-    font-size: 13px;
+    font-size: 15px;
     color: #ffffff;
 }
 
@@ -82,7 +82,7 @@ menu,
 .popup,
 tooltip {
     font-family: "Aux Mono";
-    font-size: 13px;
+    font-size: 15px;
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(89, 89, 89, 1);

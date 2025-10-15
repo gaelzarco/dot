@@ -46,4 +46,4 @@ COLOR=$GREEN
 
 pkill -f "$SPIN_NAME" 2>/dev/null
 sketchybar --set "$NAME" icon="●" icon.color=${COLOR} icon.width=16 icon.align=center \
-                 icon.padding_right=5 label.color=0xffffffff label="${LABEL} ${LAT_MS}ms"
+                 label.color=0xffffffff label="${LABEL} ${LAT_MS}ms"

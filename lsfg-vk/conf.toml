@@ -1,0 +1,11 @@
+version = 1
+
+[global]
+
+[[game]]
+exe = "x0"
+multiplier = 1
+flow_scale = 1.0
+performance_mode = true
+hdr_mode = false
+experimental_present_mode = "fifo"

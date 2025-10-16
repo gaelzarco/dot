@@ -572,8 +572,8 @@ notification-group-header {
     border: 1px solid @noti-border-color;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 100ms all ease-in-out;
-    font-family: "Aux Mono";
-    font-size: 0.9em;
+    font-family: "Dots All For Now JL";
+    font-size: 1em;
     font-weight: 800;
     outline: none;
     color: white;

@@ -30,7 +30,8 @@
     "orientation": "horizontal",
     "modules": [
       "hyprland/workspaces",
-      "hyprland/window"
+      "hyprland/window",
+      "mpris"
     ]
   },
   "group/info": {
@@ -43,22 +44,20 @@
     "orientation": "horizontal",
     "modules": [
       "tray",
-      "pulseaudio",
-      "backlight",
       "custom/brightness",
-      "battery#1",
-      "battery#2"
+      "pulseaudio",
+      "bluetooth"
     ]
   },
   "mpris": {
-    "format": "_{player_icon}{dynamic}",
+    "format": "  {player_icon}{dynamic}",
     "format-empty": "",
-    "format-paused": "{status_icon}{dynamic}",
+    "format-paused": "  {status_icon}{dynamic}",
     "player-icons": {
-      "default": "PLAYING://"
+      "default": "PLAYING_"
     },
     "status-icons": {
-      "paused": "PAUSED://"
+      "paused": "PAUSED_"
     },
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
@@ -67,6 +66,16 @@
     "interval": 1,
     "tooltip": true
     // "ignored-players": ["firefox"]
+  },
+  "custom/mpris_dots": {
+    "exec": "~/.config/waybar/scripts/mpris_dots.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+    "tooltip": true,
+    "max-length": 50
   },
   "custom/dualsense": {
     "format": " {percentage}% ",
@@ -94,10 +103,10 @@
     "icon": true
   },
   "tray": {
-    "format": "{}  ",
+    "format": " {}  ",
     "show-passive-items": false,
     "spacing": 8,
-    "icon-size": 15,
+    "icon-size": 13,
     "format-empty": ""
   },
   "clock": {
@@ -127,10 +136,9 @@
     "interval": 1
   },
   "custom/brightness": {
-    "format": "󰖨  {percentage}% ",
-    "format-empty": "",
+    "format": "󰖨  {percentage}%",
     "return-type": "json",
-    "exec": "if [ -f /tmp/brightness_cache ]; then val=$(cat /tmp/brightness_cache); else val=$(ddcutil --sleep-multiplier 0.00 --bus 4 getvcp 10 2>/dev/null | grep -oP 'current value =\\s*\\K[0-9]+' || echo 50); [ -z \"$val\" ] && val=50; val=$(( (val+5)/10*10 )); [ \"$val\" -lt 0 ] && val=0; [ \"$val\" -gt 100 ] && val=100; echo $val > /tmp/brightness_cache; fi; printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
+    "exec": "if [ -f /tmp/brightness_cache ]; then val=$(cat /tmp/brightness_cache); else val=$(ddcutil --sleep-multiplier 0.00 --bus 14 getvcp 10 2>/dev/null | grep -oP 'current value =\\s*\\K[0-9]+' || echo 50); [ -z \"$val\" ] && val=50; val=$(( (val+5)/10*10 )); [ \"$val\" -lt 0 ] && val=0; [ \"$val\" -gt 100 ] && val=100; echo $val > /tmp/brightness_cache; fi; printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
     "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up",
     "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down",
     "signal": 5,
@@ -187,8 +195,8 @@
     "tooltip": true
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%  ",
-    "format-muted": "   Muted",
+    "format": " {icon}   {volume}% ",
+    "format-muted": "    Muted ",
     "on-click": "pavucontrol",
     "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
     "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
@@ -209,45 +217,6 @@
       ]
     },
     "tooltip": true
-  },
-  "battery#1": {
-  	"bat": "BAT1",
-  	"interval": 5,
-  	"states": {
-  		"warning": 30,
-  		"critical": 15
-  	},
-  	"events": {
-  		"on-discharging-warning": "notify-send -u normal 'Low Battery'",
-  		"on-discharging-critical": "notify-send -u critical 'Critical Battery'",
-  		"on-charging-100": "notify-send -u normal 'Battery Full'"
-  	},
-  	"format": "{icon}  {capacity}%  ",
-  	"format-icons": ["", "", "", "", ""],
-  	"max-length": 25
-  },
-  "battery#2": {
-  	"bat": "BAT2",
-    "format-empty":"",
-  	"interval": 5,
-  	"states": {
-  		"warning": 30,
-  		"critical": 15
-  	},
-  	"events": {
-  		"on-discharging-warning": "notify-send -u normal 'Low Battery'",
-  		"on-discharging-critical": "notify-send -u critical 'Critical Battery'",
-  		"on-charging-100": "notify-send -u normal 'Battery Full'"
-  	},
-  	"format": "{icon}  {capacity}%  ",
-  	"format-icons": ["", "", "", "", ""],
-  	"max-length": 25
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "󰖨  {percent}%  ",
-    "on-scroll-up": "brightnessctl set +10%",
-    "on-scroll-down": "brightnessctl set 10%-"
   },
   "pulseaudio#microphone": {
     "format": " {format_source}",

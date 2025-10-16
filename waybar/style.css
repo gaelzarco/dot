@@ -1,7 +1,8 @@
-window#waybar, #workspaces button {
-    background-color: rgba(0, 0, 0, 1.0);
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.9);
     box-shadow: none;
     font-family: "Dots All For Now JL";
+    font-weight: bold;
     font-size: 15px;
     color: #ffffff;
 }
@@ -20,15 +21,20 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
+    font-family: "Dots All For Now JL";
+    font-weight: bold;
+    font-size: 14px;
     color: #ffffff;
     margin: 0px;
     padding: 0px;
+    border: none;
 }
 
 #workspaces button:hover {
     background: transparent;
     box-shadow: none;
     outline: none;
+    border: none;
 }
 
 #hypr {
@@ -39,9 +45,7 @@ window#waybar.empty #window {
 
 #sys {
     margin: 5px 0px 2px 0px;
-    padding: 0px 5px;
     transition: all 0.5s ease;
-
 }
 
 #info {
@@ -50,11 +54,8 @@ window#waybar.empty #window {
     transition: all 0.5s ease;
 }
 
-#mpris {
-    font-weight: normal;
-    margin: 5px 0px 2px 0px;
-    padding: 0px 10px;
-    transition: all 0.5s ease;
+#custom-mpris_dots {
+    padding: 0 10px;
 }
 
 #mpris.empty {
@@ -71,7 +72,7 @@ window#waybar.empty #window {
 }
 
 #controls {
-    margin: 5px 0px 2px 0px;
+    margin: 5px 0px 0px 0px;
     padding: 0px;
     transition: all 0.5s ease;
 }

@@ -13,7 +13,8 @@
 @define-color bg-selected rgb(120, 225, 120);
 
 :root {
-    --br: 0px;
+    --br: 20px;
+    --weight: bold;
 }
 
 window,
@@ -38,7 +39,7 @@ window,
 .notification .title
 /* the title text */
 {
-    font-weight: 500;
+    font-weight: var(--weight);
     font-size: 1.2em;
 }
 
@@ -161,7 +162,7 @@ window,
     text-shadow: none;
     font-family: "Dots All For Now JL";
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: var(--weight);
     padding: 0px 0px 4px 0px;
 }
 
@@ -178,7 +179,7 @@ window,
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
     /* Notification body */
     font-size: 0.8em;
-    font-weight: 400;
+    font-weight: normal;
     background: transparent;
     color: @text-color;
     text-shadow: none;
@@ -298,7 +299,7 @@ progressbar>trough>progress {
 .notification-group .notification-group-headers .notification-group-header {
     color: @text-color;
     font-family: "Dots All For Now JL";
-    font-weight: bold;
+    font-weight: var(--weight);
     font-size: 1em;
 }
 
@@ -424,12 +425,12 @@ notification-group-header {
     color: @text-color;
     margin: 15px 15px 0px 15px;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: var(--weight);
 }
 
 .widget-title>button {
     font-size: initial;
-    font-weight: 400;
+    font-weight: normal;
     color: @text-color;
     text-shadow: none;
     background: rgba(0, 0, 0, 0.9);
@@ -474,7 +475,7 @@ notification-group-header {
 
 .widget-label>label {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 /* Mpris widget */
@@ -510,7 +511,7 @@ notification-group-header {
 
 .widget-mpris .widget-mpris-player .widget-mpris-title {
     font-family: "Dots All For Now JL";
-    font-weight: bold;
+    font-weight: var(--weight);
     font-size: 0.9rem;
 }
 
@@ -574,7 +575,7 @@ notification-group-header {
     transition: 100ms all ease-in-out;
     font-family: "Dots All For Now JL";
     font-size: 0.9em;
-    font-weight: 800;
+    font-weight: var(--weight);
     outline: none;
     color: white;
 }

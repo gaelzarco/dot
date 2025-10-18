@@ -1,11 +1,11 @@
 * {
-    font: "Dots All For Now JL Bold 12";
+    font: "Aux Mono Regular 12";
     g-spacing: 10px;
     g-margin: 0;
     b-color: rgba(0,0,0,0.9);
     fg-color: #FFF;
     fgp-color: #afafafcc;
-    b-radius: 0px;
+    b-radius: 20px;
     g-padding: 5px;
     hl-color: #000000;
     hlt-color: #FFFFFF;

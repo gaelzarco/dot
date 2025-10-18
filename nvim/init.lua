@@ -14,17 +14,13 @@ vim.o.textwidth = 80
 vim.o.winborder = "rounded"
 vim.o.clipboard = "unnamedplus"
 vim.o.completeopt = "menu,menuone,noselect,noinsert"
-vim.g.vimtex_view_method = "zathura"
 vim.g.mapleader = " "
 
 vim.pack.add({
     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/windwp/nvim-autopairs" },
-    { src = "https://github.com/windwp/nvim-ts-autotag" },
-    { src = "https://github.com/lervag/vimtex" },
-    { src = "https://github.com/metalelf0/base16-black-metal-scheme" },
-    { src = "https://github.com/metalelf0/black-metal-theme-neovim" }
+    { src = "https://github.com/windwp/nvim-ts-autotag" }
 })
 
 vim.api.nvim_create_autocmd("InsertCharPre", {
@@ -38,13 +34,12 @@ vim.api.nvim_create_autocmd("InsertCharPre", {
         "rust",
         "cpp",
         "html",
-        "css",
-        "hyprlang"
+        "css"
     },
     callback = function()
         local col = vim.fn.col(".")
         if col > 80 then
-            vim.v.char = "" -- block extra chars
+            vim.v.char = ""
         end
     end,
 })
@@ -97,26 +92,10 @@ vim.lsp.enable({
     "cssls",
 })
 
-vim.filetype.add({
-    pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-})
-
-vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
-    pattern = { "*.hl", "hypr*.conf" },
-    callback = function(event)
-        vim.lsp.start {
-            name = "hyprlang",
-            cmd = { "hyprls" },
-            root_dir = vim.fn.getcwd(),
-        }
-    end
-})
-
 vim.keymap.set('n', 'gre', vim.diagnostic.open_float,
     { desc = "Show error message" })
 vim.keymap.set('n', 'grf', vim.lsp.buf.format)
 
-vim.cmd("colorscheme base16-black-metal")
 vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
 vim.cmd(":hi statusline guibg=NONE")

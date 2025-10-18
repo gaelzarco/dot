@@ -447,7 +447,6 @@ notification-group-header {
 .widget-dnd {
     color: @text-color;
     margin: 8px 15px;
-    font-size: 14px;
 }
 
 .widget-dnd>switch {

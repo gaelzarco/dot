@@ -21,9 +21,9 @@ if [[ -z "${W:-}" || -z "${H:-}" || -z "${RR:-}" ]]; then
 fi
 
 if [[ "$W" -eq 3840 && "$H" -eq 2160 ]]; then
-  echo "→ 2560x1440@60"
-  hyprctl keyword monitor "$MONITOR,2560x1440@60.00,0x0,1"
-elif [[ "$W" -eq 1600 && "$H" -eq 900 ]]; then
+  echo "→ 1920x1080@60"
+  hyprctl keyword monitor "$MONITOR,1920x1080@60.00,0x0,1"
+elif [[ "$W" -eq 1920 && "$H" -eq 1080 ]]; then
   echo "→ 3840x2160@144"
   hyprctl keyword monitor "$MONITOR,3840x2160@144.00,0x0,1.5"
 else

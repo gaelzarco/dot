@@ -3,7 +3,7 @@ window#waybar {
     box-shadow: none;
     font-family: "Dots All For Now JL";
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     color: #ffffff;
 }
 
@@ -23,7 +23,7 @@ window#waybar.empty #window {
 #workspaces button {
     font-family: "Dots All For Now JL";
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     color: #ffffff;
     margin: 0px;
     padding: 0px;
@@ -83,7 +83,7 @@ menu,
 .popup,
 tooltip {
     font-family: "Aux Mono";
-    font-size: 15px;
+    font-size: 14px;
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(89, 89, 89, 1);

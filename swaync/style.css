@@ -40,7 +40,7 @@ window,
 /* the title text */
 {
     font-weight: var(--weight);
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 
 .notification-row {
@@ -60,7 +60,7 @@ window,
     background: @noti-close-bg;
     color: @text-color;
     text-shadow: none;
-    font-size: 12px;
+    font-size: 0.9em;
     border-radius: 100px;
     box-shadow: none;
     border: none;
@@ -161,7 +161,7 @@ window,
     color: @text-color;
     text-shadow: none;
     font-family: "Dots All For Now JL";
-    font-size: 0.8em;
+    font-size: 0.725em;
     font-weight: var(--weight);
     padding: 0px 0px 4px 0px;
 }
@@ -169,7 +169,7 @@ window,
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
     /* Notification time-ago */
     font-family: "Aux Mono";
-    font-size: 0.8em;
+    font-size: 0.725em;
     font-weight: normal;
     background: transparent;
     color: @text-color;
@@ -178,7 +178,7 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
     /* Notification body */
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: normal;
     background: transparent;
     color: @text-color;
@@ -215,7 +215,7 @@ progressbar>trough>progress {
     background-color: white;
     border-radius: var(--br);
     -gtk-icon-effect: none;
-    font-size: 0.9em;
+    font-size: 0.7em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply {
@@ -229,7 +229,7 @@ progressbar>trough>progress {
     caret-color: @text-color;
     border: 1px solid transparent;
     border-radius: 100px;
-    font-size: 0.9em;
+    font-size: 0.725em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
@@ -238,14 +238,14 @@ progressbar>trough>progress {
     border: 1px solid @noti-border-color;
     border-radius: 100px;
     color: @text-color;
-    font-size: 0.9em;
+    font-size: 0.725em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:disabled {
     background: initial;
     color: @text-color-disabled;
     border: 1px solid transparent;
-    font-size: 0.9em;
+    font-size: 0.725em;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
@@ -253,7 +253,7 @@ progressbar>trough>progress {
 
 .notification-row .notification-background .notification .notification-action {
     /* The alternative actions below the default action */
-    font-size: 0.9em;
+    font-size: 0.7em;
     padding: 0px 0px 2px 0px;
 }
 
@@ -300,12 +300,12 @@ progressbar>trough>progress {
     color: @text-color;
     font-family: "Dots All For Now JL";
     font-weight: var(--weight);
-    font-size: 1em;
+    font-size: 0.825em;
 }
 
 .text-button {
     /* The actual notification button */
-    font-size: 11px;
+    font-size: 0.7em;
     border: 1px solid @noti-border-color;
     border-radius: 100px;
     outline: none;
@@ -320,7 +320,7 @@ progressbar>trough>progress {
     outline: none;
     border: none;
     outline-offset: 0;
-    font-size: 11px;
+    font-size: 0.7em;
 }
 
 .notification-group .notification-group-buttons {
@@ -348,7 +348,7 @@ progressbar>trough>progress {
 .notification-group .notification-row .notification {}
 
 notification-group-header {
-    font-size: 0.9rem;
+    font-size: 0.725rem;
 }
 
 .notification-group.collapsed .notification-row:not(:last-child) button{
@@ -424,12 +424,12 @@ notification-group-header {
     font-family: "Dots All For Now JL";
     color: @text-color;
     margin: 15px 15px 0px 15px;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: var(--weight);
 }
 
 .widget-title>button {
-    font-size: initial;
+    font-size: 0.9em;
     font-weight: normal;
     color: @text-color;
     text-shadow: none;
@@ -473,7 +473,7 @@ notification-group-header {
 }
 
 .widget-label>label {
-    font-size: 1.2rem;
+    font-size: 0.825em;
     font-weight: normal;
 }
 
@@ -511,11 +511,11 @@ notification-group-header {
 .widget-mpris .widget-mpris-player .widget-mpris-title {
     font-family: "Dots All For Now JL";
     font-weight: var(--weight);
-    font-size: 0.9rem;
+    font-size: 0.725em;
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-subtitle {
-    font-size: 0.8rem;
+    font-size: 0.7em;
 }
 
 .widget-mpris .widget-mpris-player>box>button {
@@ -573,7 +573,7 @@ notification-group-header {
     background-color: rgba(0, 0, 0, 0.9);
     transition: 100ms all ease-in-out;
     font-family: "Dots All For Now JL";
-    font-size: 0.9em;
+    font-size: 0.825em;
     font-weight: var(--weight);
     outline: none;
     color: white;

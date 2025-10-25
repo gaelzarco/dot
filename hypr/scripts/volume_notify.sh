@@ -11,7 +11,7 @@ case "$1" in
         ;;
 esac
 
-DEVICE_NAME=$(pactl list sinks | grep -A1 "Name: $(pactl get-default-sink)" | grep "Description:" | cut -d' ' -f2- | cut -c1-25)
+DEVICE_NAME=$(pactl list sinks | grep -A1 "Name: $(pactl get-default-sink)" | grep "Description:" | cut -d' ' -f2- | cut -c1-50 )
 
 # Check mute state
 if pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes'; then

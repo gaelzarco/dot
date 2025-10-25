@@ -39,7 +39,7 @@
       "custom/gpu",
       "custom/memory",
       "custom/brightness",
-      "custom/pulseaudio",
+      "pulseaudio",
       "bluetooth",
       "clock"
     ]
@@ -156,20 +156,9 @@
     "active-only": true,
     "tooltip": true
   },
-  "custom/pulseaudio": {
-    "return-type": "json",
-    "exec": "bash -lc 'vol=$(pactl get-sink-volume @DEFAULT_SINK@ 2>/dev/null | awk \"{print \\$5}\" | tr -d \"%\"); [ -z \"$vol\" ] && vol=0; vv=$(printf \"%02d\" \"$vol\"); sink=$(pactl get-default-sink 2>/dev/null); desc=$(pactl list sinks 2>/dev/null | sed -n \"/^\\s*Name: $sink$/,/^$/p\" | sed -n \"s/^\\s*Description:\\s*//p\" | head -n1); [ -z \"$desc\" ] && desc=\"$sink\"; esc=$(printf \"%s\" \"$desc\" | sed -e \"s/\\\\\\\\/\\\\\\\\\\\\\\\\/g\" -e \"s/\\\"/\\\\\\\"/g\" -e \":a;N;$!ba;s/\\n/\\\\n/g\"); printf \"{\\\"text\\\":\\\"%s\\\",\\\"tooltip\\\":\\\"%s\\\"}\\n\" \"$vv\" \"$esc\"'",
-    "format": "  {}% ",
-    "interval": 5,
-    "tooltip": true,
-    "on-click": "pavucontrol",
-    "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
-    "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
-    "on-click-middle": "$HOME/.config/hypr/scripts/volume_notify.sh mute"
-  },
   "pulseaudio": {
-    "format": "{icon}  {volume}% ",
-    "format-muted": "    Muted ",
+    "format": "{icon}  {volume:02d}% ",
+    "format-muted": "   Muted ",
     "on-click": "pavucontrol",
     "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
     "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
@@ -182,12 +171,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        "",
-        ""
-      ]
+      "default": ["","","",""]
     },
     "tooltip": true
   },

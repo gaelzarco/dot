@@ -63,7 +63,7 @@ inputbar {
 
 entry {
     padding: 15px 20px;
-    placeholder: "Search";
+    placeholder: "ax://search";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
     font: "Dots All For Now JL Bold 14";

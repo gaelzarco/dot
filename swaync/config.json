@@ -43,7 +43,7 @@
       "clear-all-button": true
     },
     "title": {
-      "text": "Control Center",
+      "text": "ax://cxc",
       "clear-all-button": true,
       "button-text": "◯"
     },
@@ -61,23 +61,23 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "● DnD",
+          "label": "● dnd",
           "type": "toggle",
           "active": false,
           "command": "sh -c '[[ $swaync_toggle_state == true ]] && swaync-client -dn || swaync-client -df'"
         },
         {
-          "label": "⟳ Restart",
+          "label": "⟳ reboot",
           "command": "sh -c 'systemctl reboot'",
           "enum": "normal"
         },
         {
-          "label": "◌ Suspend",
+          "label": "◌ suspend",
           "command": "sh -c 'systemctl suspend'",
           "enum": "normal"
         },
         {
-          "label": "○ Power",
+          "label": "○ poweroff",
           "command": "sh -c 'systemctl poweroff'",
           "enum": "normal"
         }

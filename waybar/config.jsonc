@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "height": 30,
   "spacing": 0,
   "exclusive": true,
@@ -15,15 +15,12 @@
   "modules-center": [
   ],
   "modules-right": [
-    "group/controls",
-    "group/info"
+    "group/info",
+    "group/sys"
   ],
-  "group/sys": {
+  "group/info": {
     "orientation": "horizontal",
     "modules": [
-      "custom/cpu",
-      "custom/gpu",
-      "custom/memory"
     ]
   },
   "group/hypr": {
@@ -34,19 +31,17 @@
       "mpris"
     ]
   },
-  "group/info": {
-    "orientation": "horizontal",
-    "modules": [
-      "clock"
-    ]
-  },
-  "group/controls": {
+  "group/sys": {
     "orientation": "horizontal",
     "modules": [
       "tray",
+      "custom/cpu",
+      "custom/gpu",
+      "custom/memory",
       "custom/brightness",
-      "pulseaudio",
-      "bluetooth"
+      "custom/pulseaudio",
+      "bluetooth",
+      "clock"
     ]
   },
   "mpris": {
@@ -54,10 +49,10 @@
     "format-empty": "",
     "format-paused": "  {status_icon}{dynamic}",
     "player-icons": {
-      "default": "PLAYING_"
+      "default": "PLAYING://"
     },
     "status-icons": {
-      "paused": "PAUSED_"
+      "paused": "PAUSED://"
     },
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
@@ -87,26 +82,22 @@
   "hyprland/window": {
     "format": "{}",
     "format-empty": "",
-	"rewrite": {
-		".*Zen Browser": "Zen",
-		"(.*) - Helium": "Helium",
-		"(.*) - Obsidian.*": "Obsidian",
-		"(.*) - Discord": "Discord",
-		"RPCS3(.*)": "RPCS3"
-	},
+    "rewrite": {
+        ".*Zen Browser": "Zen",
+        "(.*) - Helium": "Helium",
+        "(.*) - Obsidian.*": "Obsidian",
+        "(.*) - Discord": "Discord",
+        "RPCS3(.*)": "RPCS3"
+    },
     "max-length": 60,
     "tooltip-format": "{title}",
     "tooltip": true
   },
-  "user": {
-    "format": " ",
-    "icon": true
-  },
   "tray": {
-    "format": " {}  ",
+    "format": "{}",
     "show-passive-items": false,
     "spacing": 8,
-    "icon-size": 13,
+    "icon-size": 14,
     "format-empty": ""
   },
   "clock": {
@@ -118,55 +109,34 @@
   },
   "custom/cpu": {
     "exec": "top -bn1 | grep '%Cpu' | awk '{printf \"%02d\", 100 - $8}'",
-    "format": "  {}%",
-    "tooltip": false,
-    "interval": 1
+    "format": "  {}% ",
+    "tooltip-format": "CPU",
+    "tooltip": true,
+    "interval": 5
   },
   "custom/gpu": {
     "exec": "printf '%02d' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)",
-    "format": " 󰘚 {}%",
-    "tooltip-format": "GPU: {}%",
-    "tooltip": false,
-    "interval": 1
+    "format": "󰘚  {}% ",
+    "tooltip-format": "GPU",
+    "tooltip": true,
+    "interval": 5
   },
   "custom/memory": {
     "exec": "free | awk '/Mem:/ {printf \"%02d\", $3*100/$2}'",
-    "format": "  {}%",
-    "tooltip": false,
-    "interval": 1
+    "format": "  {}% ",
+    "tooltip-format": "RAM",
+    "tooltip": true,
+    "interval": 5
   },
   "custom/brightness": {
-    "format": "󰖨  {percentage}%",
     "return-type": "json",
-    "exec": "if [ -f /tmp/brightness_cache ]; then val=$(cat /tmp/brightness_cache); else val=$(ddcutil --sleep-multiplier 0.00 --bus 14 getvcp 10 2>/dev/null | grep -oP 'current value =\\s*\\K[0-9]+' || echo 50); [ -z \"$val\" ] && val=50; val=$(( (val+5)/10*10 )); [ \"$val\" -lt 0 ] && val=0; [ \"$val\" -gt 100 ] && val=100; echo $val > /tmp/brightness_cache; fi; printf '{\"percentage\":%s,\"tooltip\":\"Spectrum One Monitor\"}\\n' \"$val\"",
-    "on-scroll-up": "$HOME/.config/waybar/scripts/brightness_notify.sh up",
-    "on-scroll-down": "$HOME/.config/waybar/scripts/brightness_notify.sh down",
-    "signal": 5,
-    "tooltip": true
-  },
-  "custom/swaync": {
-    "format": "  {icon}",
-    "format-icons": {
-      "notification": "●",
-      "none": "◌"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": false
-  },
-  "network": {
-    "format": "{ifname} ↓ {bandwidthDownBits}",
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈁 {ifname}",
-    "format-disconnected": "Disconnected",
-    "tooltip-format": "  {ifname} via {gwaddri}",
-    "tooltip-format-wifi": " {ifname} @ {essid}\n\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-    "tooltip-format-ethernet": "    {ifname}\n\nIP: {ipaddr}\nup: {bandwidthUpBits} down: {bandwidthDownBits}",
-    "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "exec": "bash -lc 'v=$([ -f /tmp/brightness_cache ] && cat /tmp/brightness_cache || { ddcutil --sleep-multiplier 0.00 getvcp 10 2>/dev/null | grep -oP \"current value =\\s*\\K[0-9]+\" || echo 50; }); v=$(( (v+5)/10*10 )); [ \"$v\" -lt 0 ] && v=0; [ \"$v\" -gt 100 ] && v=100; echo $v > /tmp/brightness_cache; name=$(hyprctl -j monitors 2>/dev/null | jq -r \"map(select(.focused==true))[0].model // empty\"); [ -z \"$name\" ] && name=$(ddcutil detect 2>/dev/null | awk -F\": \" \"/Monitor:/ {print \\$2; exit}\"); short=$(printf \"%s\" \"$name\" | awk \"{print \\$NF}\"); [ -z \"$short\" ] && short=Monitor; printf \"{\\\"text\\\":\\\"%02d\\\",\\\"tooltip\\\":\\\"%s\\\"}\\n\" \"$v\" \"$short\"'",
+    "format": "󰖨  {}% ",
+    "tooltip": true,
+    "interval": 5,
+    "on-scroll-up": "$HOME/.config/hypr/scripts/brightness_notify.sh up",
+    "on-scroll-down": "$HOME/.config/hypr/scripts/brightness_notify.sh down",
+    "signal": 5
   },
   "bluetooth": {
     "format": "  {num_connections}  ",
@@ -180,22 +150,25 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}::{device_battery_percentage}%",
     "tooltip": true
   },
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 16,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": []
-  },
   "hyprland/workspaces": {
     "format": "{} ",
     "all-outputs": true,
     "active-only": true,
     "tooltip": true
   },
+  "custom/pulseaudio": {
+    "return-type": "json",
+    "exec": "bash -lc 'vol=$(pactl get-sink-volume @DEFAULT_SINK@ 2>/dev/null | awk \"{print \\$5}\" | tr -d \"%\"); [ -z \"$vol\" ] && vol=0; vv=$(printf \"%02d\" \"$vol\"); sink=$(pactl get-default-sink 2>/dev/null); desc=$(pactl list sinks 2>/dev/null | sed -n \"/^\\s*Name: $sink$/,/^$/p\" | sed -n \"s/^\\s*Description:\\s*//p\" | head -n1); [ -z \"$desc\" ] && desc=\"$sink\"; esc=$(printf \"%s\" \"$desc\" | sed -e \"s/\\\\\\\\/\\\\\\\\\\\\\\\\/g\" -e \"s/\\\"/\\\\\\\"/g\" -e \":a;N;$!ba;s/\\n/\\\\n/g\"); printf \"{\\\"text\\\":\\\"%s\\\",\\\"tooltip\\\":\\\"%s\\\"}\\n\" \"$vv\" \"$esc\"'",
+    "format": "  {}% ",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "pavucontrol",
+    "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
+    "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
+    "on-click-middle": "$HOME/.config/hypr/scripts/volume_notify.sh mute"
+  },
   "pulseaudio": {
-    "format": " {icon}  {volume}% ",
+    "format": "{icon}  {volume}% ",
     "format-muted": "    Muted ",
     "on-click": "pavucontrol",
     "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",

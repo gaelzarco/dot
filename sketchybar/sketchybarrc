@@ -6,7 +6,7 @@ default=(
   padding_left=5
   padding_right=5
   icon.font="GeistMono Nerd Font:Regular:14.0"
-  label.font="Dots All For Now JL:Regular:14.0"
+  label.font="Dots All For Now JL:Regular:13.0"
   icon.color=0xffffffff
   label.color=0xffffffff
   icon.padding_left=0
@@ -59,7 +59,7 @@ sketchybar --add item site_status left \
            --set site_status script="$PLUGIN_DIR/status.sh" \
              update_freq=10 \
              icon.font="GeistMono Nerd Font:Regular:14.0" \
-             label.font="Dots All For Now JL:Regular:14.0" \
+             label.font="Dots All For Now JL:Regular:13.0" \
              icon.padding_left=5 label.padding_left=5 \
            --subscribe site_status system_woke
 

@@ -2,7 +2,7 @@
     font: "Aux Mono Regular 12";
     g-spacing: 10px;
     g-margin: 0;
-    b-color: rgba(0,0,0,0.9);
+    b-color: rgba(0,0,0,0.8);
     fg-color: #FFF;
     fgp-color: #afafafcc;
     b-radius: 20px;
@@ -35,7 +35,7 @@ listview {
     border: @w-border;
     border-color: @w-border-color;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 window {
@@ -55,7 +55,7 @@ prompt {
 
 inputbar {
     children: ["prompt", "entry"];
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: @b-radius;
     border: @w-border;
     border-color: @w-border-color;
@@ -99,14 +99,14 @@ element alternate.normal {
 }
 
 element selected.active {
-    background-color: rgba(20,20,20,0.9);
+    background-color: rgba(20,20,20,0.8);
     text-color: @hlt-color;
     border: 1px solid;
     border-color: rgba(89,89,89,1);
 }
 
 element selected.normal {
-    background-color: rgba(20,20,20,0.9);
+    background-color: rgba(20,20,20,0.8);
     text-color: @hlt-color;
     border: 1px solid;
     border-color: rgba(89,89,89,1);
@@ -119,5 +119,5 @@ message {
     border-color: rgba(89,89,89,1);
     border-radius: @b-radius;
     padding: @g-padding;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
 }

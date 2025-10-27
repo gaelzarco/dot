@@ -8,7 +8,7 @@ desktop-notifications = true
 bell-features = no-title
 
 # Themes
-theme = black_metal_dark_funeral
+# theme = black_metal_dark_funeral
 background = 000000
 
 # Shaders

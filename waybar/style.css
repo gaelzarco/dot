@@ -42,7 +42,7 @@ window#waybar {
 #hypr {
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 20px;
-    margin: 2px 0px 3px 5px;
+    margin: 5px 0px 0px 5px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }
@@ -54,7 +54,7 @@ window#waybar {
 #sys {
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 20px;
-    margin: 2px 5px 3px 0px;
+    margin: 5px 5px 0px 0px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }
@@ -71,7 +71,7 @@ tooltip {
     font-family: "Aux Mono";
     font-size: 14.5px;
     box-shadow: none;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(89, 89, 89, 1);
     border-radius: 10px;
 }

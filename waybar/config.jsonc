@@ -139,7 +139,7 @@
     "signal": 5
   },
   "bluetooth": {
-    "format": "  {num_connections}  ",
+    "format": "  {num_connections:02d}  ",
     "format-disabled": "",
     "format-off": "",
     "interval": 30,

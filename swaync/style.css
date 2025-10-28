@@ -116,6 +116,9 @@ window,
     border: 1px solid transparent;
 }
 
+.notification-row .notification-background .notification .notification-action {
+    background: rgba(0, 0, 0, 0.0);
+}
 .notification-row .notification-background .notification .notification-action:hover,
 .notification-row .notification-background .notification .notification-default-action:hover {
     -gtk-icon-effect: none;
@@ -178,7 +181,7 @@ window,
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
     /* Notification body */
-    font-size: 0.7em;
+    font-size: 0.725em;
     font-weight: normal;
     background: transparent;
     color: @text-color;
@@ -253,7 +256,6 @@ progressbar>trough>progress {
 
 .notification-row .notification-background .notification .notification-action {
     /* The alternative actions below the default action */
-    font-size: 0.7em;
     padding: 0px 0px 2px 0px;
 }
 
@@ -300,12 +302,13 @@ progressbar>trough>progress {
     color: @text-color;
     font-family: "Dots All For Now JL";
     font-weight: var(--weight);
-    font-size: 0.825em;
+    font-size: 1em;
 }
 
 .text-button {
     /* The actual notification button */
-    font-size: 0.7em;
+    background: rgba(0,0,0,0.8);
+    font-size: 0.725em;
     border: 1px solid @noti-border-color;
     border-radius: 100px;
     outline: none;
@@ -317,10 +320,10 @@ progressbar>trough>progress {
 }
 
 .notification-alt-actions {
+    background: transparent;
     outline: none;
     border: none;
     outline-offset: 0;
-    font-size: 0.7em;
 }
 
 .notification-group .notification-group-buttons {
@@ -358,6 +361,7 @@ notification-group-header {
 
 .notification-group.collapsed .notification-row:not(:last-child) .notification-action,
 .notification-group.collapsed .notification-row:not(:last-child) .notification-default-action {
+    background: transparent;
     opacity: 0;
     border: 1px solid transparent;
 }
@@ -395,6 +399,7 @@ notification-group-header {
 
 .control-center .control-center-list .notification .notification-default-action,
 .control-center .control-center-list .notification .notification-action {
+    background: transparent;
     transition:
         opacity 100ms ease-in-out,
         background 0.15s ease-in-out;
@@ -515,7 +520,7 @@ notification-group-header {
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-subtitle {
-    font-size: 0.7em;
+    font-size: 0.725em;
 }
 
 .widget-mpris .widget-mpris-player>box>button {

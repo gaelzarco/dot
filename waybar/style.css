@@ -40,9 +40,10 @@ window#waybar {
 }
 
 #hypr {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
-    margin: 0px 0px 0px 5px;
+    border: 1px solid rgba(40, 40, 40, 1);
+    margin: 0px 0px 4px 5px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }
@@ -52,9 +53,10 @@ window#waybar {
 }
 
 #sys {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
-    margin: 0px 5px 0px 0px;
+    border: 1px solid rgba(40, 40, 40, 1);
+    margin: 0px 5px 4px 0px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }

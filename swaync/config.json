@@ -45,7 +45,7 @@
     "title": {
       "text": "ax://cxc",
       "clear-all-button": true,
-      "button-text": "◯"
+      "button-text": "X"
     },
     "mpris": {
       "image-size": 96,

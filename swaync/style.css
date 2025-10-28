@@ -60,7 +60,7 @@ window,
     background: @noti-close-bg;
     color: @text-color;
     text-shadow: none;
-    font-size: 0.9em;
+    font-size: 0.825em;
     border-radius: 100px;
     box-shadow: none;
     border: none;
@@ -69,7 +69,6 @@ window,
 
 .notification-row .notification-background .close-button:hover {
     box-shadow: none;
-    border: 1px solid rgba(89, 89, 89, 1);
     background-color: rgba(20, 20, 20, 0.8);
     color: white;
 }
@@ -79,6 +78,12 @@ window,
     background: rgba(0, 0, 0, 0.8);
     border-radius: 100px;
     transition: all 100ms ease-in-out;
+}
+
+.notification-row .notification-background .notification .close-button:hover {
+    box-shadow: none;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: white;
 }
 
 .notification-row .notification-background .notification {
@@ -164,7 +169,7 @@ window,
     color: @text-color;
     text-shadow: none;
     font-family: "Dots All For Now JL";
-    font-size: 0.725em;
+    font-size: 0.75em;
     font-weight: var(--weight);
     padding: 0px 0px 4px 0px;
 }
@@ -172,7 +177,7 @@ window,
 .notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
     /* Notification time-ago */
     font-family: "Aux Mono";
-    font-size: 0.725em;
+    font-size: 0.75em;
     font-weight: normal;
     background: transparent;
     color: @text-color;
@@ -485,7 +490,7 @@ notification-group-header {
 /* Mpris widget */
 .widget-mpris {
     margin: 0px 0px -20px 0px;
-    padding: 0px 0px 5px 0px;
+    padding: 0px 10px 5px 10px;
 }
 
 .widget-mpris .widget-mpris-player {
@@ -516,7 +521,7 @@ notification-group-header {
 .widget-mpris .widget-mpris-player .widget-mpris-title {
     font-family: "Dots All For Now JL";
     font-weight: var(--weight);
-    font-size: 0.725em;
+    font-size: 0.75em;
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-subtitle {

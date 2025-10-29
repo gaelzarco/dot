@@ -1,188 +1,178 @@
 {
-  "layer": "top",
-  "position": "bottom",
-  "height": 30,
-  "spacing": 0,
-  "exclusive": true,
-  "start_hidden": false,
-  "gtk-layer-shell": true,
-  "passthrough": false,
-  "fixed-center": true,
-  "reload_style_on_change": true,
-  "modules-left": [
-    "group/hypr"
-  ],
-  "modules-center": [
-  ],
-  "modules-right": [
-    "group/info",
-    "group/sys"
-  ],
-  "group/info": {
-    "orientation": "horizontal",
-    "modules": [
-    ]
-  },
-  "group/hypr": {
-    "orientation": "horizontal",
-    "modules": [
-      "hyprland/workspaces",
-      "hyprland/window",
-      "mpris"
-    ]
-  },
-  "group/sys": {
-    "orientation": "horizontal",
-    "modules": [
-      "tray",
-      "custom/cpu",
-      "custom/gpu",
-      "custom/memory",
-      "custom/brightness",
-      "pulseaudio",
-      "bluetooth",
-      "clock"
-    ]
-  },
-  "mpris": {
-    "format": "  {player_icon}{dynamic}",
-    "format-empty": "",
-    "format-paused": "  {status_icon}{dynamic}",
-    "player-icons": {
-      "default": "PLAYING://"
+    "layer": "top",
+    "position": "bottom",
+    // "mode": "overlay",
+    "height": 30,
+    "spacing": 0,
+    "exclusive": true,
+    "start_hidden": false,
+    "gtk-layer-shell": true,
+    "passthrough": false,
+    "fixed-center": false,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "group/hypr"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "group/info",
+        "group/sys"
+    ],
+    "group/info": {
+        "orientation": "horizontal",
+        "modules": []
     },
-    "status-icons": {
-      "paused": "PAUSED://"
+    "group/hypr": {
+        "orientation": "horizontal",
+        "modules": [
+            "hyprland/workspaces",
+            "hyprland/window",
+            "mpris"
+        ]
     },
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
-    "max-length": 60,
-    "interval": 1,
-    "tooltip": true
-    // "ignored-players": ["firefox"]
-  },
-  "custom/mpris_dots": {
-    "exec": "~/.config/waybar/scripts/mpris_dots.sh",
-    "return-type": "json",
-    "interval": 1,
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
-    "tooltip": true,
-    "max-length": 50
-  },
-  "custom/dualsense": {
-    "format": " {percentage}% ",
-    "return-type": "json",
-    "exec": "b=$(ls -d /sys/class/power_supply/ps-controller-battery-* 2>/dev/null | head -n1); if [ -n \"$b\" ]; then cap=$(cat \"$b/capacity\"); st=$(cat \"$b/status\"); printf '{\"percentage\":%s,\"tooltip\":\"DualSense: %s (%s%%)\",\"class\":[]}\\n' \"$cap\" \"$st\" \"$cap\"; else printf '{\"class\":[\"hidden\"],\"text\":\"\"}\\n'; fi",
-    "interval": 3,
-    "tooltip": true
-  },
-  "hyprland/window": {
-    "format": "{}",
-    "format-empty": "",
-    "rewrite": {
-        ".*Zen Browser": "Zen",
-        "(.*) - Helium": "Helium",
-        "(.*) - Obsidian.*": "Obsidian",
-        "(.*) - Discord": "Discord",
-        "RPCS3(.*)": "RPCS3"
+    "group/sys": {
+        "orientation": "horizontal",
+        "modules": [
+            "tray",
+            "custom/cpu",
+            "custom/gpu",
+            "custom/memory",
+            "custom/brightness",
+            "pulseaudio",
+            "bluetooth",
+            "clock"
+        ]
     },
-    "max-length": 60,
-    "tooltip-format": "{title}",
-    "tooltip": true
-  },
-  "tray": {
-    "format": "{}",
-    "show-passive-items": false,
-    "spacing": 8,
-    "icon-size": 14,
-    "format-empty": ""
-  },
-  "clock": {
-    "format": "{:%a %b %d %H:%M:%S}",
-    "on-click": "swaync-client -t -sw",
-    "tooltip-format": "{calendar}",
-    "tooltip": true,
-    "interval": 1
-  },
-  "custom/cpu": {
-    "exec": "top -bn1 | grep '%Cpu' | awk '{printf \"%02d\", 100 - $8}'",
-    "format": "  {}% ",
-    "tooltip-format": "CPU",
-    "tooltip": true,
-    "interval": 5
-  },
-  "custom/gpu": {
-    "exec": "printf '%02d' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)",
-    "format": "󰘚  {}% ",
-    "tooltip-format": "GPU",
-    "tooltip": true,
-    "interval": 5
-  },
-  "custom/memory": {
-    "exec": "free | awk '/Mem:/ {printf \"%02d\", $3*100/$2}'",
-    "format": "  {}% ",
-    "tooltip-format": "RAM",
-    "tooltip": true,
-    "interval": 5
-  },
-  "custom/brightness": {
-    "return-type": "json",
-    "exec": "bash -lc 'v=$([ -f /tmp/brightness_cache ] && cat /tmp/brightness_cache || { ddcutil --sleep-multiplier 0.00 getvcp 10 2>/dev/null | grep -oP \"current value =\\s*\\K[0-9]+\" || echo 50; }); v=$(( (v+5)/10*10 )); [ \"$v\" -lt 0 ] && v=0; [ \"$v\" -gt 100 ] && v=100; echo $v > /tmp/brightness_cache; name=$(hyprctl -j monitors 2>/dev/null | jq -r \"map(select(.focused==true))[0].model // empty\"); [ -z \"$name\" ] && name=$(ddcutil detect 2>/dev/null | awk -F\": \" \"/Monitor:/ {print \\$2; exit}\"); short=$(printf \"%s\" \"$name\" | awk \"{print \\$NF}\"); [ -z \"$short\" ] && short=Monitor; printf \"{\\\"text\\\":\\\"%02d\\\",\\\"tooltip\\\":\\\"%s\\\"}\\n\" \"$v\" \"$short\"'",
-    "format": "󰖨  {}% ",
-    "tooltip": true,
-    "interval": 5,
-    "on-scroll-up": "$HOME/.config/hypr/scripts/brightness_notify.sh up",
-    "on-scroll-down": "$HOME/.config/hypr/scripts/brightness_notify.sh down",
-    "signal": 5
-  },
-  "bluetooth": {
-    "format": "  {num_connections:02d}  ",
-    "format-disabled": "",
-    "format-off": "",
-    "interval": 30,
-    "on-click": "blueman-manager",
-    "format-no-controller": "",
-    "tooltip-format-connected": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}::{device_battery_percentage}%",
-    "tooltip": true
-  },
-  "hyprland/workspaces": {
-    "format": "{} ",
-    "all-outputs": true,
-    "active-only": true,
-    "tooltip": true
-  },
-  "pulseaudio": {
-    "format": "{icon}  {volume:02d}% ",
-    "format-muted": "   Muted ",
-    "on-click": "pavucontrol",
-    "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
-    "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
-    "on-click-middle": "$HOME/.config/hypr/scripts/volume_notify.sh mute",
-    "scroll-step": 1,
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["","","",""]
+    "mpris": {
+        "format": "  {player_icon}{dynamic}",
+        "format-empty": "",
+        "format-paused": "  {status_icon}{dynamic}",
+        "player-icons": {
+            "default": "PLAYING://"
+        },
+        "status-icons": {
+            "paused": "PAUSED://"
+        },
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl previous",
+        "on-scroll-down": "playerctl next",
+        "max-length": 60,
+        "interval": 1,
+        "tooltip": true
+        // "ignored-players": ["firefox"]
     },
-    "tooltip": true
-  },
-  "pulseaudio#microphone": {
-    "format": " {format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": " Muted",
-    "on-click": "pamixer --default-source -t",
-    "on-scroll-up": "pamixer --default-source -i 5",
-    "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 1,
-    "tooltip": true
-  }
+    "custom/dualsense": {
+        "format": " {percentage}% ",
+        "return-type": "json",
+        "exec": "b=$(ls -d /sys/class/power_supply/ps-controller-battery-* 2>/dev/null | head -n1); if [ -n \"$b\" ]; then cap=$(cat \"$b/capacity\"); st=$(cat \"$b/status\"); printf '{\"percentage\":%s,\"tooltip\":\"DualSense: %s (%s%%)\",\"class\":[]}\\n' \"$cap\" \"$st\" \"$cap\"; else printf '{\"class\":[\"hidden\"],\"text\":\"\"}\\n'; fi",
+        "interval": 3,
+        "tooltip": true
+    },
+    "hyprland/window": {
+        "format": "_{}",
+        "format-empty": "",
+        "rewrite": {
+            ".*Zen Browser": "Zen",
+            "(.*) - Helium": "_Helium",
+            "(.*) - Obsidian.*": "_Obsidian",
+            "(.*) - Discord": "_Discord",
+            "RPCS3(.*)": "_RPCS3"
+        },
+        "max-length": 60,
+        "tooltip-format": "{title}",
+        "tooltip": true
+    },
+    "tray": {
+        "format": "{}",
+        "show-passive-items": false,
+        "spacing": 8,
+        "icon-size": 14,
+        "format-empty": ""
+    },
+    "clock": {
+        "format": "{:%a %b %d %H:%M:%S}",
+        "on-click": "swaync-client -t -sw",
+        "tooltip-format": "{calendar}",
+        "tooltip": true,
+        "interval": 1
+    },
+    "custom/cpu": {
+        "exec": "top -bn1 | grep '%Cpu' | awk '{printf \"%02d\", 100 - $8}'",
+        "format": "  {}% ",
+        "tooltip-format": "CPU",
+        "tooltip": true,
+        "interval": 5
+    },
+    "custom/gpu": {
+        "exec": "printf '%02d' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)",
+        "format": "󰘚  {}% ",
+        "tooltip-format": "GPU",
+        "tooltip": true,
+        "interval": 5
+    },
+    "custom/memory": {
+        "exec": "free | awk '/Mem:/ {printf \"%02d\", $3*100/$2}'",
+        "format": "  {}% ",
+        "tooltip-format": "RAM",
+        "tooltip": true,
+        "interval": 5
+    },
+    "custom/brightness": {
+        "return-type": "json",
+        "exec": "bash -lc 'v=$([ -f /tmp/brightness_cache ] && cat /tmp/brightness_cache || { ddcutil --sleep-multiplier 0.00 getvcp 10 2>/dev/null | grep -oP \"current value =\\s*\\K[0-9]+\" || echo 50; }); v=$(( (v+5)/10*10 )); [ \"$v\" -lt 0 ] && v=0; [ \"$v\" -gt 100 ] && v=100; echo $v > /tmp/brightness_cache; name=$(hyprctl -j monitors 2>/dev/null | jq -r \"map(select(.focused==true))[0].model // empty\"); [ -z \"$name\" ] && name=$(ddcutil detect 2>/dev/null | awk -F\": \" \"/Monitor:/ {print \\$2; exit}\"); short=$(printf \"%s\" \"$name\" | awk \"{print \\$NF}\"); [ -z \"$short\" ] && short=Monitor; printf \"{\\\"text\\\":\\\"%02d\\\",\\\"tooltip\\\":\\\"%s\\\"}\\n\" \"$v\" \"$short\"'",
+        "format": "󰖨  {}% ",
+        "tooltip": true,
+        "interval": 5,
+        "on-scroll-up": "$HOME/.config/hypr/scripts/brightness_notify.sh up",
+        "on-scroll-down": "$HOME/.config/hypr/scripts/brightness_notify.sh down",
+        "signal": 5
+    },
+    "bluetooth": {
+        "format": "  {num_connections:02d}  ",
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 30,
+        "on-click": "blueman-manager",
+        "format-no-controller": "",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}::{device_battery_percentage}%",
+        "tooltip": true
+    },
+    "hyprland/workspaces": {
+        "format": "{} ",
+        "all-outputs": true,
+        "active-only": true,
+        "tooltip": true
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume:02d}% ",
+        "format-muted": "   Muted ",
+        "on-click": "pavucontrol",
+        "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
+        "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
+        "on-click-middle": "$HOME/.config/hypr/scripts/volume_notify.sh mute",
+        "scroll-step": 1,
+        "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["","","",""]
+        },
+        "tooltip": true
+    },
+    "pulseaudio#microphone": {
+        "format": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 1,
+        "tooltip": true
+    }
 }

@@ -13,7 +13,7 @@ window#waybar {
     box-shadow: none;
     font-family: "Dots All For Now JL";
     font-weight: bold;
-    font-size: 14px;
+    font-size: 14.5px;
     color: #ffffff;
 }
 
@@ -25,7 +25,7 @@ window#waybar {
 #workspaces button {
     font-family: "Dots All For Now JL";
     font-weight: bold;
-    font-size: 14px;
+    font-size: 14.5px;
     color: #ffffff;
     margin: 0px;
     padding: 0px;
@@ -53,7 +53,7 @@ window#waybar {
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 20px;
     border: 1px solid rgba(40, 40, 40, 0);
-    margin: 0px 0px 4px 5px;
+    margin: 2px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }
@@ -66,7 +66,7 @@ window#waybar {
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 20px;
     border: 1px solid rgba(40, 40, 40, 0);
-    margin: 0px 5px 4px 0px;
+    margin: 2px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }
@@ -81,9 +81,9 @@ menu,
 .popup,
 tooltip {
     font-family: "Aux Mono";
-    font-size: 14px;
+    font-size: 14.5px;
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(89, 89, 89, 1);
-    border-radius: 10px;
+    border-radius: 20px;
 }

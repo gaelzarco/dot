@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     // "mode": "overlay",
     "height": 30,
     "spacing": 0,
@@ -70,14 +70,14 @@
         "tooltip": true
     },
     "hyprland/window": {
-        "format": "_{}",
+        "format": "AX://{}",
         "format-empty": "",
         "rewrite": {
-            ".*Zen Browser": "Zen",
-            "(.*) - Helium": "_Helium",
-            "(.*) - Obsidian.*": "_Obsidian",
-            "(.*) - Discord": "_Discord",
-            "RPCS3(.*)": "_RPCS3"
+            ".*Zen Browser": "AX://Zen",
+            "(.*) - Helium": "AX://Helium",
+            "(.*) - Obsidian.*": "AX://Obsidian",
+            "(.*) - Discord": "AX://Discord",
+            "RPCS3(.*)": "AX://RPCS3"
         },
         "max-length": 60,
         "tooltip-format": "{title}",

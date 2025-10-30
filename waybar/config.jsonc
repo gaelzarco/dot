@@ -45,7 +45,7 @@
         ]
     },
     "mpris": {
-        "format": "{player_icon}{dynamic}",
+        "format": "  {player_icon}{dynamic}",
         "format-empty": "",
         "format-paused": "  {status_icon}{dynamic}",
         "player-icons": {
@@ -129,7 +129,7 @@
         "signal": 5
     },
     "bluetooth": {
-        "format": "  {num_connections:02d}  ",
+        "format": " {num_connections:02d} ",
         "format-disabled": "",
         "format-off": "",
         "interval": 30,
@@ -141,7 +141,7 @@
         "tooltip": true
     },
     "hyprland/workspaces": {
-        "format": "{}",
+        "format": "{} ",
         "all-outputs": true,
         "active-only": true,
         "tooltip": true

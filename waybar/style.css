@@ -58,14 +58,6 @@ window#waybar {
     transition: all 0.5s ease;
 }
 
-#window {
-    padding: 0px 0px 0px 15px;
-}
-
-#mpris {
-    padding: 0px 0px 0px 15px;
-}
-
 #tray {
     padding: 0px 15px 0px 0px;
 }

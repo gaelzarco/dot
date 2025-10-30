@@ -35,9 +35,9 @@
         "orientation": "horizontal",
         "modules": [
             "tray",
-            "custom/cpu",
-            "custom/gpu",
-            "custom/memory",
+            // "custom/cpu",
+            // "custom/gpu",
+            // "custom/memory",
             "custom/brightness",
             "pulseaudio",
             "bluetooth",
@@ -45,19 +45,19 @@
         ]
     },
     "mpris": {
-        "format": "  {player_icon}{dynamic}",
+        "format": "{player_icon}{dynamic})",
         "format-empty": "",
-        "format-paused": "  {status_icon}{dynamic}",
+        "format-paused": "  {status_icon}{dynamic})",
         "player-icons": {
-            "default": "PLAYING://"
+            "default": "MEDIA::_PLAYING("
         },
         "status-icons": {
-            "paused": "PAUSED://"
+            "paused": "MEDIA::_PAUSED("
         },
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
         "on-scroll-down": "playerctl next",
-        "max-length": 60,
+        "max-length": 100,
         "interval": 1,
         "tooltip": true
         // "ignored-players": ["firefox"]
@@ -87,7 +87,7 @@
         "format": "{}",
         "show-passive-items": false,
         "spacing": 8,
-        "icon-size": 14,
+        "icon-size": 16,
         "format-empty": ""
     },
     "clock": {
@@ -141,7 +141,7 @@
         "tooltip": true
     },
     "hyprland/workspaces": {
-        "format": "{} ",
+        "format": "{}",
         "all-outputs": true,
         "active-only": true,
         "tooltip": true

@@ -53,20 +53,20 @@ window#waybar {
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 20px;
     border: 1px solid rgba(40, 40, 40, 0);
-    margin: 2px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }
 
 #tray {
-    padding: 0px 15px 0px 0px;
+    padding: 0px 10px 0px 0px;
 }
 
 #sys {
     background-color: rgba(0, 0, 0, 0.0);
     border-radius: 20px;
     border: 1px solid rgba(40, 40, 40, 0);
-    margin: 2px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
     transition: all 0.5s ease;
 }

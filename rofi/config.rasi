@@ -5,7 +5,7 @@
     b-color: rgba(0,0,0,0.8);
     fg-color: #FFF;
     fgp-color: #afafafcc;
-    b-radius: 20px;
+    b-radius: 15px;
     g-padding: 5px;
     hl-color: #000000;
     hlt-color: #FFFFFF;

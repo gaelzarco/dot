@@ -51,7 +51,7 @@ window#waybar {
 
 #hypr {
     background-color: rgba(0, 0, 0, 0.0);
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid rgba(40, 40, 40, 0);
     margin: 5px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
@@ -64,7 +64,7 @@ window#waybar {
 
 #sys {
     background-color: rgba(0, 0, 0, 0.0);
-    border-radius: 20px;
+    border-radius: 15px;
     border: 1px solid rgba(40, 40, 40, 0);
     margin: 5px 0px 0px 0px;
     padding: 0px 10px 0px 10px;
@@ -85,5 +85,5 @@ tooltip {
     box-shadow: none;
     background-color: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(89, 89, 89, 1);
-    border-radius: 20px;
+    border-radius: 15px;
 }

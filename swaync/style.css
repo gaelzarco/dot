@@ -13,7 +13,7 @@
 @define-color bg-selected rgb(120, 225, 120);
 
 :root {
-    --br: 20px;
+    --br: 15px;
     --weight: bold;
 }
 

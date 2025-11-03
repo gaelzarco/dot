@@ -11,19 +11,16 @@
 = Gael Zarco
 
 Las Vegas, NV |
+Bi-Lingual (English & Spanish) |
 #link("mailto:gaelxarco@icloud.com")[gaelxarco\@icloud.com] |
 #link("tel:7024268371")[702-426-8371] |
-#link("https://linkedin.com/in/gaelzarco")[LinkedIn] |
-#link("https://xarco.net")[Portfolio]
+#link("https://linkedin.com/in/gaelzarco")[LinkedIn]
 
 == Objective
 #chiline()
 
-Bilingual computer science student with 3+ years of restaurant experience
-(steakhouse, Mexican, and casual dining). I bring IT/Web skills in troubleshooting,
-organization, and clear communication to fast-paced, guest-facing roles.
-Actively seeking a part-time role while pursuing a bachelor of science in Computer
-Science.
+Full-time university student seeking part-time role. Fluent in both English and
+Spanish with prior experience in guest-facing roles, IT, and software development.
 
 == Work Experience
 #chiline()
@@ -77,8 +74,7 @@ Software Development Bootcamp #h(1fr) Completed
 == Skills
 #chiline()
 
-- Hospitality: Guest Service, Order Accuracy, POS & Cash Handling, Food Running/Expo, Sanitation, Opening/Closing Checklists, Teamwork, Multitasking \
-- Transferable: Troubleshooting Under Pressure, Process Improvement,
-  Documentation, Clear Communication, Attention to Detail, Hardware/Software
-  Set-Up \
+- Certifications: Food Handler's Card, Alcohol Awareness Card, Driver's License \
 - Languages: English & Spanish  \
+- Hospitality: Guest Service, Order Accuracy, POS & Cash Handling, Food Running/Expo, Sanitation, Opening/Closing Checklists, Teamwork, Multitasking \
+- Transferable: Working Under Pressure, Process Improvement, Clear Communication, Attention to Detail

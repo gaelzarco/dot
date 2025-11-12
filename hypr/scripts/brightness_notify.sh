@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-I2C_BUS=14
+I2C_BUS=20
 CACHE=/tmp/brightness_cache
 PIDFILE=/tmp/brightness_debounce.pid
 MON_NAME_CACHE=/tmp/monitor_name_cache

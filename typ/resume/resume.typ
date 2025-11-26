@@ -25,64 +25,71 @@ Las Vegas, NV |
 
 *Web Developer* #h(1fr) July 2024 -- December 2024 \
 702 Pros #h(1fr) Las Vegas, NV \
-- Developed and maintained full-stack web applications using HTML, CSS,
-  JavaScript, PHP, and WordPress, reducing reliance on external dependencies for
-  new projects by 80%.
-- Implemented third-party API integrations in existing back-end systems,
-  automating key B2B services and significantly reducing manual work.
-- Resolved high-priority support tasks (DNS, website, and email migrations),
-  minimizing downtime by 15% and earning positive client feedback.
+- Developed and maintained full-stack web applications using *HTML*, *CSS*,
+  *JavaScript*, and *PHP*, *reducing external dependencies for new projects by
+  80%*.
+- *Implemented third-party API integrations* in existing back-end systems,
+  *automating key B2B services* such as payment processing.
+- Resolved high-priority support tasks such as *DNS and Apache/Linux server
+  migrations* while effectively *minimizing downtime* and ensuring *consistent
+  communication between team and clients*.
 
 *IT Technician* #h(1fr) July 2023 -- July 2024 \
 Team Tech Solutions #h(1fr) Las Vegas, NV \
-- Delivered IT support to clients nationwide (remote) and in Las Vegas
-  (on-site), reporting directly to the CEO and Director of Operations.
-- Configured network and IT equipment for medical facilities in Las Vegas,
-  ensuring support met SLA requirements and achieving a 99% client satisfaction
-  rate.
-- Administered Active Directory, Microsoft 365, and Exchange via Azure,
-  improving ticket resolution speed by 70% for the Las Vegas team.
-
-== Education
-#chiline()
-
-*College of Southern Nevada* #h(1fr) December 2027 \
-Bachelor of Science in Computer Science #h(1fr) In Progress \
-- Coursework: Data Structures & Algorithms, C++, Linux, Networking,
-  SQL Databases, System Architecture & Design, Calculus
-
-*University of Nevada Las Vegas* #h(1fr) June 2022 \
-Software Development Bootcamp #h(1fr) Completed \
-- Coursework: Software Development, HTML/CSS, JavaScript, React, AWS, SQL &
-  MongoDB
+- *Delivered Windows PC and network support*, on-site and remotely, to
+  medical facilities across the country, reporting directly to the CEO and
+  Director of Operations.
+- *Installed Cisco Meraki network systems and other IT equipment* for clients in
+  Las Vegas, ensuring *support met SLA requirements* and achieving a *99% client
+  satisfaction rate*.
+- Administered *Active Directory*, *Microsoft 365*, and *Exchange* processes
+  via *Azure*, *significantly improving ticket resolution speed* for the Las
+  Vegas team.
 
 == Skills
 #chiline()
 
-- Programming Languages & Tools: C++, Rust, JavaScript, HTML/CSS, SQL, Linux,
-  Docker, Git, React.js, Next.JS, AWS, Coolify
-- Languages: English (fluent), Spanish (fluent)
-- Miscellaneous: CI/CD, REST APIs, Agile, Collaboration, Teamwork, Problem
-  Solving
+- *Programming Languages & Tools*: C++, JavaScript, HTML/CSS, SQL, MongoDB,
+  Arch Linux, Git, React.js, Next.js, AWS
+- *Protocols & Methodologies*: TCP/IP, HTTP, FTP, WebSockets, SDLC, CI/CD,
+  REST APIs, Agile, Self-hosting
+- *Languages*: English (fluent), Spanish (fluent)
+
+== Education
+#chiline()
+
+*College of Southern Nevada* | *Bachelor of Science in Computer Science*
+#h(1fr) May 2024 -- May 2028 \
+- Coursework: C++, Data Structures & Algorithms, Python, Linux, Networking,
+  SQL Databases, System Design & Analysis, Discrete Mathematics, Calculus
+
+*University of Nevada Las Vegas* | *Software Development Certificate*
+#h(1fr) September 2021 -- June 2022 \
+- Coursework: Software Development, HTML/CSS, JavaScript, React, AWS, SQL &
+  MongoDB
 
 == Projects
 #chiline()
 
-*RGX* #h(1fr) 2025 \
-Software Rasterizer (Rust) #h(1fr) Completed \
+*RGX* | *Software Rasterizer (Rust)* #h(1fr) Completed \
 - Software rasterizer that parses .obj files and converts triangle
-  coordinates into 3D renders.
-- Uses minimal external dependencies; all rendering logic and file parsing
-  written from the ground up.
+  coordinates into 3D renders written from the ground up.
 - Implements a simple 3D rendering pipeline with transformations, shading, and
   rasterization-performance optimizations.
 
-
-*Space* #h(1fr) 2024 \
-Real-Time Messaging Platform (Next.JS, Tailwind CSS, Redis) #h(1fr) Completed \
-- Full-stack web app enabling two users to message in real time with persistent
+*Space* | *Real-Time Messaging Platform (Next.js, Redis, AWS S3)* #h(1fr) Completed \
+- Full-stack web app enabling two users to message in real-time with persistent
   message storage.
 - Incorporates a modern UI with modals, toast notifications, animated message
-  feeds, and light/dark mode.
-- Utilizes Web Sockets for real-time communication, OAuth for login, middleware
+  feed, and light/dark mode.
+- Utilizes WebSockets for real-time communication, OAuth for login, middleware
   to secure user and chat data, and lets users add friends by email.
+
+== Other Experience
+#chiline()
+
+*LabLabAI Hackathon*  #h(1fr) 2023 \
+- Developed an AI-powered creative brief assistant that allows users to rapidly
+  create PDFs and edit the content through a responsive user interface.
+- Collaborated with international students of varying disciplines and delivered
+  a video presentation that garnered positive feedback from the judges.

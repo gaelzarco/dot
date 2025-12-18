@@ -50,10 +50,10 @@
         "format-empty": "",
         "format-paused": "  {status_icon}{dynamic}",
         "player-icons": {
-            "default": "MEDIA::PLAYING://"
+            "default": " "
         },
         "status-icons": {
-            "paused": "MEDIA::PAUSED://"
+            "paused": "[] "
         },
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
@@ -71,14 +71,14 @@
         "tooltip": true
     },
     "hyprland/window": {
-        "format": "AX://{}",
+        "format": "{}",
         "format-empty": "",
         "rewrite": {
-            ".*Zen Browser": "AX://Zen",
-            "(.*) - Helium": "AX://Helium",
-            "(.*) - Obsidian.*": "AX://Obsidian",
-            "(.*) - Discord": "AX://Discord",
-            "RPCS3(.*)": "AX://RPCS3"
+            ".*Zen Browser": "Zen",
+            "(.*) - Helium": "Helium",
+            "(.*) - Obsidian.*": "Obsidian",
+            "(.*) - Discord": "Discord",
+            "RPCS3(.*)": "RPCS3"
         },
         "max-length": 60,
         "tooltip-format": "{title}",
@@ -92,7 +92,7 @@
         "format-empty": ""
     },
     "clock": {
-        "format": "{:%a %b %d %H:%M:%S}",
+        "format": "  {:%a %b %d %H:%M:%S}",
         "on-click": "swaync-client -t -sw",
         "tooltip-format": "{calendar}",
         "tooltip": true,
@@ -142,7 +142,7 @@
         "tooltip": true
     },
     "hyprland/workspaces": {
-        "format": "{} ",
+        "format": "{}  ",
         "all-outputs": true,
         "active-only": true,
         "tooltip": true

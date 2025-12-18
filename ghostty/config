@@ -1,11 +1,13 @@
 font-family = Aux Mono
-font-size = 12
+font-size = 11
 background-blur = true
 background-opacity = 0.8
 confirm-close-surface = false
 quit-after-last-window-closed = false
 desktop-notifications = true
 bell-features = no-title
+window-padding-x = 10,10
+window-padding-y = 10,10
 
 # Themes
 # theme = black_metal_dark_funeral

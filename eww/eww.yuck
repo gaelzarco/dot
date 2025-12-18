@@ -24,7 +24,7 @@
     :decorations false
     :geometry (geometry
         :anchor "top right"
-        :x "20px" :y "20px"
+        :x "15px" :y "15px"
         :width "5%" :height "5%")
     (sysbox)
 )

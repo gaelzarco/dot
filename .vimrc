@@ -1,6 +1,7 @@
 " Global defaults
+" set nocompatible
 " set termguicolors
-set nocompatible
+syntax on
 set number
 set relativenumber
 set wildmenu
@@ -13,7 +14,7 @@ set colorcolumn=80
 set scrolloff=8
 set sidescrolloff=8
 set list
-set listchars=tab:→\ ,trail:·,nbsp:␣
+set listchars=tab:→\ ,space:·,trail:·,nbsp:␣
 set expandtab
 set noswapfile
 set pumheight=10

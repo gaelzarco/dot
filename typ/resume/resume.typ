@@ -77,13 +77,20 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
 - Implements a simple 3D rendering pipeline with transformations, shading, and
   rasterization-performance optimizations.
 
-*Space* | *Real-Time Messaging Platform (Next.js, Redis, AWS S3)* #h(1fr) Completed \
-- Full-stack web app enabling two users to message in real-time with persistent
-  message storage.
-- Incorporates a modern UI with modals, toast notifications, animated message
-  feed, and light/dark mode.
-- Utilizes WebSockets for real-time communication, OAuth for login, middleware
-  to secure user and chat data, and lets users add friends by email.
+*Home Lab* | *Self-Hosted Application Platform (Arch Linux, Coolify)* #h(1fr) In Progress \
+- Self-hosted Arch Linux home lab that manages and automates Docker web services
+  with orchestrated application lifecycles including builds, deployments,
+  rollbacks, and environment configuration.
+- Exposed internal services securely using Cloudflare Tunnels, eliminating
+  inbound port forwarding and implements SSH access and hardened Firewall rules.
+
+// *Space* | *Real-Time Messaging Platform (Next.js, Redis, AWS S3)* #h(1fr) Completed \
+// - Full-stack web app enabling two users to message in real-time with persistent
+//   message storage.
+// - Incorporates a modern UI with modals, toast notifications, animated message
+//   feed, and light/dark mode.
+// - Utilizes WebSockets for real-time communication, OAuth for login, middleware
+//   to secure user and chat data, and lets users add friends by email.
 
 == Other Experience
 #chiline()

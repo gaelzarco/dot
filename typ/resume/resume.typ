@@ -58,12 +58,12 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
 == Education
 #chiline()
 
-*College of Southern Nevada* | *Bachelor of Science in Computer Science*
+*University of Nevada, Las Vegas* | *Bachelor of Science in Computer Science*
 #h(1fr) May 2024 -- May 2028 \
 - Coursework: C++, Data Structures & Algorithms, Python, Linux, Networking,
   SQL Databases, System Design & Analysis, Discrete Mathematics, Calculus
 
-*University of Nevada Las Vegas* | *Software Development Certificate*
+*University of Nevada, Las Vegas* | *Software Development Certificate*
 #h(1fr) September 2021 -- June 2022 \
 - Coursework: Software Development, HTML/CSS, JavaScript, React, AWS, SQL &
   MongoDB
@@ -95,8 +95,10 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
 == Other Experience
 #chiline()
 
-*LabLabAI Hackathon*  #h(1fr) 2023 \
-- Developed an AI-powered creative brief assistant that allows users to rapidly
-  create PDFs and edit the content through a responsive user interface.
-- Collaborated with international students of varying disciplines and delivered
-  a video presentation that garnered positive feedback from the judges.
+*Technical Product Manager* #h(1fr) January 2025 \
+Open Workspace #h(1fr) Las Vegas, NV \
+- Delivered workspace product demos for CES 2025 on latest MacOS, Windows, and
+  computer hardware.
+*LabLabAI Hackathon* #h(1fr) February 2024 \
+- Developed an AI-powered creative brief assistant using HTML/CSS, JavaScript,
+  Python, Flask, and AWS.

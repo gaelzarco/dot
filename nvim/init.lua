@@ -41,6 +41,12 @@ require('lspconfig').lua_ls.setup({
         },
     },
 })
+require("lspconfig").clangd.setup({
+    cmd = {
+        "clangd",
+        "--std=c++23",
+    },
+})
 require("bufferline").setup{}
 vim.api.nvim_create_autocmd("InsertCharPre", {
     pattern = {
@@ -107,9 +113,9 @@ vim.keymap.set('n', 'gre', vim.diagnostic.open_float,
 vim.keymap.set('n', 'grf', vim.lsp.buf.format)
 
 vim.cmd.colorscheme("base16-black-metal-dark-funeral")
---vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
---vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
---vim.cmd(":hi statusline guibg=NONE")
---vim.cmd(":hi LineNr guibg=NONE")
---vim.cmd(":hi CursorLineNr guibg=NONE")
---vim.cmd(":hi SignColumn guibg=NONE")
+vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
+vim.cmd(":hi statusline guibg=NONE")
+vim.cmd(":hi LineNr guibg=NONE")
+vim.cmd(":hi CursorLineNr guibg=NONE")
+vim.cmd(":hi SignColumn guibg=NONE")

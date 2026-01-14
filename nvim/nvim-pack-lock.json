@@ -1,0 +1,56 @@
+{
+  "plugins": {
+    "base16-black-metal-scheme": {
+      "rev": "c7a32bec8105a1ceddb9fcc90b713dabde5e7e5e",
+      "src": "https://github.com/metalelf0/base16-black-metal-scheme"
+    },
+    "base16-nvim": {
+      "rev": "a2907cc3cd661e0f89f7db1f4fc304782a676a7d",
+      "src": "https://github.com/RRethy/base16-nvim"
+    },
+    "black-metal-theme-neovim": {
+      "rev": "1838337ce73a8de38e81bc40abe54f07b2380273",
+      "src": "https://github.com/metalelf0/black-metal-theme-neovim"
+    },
+    "bufferline.nvim": {
+      "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
+      "src": "https://github.com/akinsho/bufferline.nvim.git"
+    },
+    "glyph.nvim": {
+      "rev": "007e5ab9a5103c2d23b6fc8b7031b9b7664ddc17",
+      "src": "https://github.com/cxinu/glyph.nvim.git"
+    },
+    "mini.base16": {
+      "rev": "2a462667a9f9b9a04da8a2a35eac7577426b38ee",
+      "src": "https://github.com/nvim-mini/mini.base16.git"
+    },
+    "mini.pick": {
+      "rev": "82ec629ca108c7b96b8b9bb733d235b39e137690",
+      "src": "https://github.com/echasnovski/mini.pick"
+    },
+    "nvim-autopairs": {
+      "rev": "23320e75953ac82e559c610bec5a90d9c6dfa743",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
+    "nvim-lspconfig": {
+      "rev": "d0dbf489a8810672fa9a61f4a86e5cf89214b772",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "42fc28ba918343ebfd5565147a42a26580579482",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-ts-autotag": {
+      "rev": "a1d526af391f6aebb25a8795cbc05351ed3620b5",
+      "src": "https://github.com/windwp/nvim-ts-autotag"
+    },
+    "oil.nvim": {
+      "rev": "bbad9a76b2617ce1221d49619e4e4b659b3c61fc",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "vimtex": {
+      "rev": "7f2633027c8f496a85284de0c11aa32f1e07e049",
+      "src": "https://github.com/lervag/vimtex"
+    }
+  }
+}

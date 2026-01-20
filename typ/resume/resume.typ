@@ -15,10 +15,11 @@
 = Gael Zarco
 
 Las Vegas, NV |
+Bi-Lingual (English & Spanish) |
 #link("mailto:gaelxarco@icloud.com")[gaelxarco\@icloud.com] |
 #link("tel:7024268371")[702-426-8371] |
 #link("https://linkedin.com/in/gaelzarco")[LinkedIn] |
-#link("https://xarco.net")[Portfolio]
+#link("https://xarco.net")[Website]
 
 == Work Experience
 #chiline()
@@ -30,6 +31,8 @@ Las Vegas, NV |
   80%*.
 - *Implemented third-party API integrations* in existing back-end systems,
   *automating key B2B services* such as payment processing.
+- *Managed MySQL database security and operations* using configuration files,
+  SQL queries, and front-end integrations.
 - Resolved high-priority support tasks such as *DNS and Apache/Linux server
   migrations* while effectively *minimizing downtime* and ensuring *consistent
   communication between team and clients*.
@@ -49,22 +52,22 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
 == Skills
 #chiline()
 
-- *Programming Languages & Tools*: C++, JavaScript, HTML/CSS, SQL, MongoDB,
-  Arch Linux, Git, React.js, Next.js, AWS
-- *Protocols & Methodologies*: TCP/IP, HTTP, FTP, WebSockets, SDLC, CI/CD,
-  REST APIs, Agile, Self-hosting
-- *Languages*: English (fluent), Spanish (fluent)
+- *Programming Languages & Tools*: C++, JavaScript, HTML/CSS, MySQL, Linux, Git
+  React.js, Next.js, AWS, Azure, Active Directory, CRMs, RDP
+- *Protocols & Methods*: TCP/IP, SFTP, WebSockets, SDLC, CI/CD,
+  REST APIs, Agile, Self-hosting, Troubleshooting, Debugging, Documentation
+- *Languages*: English, Spanish
 
 == Education
 #chiline()
 
 *University of Nevada, Las Vegas* | *Bachelor of Science in Computer Science*
-#h(1fr) May 2024 -- May 2028 \
+#h(1fr) June 2024 -- December 2028 \
 - Coursework: C++, Data Structures & Algorithms, Python, Linux, Networking,
   SQL Databases, System Design & Analysis, Discrete Mathematics, Calculus
 
 *University of Nevada, Las Vegas* | *Software Development Certificate*
-#h(1fr) September 2021 -- June 2022 \
+#h(1fr) August 2021 -- June 2022 \
 - Coursework: Software Development, HTML/CSS, JavaScript, React, AWS, SQL &
   MongoDB
 
@@ -95,10 +98,7 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
 == Other Experience
 #chiline()
 
-*Technical Product Manager* #h(1fr) January 2025 \
+*Technical Product Manager* #h(1fr) January 2026 \
 Open Workspace #h(1fr) Las Vegas, NV \
 - Delivered workspace product demos for CES 2025 on latest MacOS, Windows, and
   computer hardware.
-*LabLabAI Hackathon* #h(1fr) February 2024 \
-- Developed an AI-powered creative brief assistant using HTML/CSS, JavaScript,
-  Python, Flask, and AWS.

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-MONITOR="DP-4"
+MONITOR=$HYPR_DISPLAY
 
 # Grab JSON safely
 JSON="$(hyprctl -j monitors 2>/dev/null || true)"

@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "aerial.nvim": {
+      "rev": "da0ceef62eb58b9bec1975017beb2f28c3b1e72c",
+      "src": "https://github.com/stevearc/aerial.nvim"
+    },
     "base16-black-metal-scheme": {
       "rev": "c7a32bec8105a1ceddb9fcc90b713dabde5e7e5e",
       "src": "https://github.com/metalelf0/base16-black-metal-scheme"
@@ -15,6 +19,10 @@
     "bufferline.nvim": {
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim.git"
+    },
+    "e-ink.nvim": {
+      "rev": "a0f003a0c6e2952abd9b73ef89d56c65e6c46f00",
+      "src": "https://github.com/e-ink-colorscheme/e-ink.nvim"
     },
     "glyph.nvim": {
       "rev": "007e5ab9a5103c2d23b6fc8b7031b9b7664ddc17",
@@ -47,6 +55,10 @@
     "oil.nvim": {
       "rev": "bbad9a76b2617ce1221d49619e4e4b659b3c61fc",
       "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "studio98": {
+      "rev": "6d9bcdd2ad9a098b80b8f3f09af5eb4679cb54cb",
+      "src": "https://github.com/jnz/studio98"
     },
     "vimtex": {
       "rev": "7f2633027c8f496a85284de0c11aa32f1e07e049",

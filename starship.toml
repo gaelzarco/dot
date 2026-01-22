@@ -29,11 +29,11 @@ success_symbol = '[➜](blue)'
 error_symbol = "[➜](red)"
 
 [git_branch]
-format = "[$branch](white)"
+format = "[$branch](gray)"
 
 [git_status]
-format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](white)($ahead_behind$stashed)]($style) "
-style = "white"
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](gray)($ahead_behind$stashed)]($style) "
+style = "gray"
 conflicted = "⨯"
 untracked = "◌"
 modified = "·"
@@ -43,7 +43,7 @@ deleted = ""
 stashed = "↷"
 
 [git_state]
-format = '\([$state( $progress_current/$progress_total)](white)\) '
+format = '\([$state( $progress_current/$progress_total)](gray)\) '
 
 [cmd_duration]
 format = "[$duration](gray) "

@@ -104,7 +104,7 @@ init_cache
 case "$1" in
   up)   update_local $(( $(read_cache) + STEP )) ;;
   down) update_local $(( $(read_cache) - STEP )) ;;
-  min)  update_local 10 ;;
+  min)  update_local 0 ;;
   max)  update_local 100 ;;
   set)  update_local "${2:-50}" ;;
   get)  read_cache ;;

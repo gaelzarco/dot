@@ -56,7 +56,6 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
   React.js, Next.js, AWS, Azure, Active Directory, CRMs, RDP
 - *Protocols & Methods*: TCP/IP, SFTP, WebSockets, SDLC, CI/CD,
   REST APIs, Agile, Self-hosting, Troubleshooting, Debugging, Documentation
-- *Languages*: English, Spanish
 
 == Education
 #chiline()

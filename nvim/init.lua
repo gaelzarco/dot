@@ -29,7 +29,9 @@ vim.pack.add({
     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/akinsho/bufferline.nvim.git" },
-    { src = "https://github.com/metalelf0/base16-black-metal-scheme.git" }
+    { src = "https://github.com/e-ink-colorscheme/e-ink.nvim" },
+    { src = "https://github.com/jnz/studio98" },
+    { src = "https://github.com/stevearc/aerial.nvim" }
 })
 
 require('lspconfig').lua_ls.setup({
@@ -41,12 +43,7 @@ require('lspconfig').lua_ls.setup({
         },
     },
 })
-require("lspconfig").clangd.setup({
-    cmd = {
-        "clangd",
-        "--std=c++23",
-    },
-})
+
 require("bufferline").setup{}
 vim.api.nvim_create_autocmd("InsertCharPre", {
     pattern = {
@@ -108,14 +105,29 @@ vim.lsp.enable({
     "cssls",
 })
 
+require("aerial").setup({
+  on_attach = function(bufnr)
+    vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+    vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+  end,
+})
+vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle! right<CR>")
+
 vim.keymap.set('n', 'gre', vim.diagnostic.open_float,
     { desc = "Show error message" })
 vim.keymap.set('n', 'grf', vim.lsp.buf.format)
 
-vim.cmd.colorscheme("base16-black-metal-dark-funeral")
-vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
-vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
-vim.cmd(":hi statusline guibg=NONE")
-vim.cmd(":hi LineNr guibg=NONE")
-vim.cmd(":hi CursorLineNr guibg=NONE")
-vim.cmd(":hi SignColumn guibg=NONE")
+vim.cmd.colorscheme("e-ink")
+vim.o.background = "light"
+
+vim.opt.guicursor = "n-v-c:block-Cursor/lCursor"
+vim.cmd("highlight Cursor guifg=NONE guibg=#aaaaaa")
+vim.cmd("highlight lCursor guifg=NONE guibg=#aaaaaa")
+vim.cmd([[highlight NonText guibg=NONE ctermbg=NONE]])
+vim.cmd([[highlight SpecialKey guibg=NONE ctermbg=NONE]])
+--vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+--vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
+--vim.cmd(":hi statusline guibg=NONE")
+--vim.cmd(":hi LineNr guibg=NONE")
+--vim.cmd(":hi CursorLineNr guibg=NONE")
+--vim.cmd(":hi SignColumn guibg=NONE")

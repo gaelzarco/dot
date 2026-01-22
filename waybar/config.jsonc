@@ -46,14 +46,13 @@
         ]
     },
     "mpris": {
-        "format": "  {player_icon}{dynamic}",
+        "format": "  PLAYING://{player_icon}{dynamic}",
         "format-empty": "",
-        "format-paused": "  {status_icon}{dynamic}",
+        "format-paused": "  PAUSED://{status_icon}{dynamic}",
         "player-icons": {
-            "default": " "
+            "default": ""
         },
         "status-icons": {
-            "paused": "[] "
         },
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
@@ -63,21 +62,14 @@
         "tooltip": true
         // "ignored-players": ["firefox"]
     },
-    "custom/dualsense": {
-        "format": " {percentage}% ",
-        "return-type": "json",
-        "exec": "b=$(ls -d /sys/class/power_supply/ps-controller-battery-* 2>/dev/null | head -n1); if [ -n \"$b\" ]; then cap=$(cat \"$b/capacity\"); st=$(cat \"$b/status\"); printf '{\"percentage\":%s,\"tooltip\":\"DualSense: %s (%s%%)\",\"class\":[]}\\n' \"$cap\" \"$st\" \"$cap\"; else printf '{\"class\":[\"hidden\"],\"text\":\"\"}\\n'; fi",
-        "interval": 3,
-        "tooltip": true
-    },
     "hyprland/window": {
         "format": "{}",
-        "format-empty": "",
         "rewrite": {
             ".*Zen Browser": "Zen",
             "(.*) - Helium": "Helium",
             "(.*) - Obsidian.*": "Obsidian",
             "(.*) - Discord": "Discord",
+            "": "_",
             "RPCS3(.*)": "RPCS3"
         },
         "max-length": 60,
@@ -92,7 +84,7 @@
         "format-empty": ""
     },
     "clock": {
-        "format": "  {:%a %b %d %H:%M:%S}",
+        "format": " {:%a %b %d %H:%M:%S}",
         "on-click": "swaync-client -t -sw",
         "tooltip-format": "{calendar}",
         "tooltip": true,
@@ -125,8 +117,10 @@
         "format": "󰖨  {}% ",
         "tooltip": true,
         "interval": 5,
+        "on-click": "$HOME/.config/hypr/scripts/brightness_notify.sh min",
         "on-scroll-up": "$HOME/.config/hypr/scripts/brightness_notify.sh up",
         "on-scroll-down": "$HOME/.config/hypr/scripts/brightness_notify.sh down",
+        "on-click-middle": "$HOME/.config/hypr/scripts/brightness_notify.sh max",
         "signal": 5
     },
     "bluetooth": {
@@ -142,7 +136,7 @@
         "tooltip": true
     },
     "hyprland/workspaces": {
-        "format": "{}  ",
+        "format": "{} ",
         "all-outputs": true,
         "active-only": true,
         "tooltip": true
@@ -150,10 +144,10 @@
     "pulseaudio": {
         "format": "{icon}  {volume:02d}% ",
         "format-muted": "   Muted ",
-        "on-click": "pavucontrol",
+        "on-click": "$HOME/.config/hypr/scripts/volume_notify.sh mute",
         "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
         "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
-        "on-click-middle": "$HOME/.config/hypr/scripts/volume_notify.sh mute",
+        "on-click-middle": "pavucontrol",
         "scroll-step": 1,
         "format-icons": {
           "headphone": "",
@@ -173,6 +167,7 @@
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
+        "on-click-middle": "pavucontrol",
         "scroll-step": 1,
         "tooltip": true
     }

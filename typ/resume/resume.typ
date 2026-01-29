@@ -99,5 +99,5 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
 
 *Technical Product Manager* #h(1fr) January 2026 \
 Open Workspace #h(1fr) Las Vegas, NV \
-- Delivered workspace product demos for CES 2025 on latest MacOS, Windows, and
-  computer hardware.
+- Delivered workspace product demos for CES 2026 on latest MacOS, Windows, and
+  other computer hardware.

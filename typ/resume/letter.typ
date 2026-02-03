@@ -11,33 +11,27 @@
 = Gael Zarco
 
 Las Vegas, NV |
+Bi-Lingual (English & Spanish) |
 #link("mailto:gaelxarco@icloud.com")[gaelxarco\@icloud.com] |
 #link("tel:7024268371")[702-426-8371] |
 #link("https://linkedin.com/in/gaelzarco")[LinkedIn] |
-#link("https://xarco.net")[Portfolio]
+#link("https://xarco.net")[Website]
 
 #chiline()
 
-Dear Nova1625 Team,
+Dear Acusensus Hiring Team,
 
-I am a Computer Science student at the University of Nevada, Las Vegas applying for the
-part-time/internship Web Developer role. I am seeking hands-on experience
-contributing to real-world projects while continuing to grow in a professional
-development environment.
+I am writing to express my interest in the Systems Engineer position at Acusensus. I am currently a Computer Science student at the University of Nevada, Las Vegas, with hands-on experience across systems, software, and infrastructure. My availability is currently open due to a required gap semester in my studies. I hope to use this time to develop professionally, technically, and work full-time both now and upon my university program resuming in the Fall.
 
-I have formal work experience as a Web Developer and IT Technician, building and
-maintaining web applications using *HTML*, *CSS*, *JavaScript*, and *PHP*. My work
-has included front-end development, responsive UI improvements, third-party API
-integrations, and collaboration through *Git*-based workflows. I am comfortable
-shipping features, fixing bugs, and communicating clearly with both technical
-teams and clients.
+I have professional experience working as a Web Developer and IT Technician, where I supported and maintained production systems, troubleshot technical issues, and collaborated closely with both technical and non-technical stakeholders. My background includes working in Linux-based environments, deploying and updating software, monitoring system health, and using version control (Git) to manage changes reliably.
 
-Alongside my professional experience, I actively build personal projects using
-tools such as *C++*, *Next.js*, *Rust*, and self-hosted infrastructure. I value
-clean code, thoughtful UI/UX, and continuous learning.
+Beyond my formal roles, I actively develop and maintain personal projects involving self-hosted infrastructure, and programming using tools such as C++, Rust, cloud services, and orchestration tools such as Docker. I enjoy delving deeply into technical issues and solving complex problems with elegant solutions.
 
-I am ecstatic about the opportunity to contribute to your team and grow as a developer
-while supporting meaningful projects. Thank you for your time and consideration.
+Acusensus’ mission to improve road safety through technology strongly resonates with me. I am particularly drawn to the collaborative, hands-on nature of this role and the opportunity to contribute across deployment, monitoring, automation, and client-facing technical work.
 
-Best regards, \  
-*Gael Zarco*
+I am eager to begin my career as a systems engineer while delivering reliable, scalable solutions that exceed customer expectations. My previous experience and current skill-set are directly transferable to this role. Although I understand that you are busy, I kindly ask you take a moment to review my attached resume.
+
+Thank you for your time and consideration. I look forward to the opportunity to further discuss how my skills and interests align with Acusensus’ goals.
+
+Kind regards, \
+*Gael Zarco* \

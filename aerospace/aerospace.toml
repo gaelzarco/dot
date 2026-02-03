@@ -103,8 +103,11 @@ if.app-id = 'org.localsend.localsendApp'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'net.imput.helium.app.cinhimbnkkaeohfgghhklpknlkffjgod'
-run = 'layout floating'
+if.app-id = 'net.imput.helium'
+run = [
+  'layout floating',
+  'move-node-to-workspace 2'
+]
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
@@ -114,10 +117,24 @@ run = [
 ]
 
 [[on-window-detected]]
-if.app-id = 'md.obsidian'
+if.app-id = 'org.wireshark.Wireshark'
 run = [
   'layout floating',
   'move-node-to-workspace 1'
+]
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = [
+  'layout floating',
+  'move-node-to-workspace 3'
+]
+
+[[on-window-detected]]
+if.app-id = 'pro.affine.app'
+run = [
+  'layout floating',
+  'move-node-to-workspace 3'
 ]
 
 [[on-window-detected]]
@@ -147,7 +164,10 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-run = 'move-node-to-workspace 2'
+run = [
+  'layout floating',
+  'move-node-to-workspace 2'
+]
 
 [[on-window-detected]]
 if.app-id = 'org.xquartz.X11'
@@ -160,14 +180,14 @@ run = [
 if.app-id = 'com.realvnc.vncviewer'
 run = [
   'layout floating',
-  'move-node-to-workspace 3'
+  'move-node-to-workspace 5'
 ]
 
 [[on-window-detected]]
 if.app-id = 'com.realvnc.vncviewer'
 run = [
   'layout floating',
-  'move-node-to-workspace 3'
+  'move-node-to-workspace 5'
 ]
 
 [[on-window-detected]]
@@ -181,28 +201,42 @@ run = [
 if.app-id = 'com.valvesoftware.steam'
 run = [
   'layout floating',
-  'move-node-to-workspace 3'
+  'move-node-to-workspace 4'
 ]
 
 [[on-window-detected]]
 if.app-id = 'com.valvesoftware.steam.helper'
 run = [
   'layout floating',
-  'move-node-to-workspace 3'
+  'move-node-to-workspace 4'
 ]
 
 [[on-window-detected]]
 if.app-id = 'com.codeweavers.CrossOver'
 run = [
   'layout floating',
-  'move-node-to-workspace 3'
+  'move-node-to-workspace 4'
 ]
 
 [[on-window-detected]]
 if.app-id = 'net.rpcs3.rpcs3'
 run = [
   'layout floating',
-  'move-node-to-workspace 3'
+  'move-node-to-workspace 4'
+]
+
+[[on-window-detected]]
+if.app-id = 'net.pcsx2.pcsx2'
+run = [
+  'layout floating',
+  'move-node-to-workspace 4'
+]
+
+[[on-window-detected]]
+if.app-id = 'com.github.stenzek.duckstation'
+run = [
+  'layout floating',
+  'move-node-to-workspace 4'
 ]
 
 [[on-window-detected]]
@@ -226,7 +260,7 @@ inner.horizontal = 5
 inner.vertical =   5
 outer.left =       5 
 outer.bottom =     5
-outer.top = [{ monitor."ES07D03" = 30 }, 5]
+outer.top = [{ monitor."ES07D03" = 5 }, 5]
 outer.right =      5
 
 # 'main' binding mode declaration

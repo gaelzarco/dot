@@ -50,9 +50,10 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
 
 - *Languages & Core*: C++, JavaScript, HTML/CSS, Linux, SQL
 - *Frameworks & Platforms*: React, Next.js, WordPress, AWS, Azure
-- *IT & Infrastructure*: TCP/IP, DNS, VPN, JSON, Active Directory, Docker, MSP
-  Environment, RMM Software
-- *Practices*: Git, SDLC, Agile, CI/CD, REST APIs, Object-Oriented Programming
+- *IT & Infrastructure*: TCP/IP, DNS, VPN, HTTP, JSON, Active Directory, Docker,
+  MSP Environment
+- *Practices*: Git, SDLC, Agile, CI/CD, REST APIs, Object-Oriented Programming,
+  UI/UX
 - *Operational*: Troubleshooting, Debugging, Documentation, Teamwork
 
 == Education

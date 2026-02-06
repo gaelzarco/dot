@@ -103,38 +103,10 @@ if.app-id = 'org.localsend.localsendApp'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'net.imput.helium'
-run = [
-  'layout floating',
-  'move-node-to-workspace 2'
-]
-
-[[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = [
   'layout floating',
   'move-node-to-workspace 1'
-]
-
-[[on-window-detected]]
-if.app-id = 'org.wireshark.Wireshark'
-run = [
-  'layout floating',
-  'move-node-to-workspace 1'
-]
-
-[[on-window-detected]]
-if.app-id = 'md.obsidian'
-run = [
-  'layout floating',
-  'move-node-to-workspace 3'
-]
-
-[[on-window-detected]]
-if.app-id = 'pro.affine.app'
-run = [
-  'layout floating',
-  'move-node-to-workspace 3'
 ]
 
 [[on-window-detected]]
@@ -145,28 +117,38 @@ run = [
 ]
 
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
-if.window-title-regex-substring = 'Picture-in-Picture'
-run = 'layout floating'
+if.app-id = 'net.imput.helium'
+run = [
+  'layout floating',
+  'move-node-to-workspace 2'
+]
 
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
-if.window-title-regex-substring = '.*Do Homework.*'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'sh.cider.genten.mac'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'
-run = 'layout floating'
+if.app-id = 'com.google.Chrome'
+run = [
+  'layout floating',
+  'move-node-to-workspace 2'
+]
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 run = [
   'layout floating',
   'move-node-to-workspace 2'
+]
+
+[[on-window-detected]]
+if.app-id = 'org.wireshark.Wireshark'
+run = [
+  'layout floating',
+  'move-node-to-workspace 3'
+]
+
+[[on-window-detected]]
+if.app-id = 'com.utmapp.UTM'
+run = [
+  'layout floating',
+  'move-node-to-workspace 3'
 ]
 
 [[on-window-detected]]
@@ -180,21 +162,28 @@ run = [
 if.app-id = 'com.realvnc.vncviewer'
 run = [
   'layout floating',
-  'move-node-to-workspace 5'
-]
-
-[[on-window-detected]]
-if.app-id = 'com.realvnc.vncviewer'
-run = [
-  'layout floating',
-  'move-node-to-workspace 5'
+  'move-node-to-workspace 3'
 ]
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
 run = [
   'layout floating',
-  'move-node-to-workspace 3'
+  'move-node-to-workspace 4'
+]
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = [
+  'layout floating',
+  'move-node-to-workspace 4'
+]
+
+[[on-window-detected]]
+if.app-id = 'pro.affine.app'
+run = [
+  'layout floating',
+  'move-node-to-workspace 4'
 ]
 
 [[on-window-detected]]
@@ -238,6 +227,24 @@ run = [
   'layout floating',
   'move-node-to-workspace 4'
 ]
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+if.window-title-regex-substring = 'Picture-in-Picture'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+if.window-title-regex-substring = '.*Do Homework.*'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'sh.cider.genten.mac'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'NULL-APP-BUNDLE-ID'

@@ -1,4 +1,4 @@
-format = """\\[$hostname$username $directory\\] $git_branch$git_state$git_status $cmd_duration $character"""
+format = """\\[$hostname$username $directory\\] $git_branch$git_state$git_status$cmd_duration$character"""
 
 add_newline = false
 
@@ -25,14 +25,14 @@ threshold = 25
 style = "red"
 
 [character]
-success_symbol = '➜'
-error_symbol = "[➜](red)"
+success_symbol = "\\$"
+error_symbol = "[\\$](red)"
 
 [git_branch]
 format = "[$branch](gray)"
 
 [git_status]
-format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](gray)($ahead_behind$stashed)]($style)"
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](gray)($ahead_behind$stashed)]($style) "
 style = "gray"
 conflicted = "⨯"
 untracked = "◌"
@@ -46,7 +46,7 @@ stashed = "↷"
 format = '\([$state( $progress_current/$progress_total)](gray)\)'
 
 [cmd_duration]
-format = "[$duration](gray)"
+format = "[$duration](gray) "
 min_time = 0
 show_milliseconds = true
 
@@ -54,13 +54,13 @@ show_milliseconds = true
 disabled = false
 
 [erlang]
-symbol = "ⓔ "
+symbol = "ⓔ"
 
 [nodejs]
-symbol = "[⬢](green) "
+symbol = "[⬢](green)"
 
 [pulumi]
-symbol = "🧊 "
+symbol = "🧊"
 
 [typst]
-symbol = "t "
+symbol = "t"

@@ -60,6 +60,10 @@
       "rev": "6d9bcdd2ad9a098b80b8f3f09af5eb4679cb54cb",
       "src": "https://github.com/jnz/studio98"
     },
+    "vim-moonfly-colors": {
+      "rev": "d11b3d04cc1cb71a778d67a4df73283a5a6d66f4",
+      "src": "https://github.com/bluz71/vim-moonfly-colors"
+    },
     "vimtex": {
       "rev": "7f2633027c8f496a85284de0c11aa32f1e07e049",
       "src": "https://github.com/lervag/vimtex"

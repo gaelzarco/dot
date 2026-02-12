@@ -30,6 +30,7 @@ vim.pack.add({
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/akinsho/bufferline.nvim.git" },
     { src = "https://github.com/e-ink-colorscheme/e-ink.nvim" },
+    { src = "https://github.com/bluz71/vim-moonfly-colors" },
     { src = "https://github.com/jnz/studio98" },
     { src = "https://github.com/stevearc/aerial.nvim" }
 })
@@ -117,12 +118,12 @@ vim.keymap.set('n', 'gre', vim.diagnostic.open_float,
     { desc = "Show error message" })
 vim.keymap.set('n', 'grf', vim.lsp.buf.format)
 
-vim.cmd.colorscheme("e-ink")
-vim.o.background = "light"
+vim.cmd.colorscheme("moonfly")
+-- vim.o.background = "light"
 
 vim.opt.guicursor = "n-v-c:block-Cursor/lCursor"
-vim.cmd("highlight Cursor guifg=NONE guibg=#aaaaaa")
-vim.cmd("highlight lCursor guifg=NONE guibg=#aaaaaa")
+-- vim.cmd("highlight Cursor guifg=NONE guibg=#aaaaaa")
+-- vim.cmd("highlight lCursor guifg=NONE guibg=#aaaaaa")
 vim.cmd([[highlight NonText guibg=NONE ctermbg=NONE]])
 vim.cmd([[highlight SpecialKey guibg=NONE ctermbg=NONE]])
 --vim.cmd("hi Normal guibg=NONE ctermbg=NONE")

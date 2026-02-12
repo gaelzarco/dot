@@ -27,14 +27,14 @@
         "orientation": "horizontal",
         "modules": [
             "hyprland/workspaces",
-            "hyprland/window",
-            "mpris"
+            "hyprland/window"
+            // "mpris"
         ]
     },
     "group/sys": {
         "orientation": "horizontal",
         "modules": [
-            "tray",
+            // "tray",
             // "custom/cpu",
             // "custom/gpu",
             // "custom/memory",
@@ -57,7 +57,7 @@
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
         "on-scroll-down": "playerctl next",
-        "max-length": 100,
+        "max-length": 25,
         "interval": 1,
         "tooltip": true
         // "ignored-players": ["firefox"]
@@ -69,7 +69,7 @@
             "(.*) - Helium": "Helium",
             "(.*) - Obsidian.*": "Obsidian",
             "(.*) - Discord": "Discord",
-            "": "_",
+            "(.*) - Geany": "Geany",
             "RPCS3(.*)": "RPCS3"
         },
         "max-length": 60,
@@ -114,7 +114,7 @@
     "custom/brightness": {
         "return-type": "json",
         "exec": "bash -lc 'v=$([ -f /tmp/brightness_cache ] && cat /tmp/brightness_cache || { ddcutil --sleep-multiplier 0.00 getvcp 10 2>/dev/null | grep -oP \"current value =\\s*\\K[0-9]+\" || echo 50; }); v=$(( (v+5)/10*10 )); [ \"$v\" -lt 0 ] && v=0; [ \"$v\" -gt 100 ] && v=100; echo $v > /tmp/brightness_cache; name=$(hyprctl -j monitors 2>/dev/null | jq -r \"map(select(.focused==true))[0].model // empty\"); [ -z \"$name\" ] && name=$(ddcutil detect 2>/dev/null | awk -F\": \" \"/Monitor:/ {print \\$2; exit}\"); short=$(printf \"%s\" \"$name\" | awk \"{print \\$NF}\"); [ -z \"$short\" ] && short=Monitor; printf \"{\\\"text\\\":\\\"%02d\\\",\\\"tooltip\\\":\\\"%s\\\"}\\n\" \"$v\" \"$short\"'",
-        "format": "󰖨  {}% ",
+        "format": "󰖨  {}%  ",
         "tooltip": true,
         "interval": 5,
         "on-click": "$HOME/.config/hypr/scripts/brightness_notify.sh min",
@@ -124,7 +124,7 @@
         "signal": 5
     },
     "bluetooth": {
-        "format": " {num_connections:02d} ",
+        "format": " {num_connections} ",
         "format-disabled": "",
         "format-off": "",
         "interval": 30,
@@ -142,8 +142,8 @@
         "tooltip": true
     },
     "pulseaudio": {
-        "format": "{icon}  {volume:02d}% ",
-        "format-muted": "   Muted ",
+        "format": "{icon}  {volume:02d}%  ",
+        "format-muted": "   Muted  ",
         "on-click": "$HOME/.config/hypr/scripts/volume_notify.sh mute",
         "on-scroll-up": "$HOME/.config/hypr/scripts/volume_notify.sh volup",
         "on-scroll-down": "$HOME/.config/hypr/scripts/volume_notify.sh voldown",
@@ -156,14 +156,14 @@
           "phone": "",
           "portable": "",
           "car": "",
-          "default": ["","","",""]
+          "default": ["","","",""]
         },
         "tooltip": true
     },
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": " {volume:02d}% ",
-        "format-source-muted": "  Muted ",
+        "format-source": " {volume:02d}%  ",
+        "format-source-muted": "  Muted  ",
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",

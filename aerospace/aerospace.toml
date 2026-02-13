@@ -152,6 +152,13 @@ run = [
 ]
 
 [[on-window-detected]]
+if.app-id = 'com.moonlight-stream.Moonlight'
+run = [
+  'layout floating',
+  'move-node-to-workspace 3'
+]
+
+[[on-window-detected]]
 if.app-id = 'org.xquartz.X11'
 run = [
   'layout floating',

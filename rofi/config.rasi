@@ -12,7 +12,7 @@
     alt-color: #111111FF;
     wbg-color: #000000;
     w-border: 1px solid;
-    w-border-color: rgba(86,86,86,1);
+    w-border-color: rgba(50,50,50,1);
     w-padding: 5px;
 }
 
@@ -63,7 +63,7 @@ inputbar {
 
 entry {
     padding: 15px 20px;
-    placeholder: "ax://search";
+    placeholder: "";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
     font: "Dots All For Now JL Bold 14";
@@ -99,24 +99,24 @@ element alternate.normal {
 }
 
 element selected.active {
-    background-color: rgba(20,20,20,0.8);
+    background-color: rgba(10,10,10,0.8);
     text-color: @hlt-color;
     border: 1px solid;
-    border-color: rgba(89,89,89,1);
+    border-color: rgba(50,50,50,1);
 }
 
 element selected.normal {
-    background-color: rgba(20,20,20,0.8);
+    background-color: rgba(10,10,10,0.8);
     text-color: @hlt-color;
     border: 1px solid;
-    border-color: rgba(89,89,89,1);
+    border-color: rgba(50,50,50,1);
 }
 
 message {
     background-color: transparent;
     text-color: @hlt-color;
     border: 1px solid;
-    border-color: rgba(89,89,89,1);
+    border-color: rgba(50,50,50,1);
     border-radius: @b-radius;
     padding: @g-padding;
     background-color: rgba(0, 0, 0, 0.8);

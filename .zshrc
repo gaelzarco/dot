@@ -30,15 +30,10 @@ export GPG_TTY=$(tty)
 autoload -U compinit; compinit
 
 # Hyprland: tmux autostart -> win1 runs STAT_CMD, win2 shell
-STAT_CMD="${TMUX_STAT_CMD:-btop}"
-command -v "$STAT_CMD" >/dev/null || STAT_CMD="btop"
-
 if command -v tmux &>/dev/null && [ -z "$TMUX" ] && { [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ] || [ -n "$WAYLAND_DISPLAY" ]; }; then
   if tmux has-session -t x0 2>/dev/null; then
     exec tmux attach -t x0
   else
-    tmux new-session -d -s x0 -n sesh "$STAT_CMD"
-    tmux new-window  -t x0:2 -n term
-    exec tmux attach -t x0 \; select-window -t 1
+    tmux new-session -s x0
   fi
 fi

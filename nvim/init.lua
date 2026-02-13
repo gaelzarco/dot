@@ -29,10 +29,10 @@ vim.pack.add({
     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/akinsho/bufferline.nvim.git" },
-    { src = "https://github.com/e-ink-colorscheme/e-ink.nvim" },
-    { src = "https://github.com/bluz71/vim-moonfly-colors" },
+    { src = "https://github.com/stevearc/aerial.nvim" },
     { src = "https://github.com/jnz/studio98" },
-    { src = "https://github.com/stevearc/aerial.nvim" }
+    { src = "https://github.com/projekt0n/github-nvim-theme" },
+    { src = "https://github.com/gmr458/cold.nvim" },
 })
 
 require('lspconfig').lua_ls.setup({
@@ -118,14 +118,21 @@ vim.keymap.set('n', 'gre', vim.diagnostic.open_float,
     { desc = "Show error message" })
 vim.keymap.set('n', 'grf', vim.lsp.buf.format)
 
-vim.cmd.colorscheme("moonfly")
+vim.cmd.colorscheme("cold")
 -- vim.o.background = "light"
 
 vim.opt.guicursor = "n-v-c:block-Cursor/lCursor"
 -- vim.cmd("highlight Cursor guifg=NONE guibg=#aaaaaa")
 -- vim.cmd("highlight lCursor guifg=NONE guibg=#aaaaaa")
-vim.cmd([[highlight NonText guibg=NONE ctermbg=NONE]])
-vim.cmd([[highlight SpecialKey guibg=NONE ctermbg=NONE]])
+-- vim.cmd([[highlight NonText guibg=NONE ctermbg=NONE]])
+-- vim.cmd([[highlight SpecialKey guibg=NONE ctermbg=NONE]])
+-- vim.cmd("hi Normal guibg=#000000 ctermbg=NONE")
+-- vim.cmd("hi NormalFloat guibg=#000000 ctermbg=NONE")
+-- vim.cmd(":hi statusline guibg=#000000")
+-- vim.cmd(":hi LineNr guibg=#000000")
+-- vim.cmd(":hi CursorLineNr guibg=#000000")
+-- vim.cmd(":hi SignColumn guibg=#000000")
+
 --vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 --vim.cmd("hi NormalFloat guibg=NONE ctermbg=NONE")
 --vim.cmd(":hi statusline guibg=NONE")

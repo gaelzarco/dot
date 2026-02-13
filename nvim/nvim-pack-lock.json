@@ -20,9 +20,17 @@
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim.git"
     },
+    "cold.nvim": {
+      "rev": "3ab9fcd733b707079662c488bc1da54377d85ae8",
+      "src": "https://github.com/gmr458/cold.nvim"
+    },
     "e-ink.nvim": {
       "rev": "a0f003a0c6e2952abd9b73ef89d56c65e6c46f00",
       "src": "https://github.com/e-ink-colorscheme/e-ink.nvim"
+    },
+    "github-nvim-theme": {
+      "rev": "c106c9472154d6b2c74b74565616b877ae8ed31d",
+      "src": "https://github.com/projekt0n/github-nvim-theme"
     },
     "glyph.nvim": {
       "rev": "007e5ab9a5103c2d23b6fc8b7031b9b7664ddc17",
@@ -59,6 +67,10 @@
     "studio98": {
       "rev": "6d9bcdd2ad9a098b80b8f3f09af5eb4679cb54cb",
       "src": "https://github.com/jnz/studio98"
+    },
+    "vim-256noir": {
+      "rev": "e8668a18a4a90272c1cae87e655f8bddc5ac3665",
+      "src": "https://github.com/andreasvc/vim-256noir"
     },
     "vim-moonfly-colors": {
       "rev": "d11b3d04cc1cb71a778d67a4df73283a5a6d66f4",

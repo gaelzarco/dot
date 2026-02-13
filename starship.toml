@@ -25,8 +25,8 @@ threshold = 25
 style = "red"
 
 [character]
-success_symbol = " λ"
-error_symbol = " λ"
+success_symbol = " ➜"
+error_symbol = " ➜"
 
 [git_branch]
 format = " [$branch](gray)"
@@ -34,12 +34,12 @@ format = " [$branch](gray)"
 [git_status]
 format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](gray)($ahead_behind$stashed)]($style)"
 style = "gray"
-conflicted = "⨯"
-untracked = "◌"
-modified = "⌥"
-staged = "⎇"
-renamed = ""
-deleted = ""
+conflicted = "⇆"
+untracked = "○"
+modified = "⠐"
+staged = "⠒"
+renamed = "_"
+deleted = "⨯"
 stashed = "↷"
 
 [git_state]

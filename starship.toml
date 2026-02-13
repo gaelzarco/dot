@@ -39,10 +39,10 @@ untracked = "○"
 modified = "⠂"
 staged = "⠒"
 ahead = "⠶"
-behind = "↓"
+behind = "⣄"
 renamed = "_"
 deleted = "⨯"
-stashed = "↷"
+stashed = "▢"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)](gray)\)'

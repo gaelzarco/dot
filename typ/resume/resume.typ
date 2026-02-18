@@ -20,6 +20,15 @@ Bi-Lingual (English & Spanish) |
 == Work Experience
 #chiline()
 
+*Network Technician Intern* #h(1fr) February 2026 -- Current \
+ANAX Business Technologies #h(1fr) Las Vegas, NV \
+- *Monitored and triaged real-time workstation, backup, and security event log
+  issues* while routing high-priority incidents—*strengthening system
+  reliability and reducing downtime.*
+- *Performed Windows server management and ticket triage using industry tools
+  like ConnectWise and IT Glue* and contributing to *improved operational
+  efficiency in a fast-paced MSP setting.*
+
 *Web Developer* #h(1fr) July 2024 -- December 2024 \
 702 Pros #h(1fr) Las Vegas, NV \
 - Developed and maintained full-stack web applications using *HTML*, *CSS*,
@@ -88,10 +97,10 @@ Team Tech Solutions #h(1fr) Las Vegas, NV \
   inbound port forwarding while implementing SSH access (via VPN) and hardened
   firewall rules.
 
-== Other Experience
-#chiline()
-
-*Technical Product Manager* #h(1fr) January 2026 -- January 2026 \
-Open Workspace #h(1fr) Las Vegas, NV \
-- Delivered workspace product demos for CES 2026 on bleeding-edge MacOS,
-  Windows, and other computer hardware.
+// == Other Experience
+// #chiline()
+// 
+// *Technical Product Manager* #h(1fr) January 2026 -- January 2026 \
+// Open Workspace #h(1fr) Las Vegas, NV \
+// - Delivered workspace product demos for CES 2026 on bleeding-edge MacOS,
+//   Windows, and other computer hardware.

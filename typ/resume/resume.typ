@@ -22,36 +22,38 @@ Bi-Lingual (English & Spanish) |
 
 *Network Technician Intern* #h(1fr) February 2026 -- Current \
 ANAX Business Technologies #h(1fr) Las Vegas, NV \
-- *Monitored and triaged real-time workstation, backup, and security event log
-  issues* while routing high-priority incidents—*strengthening system
-  reliability and reducing downtime.*
-- *Performed Windows server management and ticket triage using industry tools
-  like ConnectWise and IT Glue* and contributing to *improved operational
-  efficiency in a fast-paced MSP setting.*
+- *Monitored and triaged real-time Windows server, backup, and security event log
+  issues* while routing high-priority incidents internally—*strengthening system
+  reliability and reducing downtime*.
+- Performed ticket triage in a fast-paced MSP setting using industry tools like
+  ConnectWise and *created standarized troubleshooting procedures in IT Glue*
+  leading to *improved operational efficiency across 50% of tickets.*
 
-*Web Developer* #h(1fr) July 2024 -- December 2024 \
+*Web Developer Intern* #h(1fr) July 2024 -- December 2024 \
 702 Pros #h(1fr) Las Vegas, NV \
 - Developed and maintained full-stack web applications using *HTML*, *CSS*,
-  *JavaScript*, *PHP*, and WordPress, *reducing external dependencies for new
-  projects by 80%*.
+  *JavaScript*, *PHP*, and *WordPress* for medium-sized businesses in Las Vegas,
+  *reducing external dependencies for new projects by 80%*.
 - *Implemented third-party API integrations* in existing back-end systems,
-  *automating key B2B services* such as payment processing.
-- *Managed MySQL database security and operations* directly using SQL queries
-  and front-end integrations.
-- Resolved high-priority support tasks such as *DNS and Apache/Linux server
+  *automating key B2B services* such as payment processing via Stripe and
+  updating user health records across business applications.
+- *Administered and optimized MySQL databases*, writing complex SQL queries,
+  *improving query performance*, and enforcing role-based access controls to
+  *ensure data integrity, security, and high availability*.
+- Resolved high-priority support tasks such as *DNS and Linux Apache HTTP server
   migrations* while effectively *minimizing downtime* and ensuring *consistent
   communication between team and clients*.
 
 *IT Technician* #h(1fr) July 2023 -- July 2024 \
 Team Tech Solutions #h(1fr) Las Vegas, NV \
-- *Delivered Windows PC and network support* within an *MSP environment*,
+- Delivered Windows PC and network support within an MSP environment,
   on-site and remotely, to medical facilities across the country, reporting
   directly to the CEO and Director of Operations.
-- *Installed Cisco Meraki network systems and other IT equipment* for clients in
-  Las Vegas, ensuring *support met SLA requirements* and achieving a *99% client
+- Installed Cisco Meraki network systems and other IT equipment for clients in
+  Las Vegas, ensuring support met SLA requirements and achieving a *99% client
   satisfaction rate*.
-- Administered *Active Directory*, *Microsoft 365*, and *Exchange* processes
-  via *Azure*, *significantly improving ticket resolution speed* for the Las
+- Administered Active Directory, Microsoft 365, and Exchange processes
+  via *Azure*, significantly improving ticket resolution speed for the Las
   Vegas team.
 
 == Skills

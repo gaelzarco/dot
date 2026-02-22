@@ -42,7 +42,7 @@ Las Vegas, NV |
 - Administered and optimized MySQL databases, *improving query performance*,
   and enforcing role-based access controls to *ensure data integrity and
   security.*
-- Led DNS, email. and Apache HTTP Server migrations on Linux systems, *minimizing
+- Led DNS, email, and Apache HTTP Server migrations on Linux systems, *minimizing
   service interruption* and *coordinating technical updates with clients*.
 
 == Projects

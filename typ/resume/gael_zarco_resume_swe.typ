@@ -51,8 +51,6 @@ Las Vegas, NV |
 *3D Software Renderer* (Rust)\
 - Designed a rendering pipeline including model/view transformations, triangle
   rasterization, and basic shading.
-- Implemented a simple 3D rendering pipeline with transformations, shading, and
-  performance optimizations.
 - Utilized linear algebra in industry-standard algorithms such as barycentric
   coordinates and z-buffering with a single dependency for program window
   creation and management.

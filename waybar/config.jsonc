@@ -34,7 +34,7 @@
     "group/sys": {
         "orientation": "horizontal",
         "modules": [
-            // "tray",
+            "tray",
             // "custom/cpu",
             // "custom/gpu",
             // "custom/memory",

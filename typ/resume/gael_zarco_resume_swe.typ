@@ -48,18 +48,23 @@ Las Vegas, NV |
 == Projects
 #chiline()
 
-*3D Software Renderer* (Rust)\
-- Designed a rendering pipeline including model/view transformations, triangle
-  rasterization, and basic shading.
-- Utilized linear algebra in industry-standard algorithms such as barycentric
-  coordinates and z-buffering with a single dependency for program window
-  creation and management.
+// *3D Software Renderer* (Rust)\
+// - Designed a rendering pipeline including model/view transformations, triangle
+//   rasterization, and basic shading.
+// - Utilized linear algebra in industry-standard algorithms such as barycentric
+//   coordinates and z-buffering with a single dependency for program window
+//   creation and management.
+
+*Real-Time Messaging Platform* (TypeScript, Next.js, Tailwind CSS, Redis)
+- Developed a full-stack real-time messaging application using WebSockets for bidirectional communication and server-side OAuth for secure authentication.
+- Designed friend management and conversation systems with Redis as the primary data store, optimizing for low-latency reads and writes.
+- Implemented asynchronous UI updates to deliver instant feedback and a responsive user experience.
 
 *LabLabAI - OpenAI Stack Hack Hackathon* (React.js, Flask, OpenAI SDK, Vercel) \
 - Developed a full-stack AI application that transforms unstructured input into
   structured creative briefs, generating formatted PDFs through an automated
   document pipeline with a dynamic React-based editing interface.
-- Led a distributed team during the OpenAI Stack Hackathon, coordinating API
+- Led a remote team during the OpenAI Stack Hackathon, coordinating API
   integration, backend architecture (Flask), and cloud deployment on Vercel.
 
 *Self-Hosted Application Platform* (Arch Linux, Docker, Coolify) \
@@ -73,10 +78,9 @@ Las Vegas, NV |
 #chiline()
 
 - *Languages*: C++, JavaScript, TypeScript, HTML, CSS, PHP, SQL, Rust
-- *Libraries*: React.js, Tailwind CSS, TanStack Query, tRPC
-- *Frameworks*: Next.js, Express.js, WordPress, Flask
-- *Tools*: Linux, Git, MySQL, PostgreSQL, MongoDB, Vercel, phpMyAdmin
-- *Platforms*: AWS, Azure, Docker, Coolify
+- *Frameworks & Libraries*: Next.js, Express.js, WordPress, Flask, React.js, Tailwind CSS, tRPC
+- *Tools & Platforms*: Linux, Git, MySQL, PostgreSQL, Docker, MongoDB, Vercel,
+  phpMyAdmin, AWS, Azure
 
 == Work Experience
 #chiline()
@@ -85,7 +89,7 @@ Las Vegas, NV |
 ANAX Business Technologies #h(1fr) Las Vegas, NV \
 - Monitored and triaged Windows Server, backup, and security event logs,
   escalating high-severity incidents and contributing to improved system uptime.
-- Standardized troubleshooting documentation in IT Glue and streamlined ticket
+- Created standarized documentation in IT Glue and streamlined ticket
   triage in ConnectWise, accelerating resolution time for recurring alerts by
   50%.
 

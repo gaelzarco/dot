@@ -60,7 +60,7 @@ Las Vegas, NV |
 - Designed friend management and conversation systems with Redis as the primary data store, optimizing for low-latency reads and writes.
 - Implemented asynchronous UI updates to deliver instant feedback and a responsive user experience.
 
-*LabLabAI - OpenAI Stack Hack Hackathon* (React.js, Flask, OpenAI SDK, Vercel) \
+*LabLabAI - OpenAI Stack Hack Hackathon* (Python, Flask, React.js, OpenAI SDK, Vercel) \
 - Developed a full-stack AI application that transforms unstructured input into
   structured creative briefs, generating formatted PDFs through an automated
   document pipeline with a dynamic React-based editing interface.

@@ -20,7 +20,7 @@ Bi-Lingual (English & Spanish) |
 == Work Experience
 #chiline()
 
-*Network Technician Intern* #h(1fr) February 2026 -- Current \
+*Network Technician* #h(1fr) February 2026 -- Current \
 ANAX Business Technologies #h(1fr) Las Vegas, NV \
 - *Monitored and triaged real-time Windows server, backup, and security event log
   issues* while routing high-priority incidents internally—*strengthening system
@@ -29,7 +29,7 @@ ANAX Business Technologies #h(1fr) Las Vegas, NV \
   ConnectWise and *created standarized troubleshooting procedures in IT Glue*
   leading to *improved operational efficiency across 50% of tickets.*
 
-*Web Developer Intern* #h(1fr) July 2024 -- December 2024 \
+*Web Developer* #h(1fr) July 2024 -- December 2024 \
 702 Pros #h(1fr) Las Vegas, NV \
 - Developed and maintained full-stack web applications using *HTML*, *CSS*,
   *JavaScript*, *PHP*, and *WordPress* for medium-sized businesses in Las Vegas,

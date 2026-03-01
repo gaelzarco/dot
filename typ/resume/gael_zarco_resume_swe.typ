@@ -26,7 +26,7 @@ Las Vegas, NV |
 *Associate of Arts in Computer Science* | College of Southern Nevada
 #h(1fr) June 2024 -- December 2025 \
 
-*Software Development Certificate* | University of Nevada, Las Vegas
+*Software Engineering Certificate* | University of Nevada, Las Vegas
 #h(1fr) August 2021 -- June 2022 \
 
 == Relevant Experience
@@ -44,6 +44,17 @@ Las Vegas, NV |
   security.*
 - Led DNS, email, and Apache HTTP Server migrations on Linux systems, *minimizing
   service interruption* and *coordinating technical updates with clients*.
+
+== Work Experience
+#chiline()
+
+*Network Technician* #h(1fr) February 2026 -- Present \
+ANAX Business Technologies #h(1fr) Las Vegas, NV \
+- Monitored and triaged Windows Server, backup, and security event logs,
+  escalating high-severity incidents and contributing to improved system uptime.
+- Created standarized documentation in IT Glue and streamlined ticket
+  triage in ConnectWise, accelerating resolution time for recurring alerts by
+  50%.
 
 == Projects
 #chiline()
@@ -81,17 +92,6 @@ Las Vegas, NV |
 - *Frameworks & Libraries*: Next.js, Express.js, WordPress, Flask, React.js, Tailwind CSS, tRPC
 - *Tools & Platforms*: Linux, Git, MySQL, PostgreSQL, Docker, MongoDB, Vercel,
   phpMyAdmin, AWS, Azure
-
-== Work Experience
-#chiline()
-
-*Network Technician Intern* #h(1fr) February 2026 -- Present \
-ANAX Business Technologies #h(1fr) Las Vegas, NV \
-- Monitored and triaged Windows Server, backup, and security event logs,
-  escalating high-severity incidents and contributing to improved system uptime.
-- Created standarized documentation in IT Glue and streamlined ticket
-  triage in ConnectWise, accelerating resolution time for recurring alerts by
-  50%.
 
 // *Technical Product Manager* #h(1fr) January 2026 -- January 2026 \
 // Open Workspace #h(1fr) Las Vegas, NV \
